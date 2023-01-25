@@ -1,0 +1,61 @@
+import { Routes, Route } from "react-router-dom"
+import Home from "./Home"
+import About from "./About"
+import Contact from "./Contact"
+import { BrowserRouter, NavLink, Outlet } from "react-router-dom";
+
+
+const Layout = () => {
+  const style = ({ isActive }) => ({
+    fontWeight: isActive ? 'bold' : 'normal',
+  });
+
+  return (
+    <>
+      <h1>React Router</h1>
+
+      <nav
+        style={{
+          borderBottom: 'solid 1px',
+          paddingBottom: '1rem',
+        }}
+      >
+        <NavLink to="/" style={style}>
+          Home
+        </NavLink>
+        <NavLink to="/about" style={style}>
+          About
+        </NavLink>
+        <NavLink to="/contact" style={style}>
+          Contact
+        </NavLink>
+      </nav>
+
+      <main style={{ padding: '1rem 0' }}>
+        <Outlet />
+      </main>
+    </>
+  );
+};
+
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />} >
+            <Route path="/" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  )
+}
+
+export default App
+
+
+
