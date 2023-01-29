@@ -1,16 +1,15 @@
 import { NavLink, Outlet } from "react-router-dom";
 
-
 export default function Layout() {
 
     const testMenuItems = [
         {
             href: '/',
-            title: 'Introduction',
+            title: 'Generate Image URL',
         },
         {
             href: 'about',
-            title: 'About',
+            title: 'Generate Video URL',
         },
         {
             href: 'contact',
@@ -74,7 +73,8 @@ export default function Layout() {
     return (
         <div className='min-h-screen flex flex-col'>
             <header className='bg-gray-200 text-black sticky top-0 h-14 flex justify-center items-center font-semibold uppercase'>
-                Cloudinary Actions
+            Cloudinary URL Generator
+
             </header>
             <div className='flex flex-col md:flex-row flex-1'>
                 <aside className='bg-gray-100 w-full md:w-60'>

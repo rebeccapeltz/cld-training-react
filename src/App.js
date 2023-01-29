@@ -1,11 +1,8 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, BrowserRouter } from "react-router-dom"
 import Home from "./Home"
 import About from "./About"
 import Contact from "./Contact"
-import { BrowserRouter} from "react-router-dom";
 import Layout from "./components/Layout";
-
-
 
 function App() {
   return (
