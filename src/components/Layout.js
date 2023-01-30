@@ -8,7 +8,7 @@ export default function Layout() {
             title: 'Generate Image URL',
         },
         {
-            href: 'about',
+            href: 'video',
             title: 'Generate Video URL',
         },
         {

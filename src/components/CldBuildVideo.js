@@ -1,60 +1,49 @@
 import '../App.css';
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-const cloudinaryAdvancedImage = `
-import {AdvancedImage} from '@cloudinary/react';
-import {Cloudinary} from "@cloudinary/url-gen";
-import {Transformation} from "@cloudinary/url-gen";
+const cloudinaryAdvancedVideo = `
+import {AdvancedVideo} from '@cloudinary/react';
+import {CloudinaryVideo} from "@cloudinary/url-gen";
+const video = new CloudinaryVideo('elephants',{cloudName:'demo',analytics:false});
 export default function App() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'demo'
-    }
-  }); 
-  const myImage = cld.image('front_face');
-  // return <h1>Hello Sandpack</h1>
   return (
-    <div>
-      <AdvancedImage cldImg={myImage} />
+    <div className="App">
+      <AdvancedVideo cldVid={video} width='100%' controls cldPoster="auto" />
     </div>
-  )
-}`
-const cloudinaryImageURL = `
-import {AdvancedImage} from '@cloudinary/react';
-import {Cloudinary} from "@cloudinary/url-gen";
-import {Transformation} from "@cloudinary/url-gen";
+  );
+}
+`
+
+const cloudinaryVideoURL = `
+import {AdvancedVideo} from '@cloudinary/react';
+import {CloudinaryVideo} from "@cloudinary/url-gen";
+import {format} from "@cloudinary/url-gen/actions/delivery";
+const video = new CloudinaryVideo('elephants',{cloudName:'demo',analytics:false});
+const videoURL = video.toURL();
+const posterURL = video.format('jpg').toURL();
+console.log(videoURL);
 export default function App() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'demo'
-    }
-  }); 
-  const myImageURL = cld.image('front_face').toURL();
-  // return <h1>Hello Sandpack</h1>
   return (
-    <div>
-      <img src={myImageURL} />
-    </div>
-  )
-}`
+    <div className="App">
+        <video width="100%" controls poster={posterURL}>
+            <source src={videoURL} type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>    
+  </div>
+  );
+}
+`
 
-
-export default function CldBuildImg() {
+export default function CldBuildVideo() {
 
     return (
         <div className="code-container">
-            {/* <h2 className={'<h2 class="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600">Tailwind Elements</h2>'}>Cloudinary URL Generator</h2> */}
-
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Advanced Image</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Advanced Video</h3>
             <Sandpack
-                // You can change these examples!
-                // Try uncommenting any of these lines
                 theme="dark"
-                // theme="light" 
-                // theme="auto"
                 template="react"
                 files={{
-                    "/App.js": cloudinaryAdvancedImage,
+                    "/App.js": cloudinaryAdvancedVideo,
                 }}
                 customSetup={{
                     dependencies: {
@@ -69,23 +58,18 @@ export default function CldBuildImg() {
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
                     editorHeight: 350, // default - 300
-                    // editorWidthPercentage: 60, // default - 50
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
                     recompileDelay: 400,
                     resizablePanels: true, //default
                 }}
             />
-             <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Image URL</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Video URL</h3>
             <Sandpack
-                // You can change these examples!
-                // Try uncommenting any of these lines
                 theme="dark"
-                // theme="light" 
-                // theme="auto"
                 template="react"
                 files={{
-                    "/App.js": cloudinaryImageURL,
+                    "/App.js": cloudinaryVideoURL,
                 }}
                 customSetup={{
                     dependencies: {
@@ -99,11 +83,10 @@ export default function CldBuildImg() {
                     showLineNumbers: false, // default - true
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 400, // default - 300
-                    // editorWidthPercentage: 60, // default - 50
+                    editorHeight: 350, // default - 300
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
-                    recompileDelay: 300,
+                    recompileDelay: 400,
                     resizablePanels: true, //default
                 }}
             />

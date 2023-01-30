@@ -4,7 +4,6 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 const cloudinaryAdvancedImage = `
 import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
-import {Transformation} from "@cloudinary/url-gen";
 export default function App() {
   const cld = new Cloudinary({
     cloud: {
