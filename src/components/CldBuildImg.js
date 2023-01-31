@@ -12,7 +12,6 @@ export default function App() {
     }
   }); 
   const myImage = cld.image('front_face');
-  // return <h1>Hello Sandpack</h1>
   return (
     <div>
       <AdvancedImage cldImg={myImage} />

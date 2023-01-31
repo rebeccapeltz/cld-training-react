@@ -12,8 +12,64 @@ export default function Layout() {
             title: 'Generate Video URL',
         },
         {
-            href: 'contact',
-            title: 'Contact',
+            href: 'resize-scale',
+            title: 'Resize with Scale',
+        },
+        {
+            href: 'resize-crop-gravity',
+            title: 'Resize with Crop/Gravity',
+        },
+        {
+            href: 'quality',
+            title: 'Quality (Compression)',
+        },
+        {
+            href: 'format',
+            title: 'Format',
+        },
+        {
+            href: 'optimization',
+            title: 'Optimization',
+        },
+         {
+            href: 'aesthetics',
+            title: 'Aesthic Transformations',
+        },
+        {
+            href: 'background',
+            title: 'Background',
+        },
+        {
+            href: 'overlay-image',
+            title: 'Overlay Image',
+        },
+        {
+            href: 'overlay-text',
+            title: 'Overlay Text',
+        },
+        {
+            href: 'overlay-video',
+            title: 'Overlay Video',
+        },
+        {
+            href: 'video-only',
+            title: 'Video Only',
+        },
+        {
+            href: 'lazyload',
+            title: 'Lazyload Plugin',
+        },
+        {
+            href: 'placeholder',
+            title: 'Placeholder Plugin',
+        },
+        {
+            href: 'responsive',
+            title: 'Responsive Plugin',
+        },
+        {
+            href: 'accessibility',
+            title: 'Accessibility Plugin',
         }
     ];
     // const menuItems = [
@@ -81,7 +137,7 @@ export default function Layout() {
                     <nav>
                         <ul>
                             {testMenuItems.map(({ href, title }) => (
-                                <li className='m-2' key={title}>
+                                <li className='m-1' key={title}>
                                     <NavLink to={href} >
                                         <p className={'text-black'}>{title}</p>
                                     </NavLink>
