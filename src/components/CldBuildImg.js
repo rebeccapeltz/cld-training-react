@@ -67,7 +67,7 @@ export default function CldBuildImg() {
                     showLineNumbers: false, // default - true
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 350, // default - 300
+                    editorHeight: 600, // default - 300
                     // editorWidthPercentage: 60, // default - 50
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
@@ -98,7 +98,7 @@ export default function CldBuildImg() {
                     showLineNumbers: false, // default - true
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 400, // default - 300
+                    editorHeight: 300, // default - 300
                     // editorWidthPercentage: 60, // default - 50
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
