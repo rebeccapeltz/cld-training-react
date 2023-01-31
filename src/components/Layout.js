@@ -33,7 +33,7 @@ export default function Layout() {
         },
          {
             href: 'aesthetics',
-            title: 'Aesthic Transformations',
+            title: 'Aesthetic Transformations',
         },
         {
             href: 'background',
