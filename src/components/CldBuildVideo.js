@@ -57,7 +57,7 @@ export default function CldBuildVideo() {
                     showLineNumbers: false, // default - true
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 600, // default - 300
+                    editorHeight: 300, // default - 300
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
                     recompileDelay: 400,
