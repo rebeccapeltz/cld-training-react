@@ -15,12 +15,12 @@ function App() {
         <Routes>
           <Route element={<Layout />} >
             <Route path="/" element={<Image />} />
-            <Route path="video" element={<Video />} />
-            <Route path="responsive" element={<Responsive />} />
-            <Route path="placeholder" element={<Placeholder />} />
-            <Route path="accessibility" element={<Accessibility />} />
-            <Route path="lazyload" element={<LazyLoad />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="/video" element={<Video />} />
+            <Route path="/responsive" element={<Responsive />} />
+            <Route path="/placeholder" element={<Placeholder />} />
+            <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/lazyload" element={<LazyLoad />} />
+            <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>
