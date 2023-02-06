@@ -146,7 +146,7 @@ export default function Layout() {
                         </ul>
                     </nav>
                 </aside>
-                <main className={'flex-1 mr-2'}>
+                <main className={'flex-1 mr-2 ml-2'}>
                     <Outlet />
                 </main>
                 {/* <main className='flex-1'>{children}</main> */}
