@@ -116,7 +116,7 @@ function LazyLoad() {
       <div className="collapse">
         <input type="checkbox" />
         <div className="collapse-title text-xl font-medium">
-          Click to view code
+          Click to view/hide code
         </div>
         <div className="collapse-content">
           <div>

@@ -1,6 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom"
 import Image from "./pages/Image"
 import Video from "./pages/Video"
+import ResizeScale from "./pages/ResizeScale"
 import Responsive from "./pages/Responsive"
 import LazyLoad from "./pages/Lazyload"
 import Accessibility from "./pages/Accessibility"
@@ -16,6 +17,7 @@ function App() {
           <Route element={<Layout />} >
             <Route path="/" element={<Image />} />
             <Route path="/video" element={<Video />} />
+            <Route path="/resize-scale" element={<ResizeScale />} />
             <Route path="/responsive" element={<Responsive />} />
             <Route path="/placeholder" element={<Placeholder />} />
             <Route path="/accessibility" element={<Accessibility />} />
