@@ -2,8 +2,8 @@ import '../App.css';
 import { Sandpack } from "@codesandbox/sandpack-react";
 
 const cloudinaryAdvancedVideo = `
-import {AdvancedVideo, AdvancedImage} from '@cloudinary/react';
-import {CloudinaryVideo, CloudinaryImage} from "@cloudinary/url-gen";
+import {AdvancedVideo} from '@cloudinary/react';
+import {CloudinaryVideo} from "@cloudinary/url-gen";
 import {scale} from '@cloudinary/url-gen/actions/resize';
 
 
@@ -20,20 +20,16 @@ export default function App() {
 
 const cloudinaryAdvancedImage = `
 import {AdvancedImage} from '@cloudinary/react';
-import {Cloudinary} from "@cloudinary/url-gen";
+import {CloudinaryImage} from "@cloudinary/url-gen";
 import {scale} from '@cloudinary/url-gen/actions/resize';
 
 export default function App() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'demo'
-    }
-  }); 
-  const myImage = cld.image('sample');
-  myImage.resize(scale().width(350));
+  const image = new CloudinaryImage('sample',{cloudName:'demo',analytics:false});
+
+  image.resize(scale().width(350));
   return (
     <div>
-      <AdvancedImage cldImg={myImage} />
+      <AdvancedImage cldImg={image} />
     </div>
   )
 }
