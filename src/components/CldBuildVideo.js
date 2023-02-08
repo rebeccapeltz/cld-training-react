@@ -8,7 +8,7 @@ const video = new CloudinaryVideo('elephants',{cloudName:'demo',analytics:false}
 export default function App() {
   return (
     <div className="App">
-      <AdvancedVideo cldVid={video} width='100%' controls cldPoster="auto" />
+      <AdvancedVideo cldVid={video} style={{width:"auto", maxHeight: "300px"}} controls cldPoster="auto" />
     </div>
   );
 }
@@ -25,7 +25,7 @@ console.log(videoURL);
 export default function App() {
   return (
     <div className="App">
-        <video width="100%" controls poster={posterURL}>
+        <video style={{width:"auto", height:"300px"}} controls poster={posterURL}>
             <source src={videoURL} type="video/mp4" />
             Your browser does not support the video tag.
         </video>    
@@ -57,7 +57,7 @@ export default function CldBuildVideo() {
                     showLineNumbers: false, // default - true
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 300, // default - 300
+                    editorHeight: 350, // default - 300
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
                     recompileDelay: 400,
@@ -83,7 +83,7 @@ export default function CldBuildVideo() {
                     showLineNumbers: false, // default - true
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 300, // default - 300
+                    editorHeight: 350, // default - 300
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
                     recompileDelay: 400,
