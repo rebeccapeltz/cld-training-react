@@ -3,8 +3,11 @@ import { NavLink, Outlet } from "react-router-dom";
 export default function Layout() {
 
     const testMenuItems = [
+        { href: '/',
+          title: 'Transformation Builder'
+        },
         {
-            href: '/',
+            href: 'image',
             title: 'Generate Image URL',
         },
         {
@@ -132,7 +135,7 @@ export default function Layout() {
             Cloudinary URL Generator
 
             </header>
-            <div style={{"backgroundColor":"white !important;"}} className='flex flex-col md:flex-row flex-1'>
+            <div className='flex flex-col md:flex-row flex-1'>
                 <aside className='bg-gray-100 w-full md:w-60'>
                     <nav>
                         <ul>

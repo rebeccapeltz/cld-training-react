@@ -38,7 +38,7 @@ export default function CldBuildVideo() {
 
     return (
         <div className="code-container">
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Advanced Video</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Advanced Video</h3>
             <Sandpack
                 theme="dark"
                 template="react"
@@ -64,7 +64,7 @@ export default function CldBuildVideo() {
                     resizablePanels: true, //default
                 }}
             />
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Video URL</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Video URL</h3>
             <Sandpack
                 theme="dark"
                 template="react"

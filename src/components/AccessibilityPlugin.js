@@ -36,7 +36,7 @@ const accessbility = `
 function AccessibilityPlugin() {
     return (
         <div className="code-container">
-            {/* <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Accessibility Plugin</h3> */}
+            {/* <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Accessibility Plugin</h3> */}
             <Sandpack
                 theme="dark"
                 template="react"

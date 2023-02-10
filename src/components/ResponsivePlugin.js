@@ -25,7 +25,7 @@ const responsive = `
 function ResponsivePlugin() {
     return (
         <div className="code-container">
-            {/* <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Responsive Plugin</h3> */}
+            {/* <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Responsive Plugin</h3> */}
             <Sandpack
                 theme="dark"
                 template="react"

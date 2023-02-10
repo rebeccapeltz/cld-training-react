@@ -42,9 +42,9 @@ export default function CldBuildImg() {
 
     return (
         <div className="code-container">
-            {/* <h2 className={'<h2 class="font-medium leading-tight text-4xl mt-0 mb-2 text-blue-600">Tailwind Elements</h2>'}>Cloudinary URL Generator</h2> */}
+            {/* <h2 className={'<h2 class="font-medium leading-tight text-4xl mt-0 mb-2 text-white-600">Tailwind Elements</h2>'}>Cloudinary URL Generator</h2> */}
 
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Advanced Image</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Advanced Image</h3>
             <Sandpack
                 // You can change these examples!
                 // Try uncommenting any of these lines
@@ -75,7 +75,7 @@ export default function CldBuildImg() {
                     resizablePanels: true, //default
                 }}
             />
-             <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Image URL</h3>
+             <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Image URL</h3>
             <Sandpack
                 // You can change these examples!
                 // Try uncommenting any of these lines
