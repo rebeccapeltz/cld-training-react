@@ -4,10 +4,19 @@ import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 function TransformationBuilderPage() {
   const codeString = `
+  // apply the transformation to the existing image object
     return (
         <div>
           <AdvancedImage cldImg={myImage.effect(cartoonify())} />
           <AdvancedImage cldImg={myImage.effect(outline())} />
+        </div>
+      )
+  // create a new object and apply the outline to the new object
+      const myImage2 = new cld.image("front-face");
+      return (
+        <div>
+          <AdvancedImage cldImg={myImage.effect(cartoonify())} />
+          <AdvancedImage cldImg={myImage2.effect(outline())} />
         </div>
       )
     `;
@@ -38,8 +47,10 @@ function TransformationBuilderPage() {
                   the second AdvancedImage Element use the outline effect
                 </li>
                 <li>
-                  {" "}
                   Notice that the effect was applied to both rendered images.
+                </li>
+                <li>
+                  Now create a new image object and apply the outline to the new object.
                 </li>
               </ul>
             </div>
