@@ -5,6 +5,8 @@ const cloudinaryAdvancedImage = `
 import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {Transformation} from "@cloudinary/url-gen";
+import {fill} from "@cloudinary/url-gen/actions/resize";
+import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 import {outline, cartoonify} from "@cloudinary/url-gen/actions/effect";
 
 export default function App() {
@@ -13,7 +15,7 @@ export default function App() {
       cloudName: 'demo'
     }
   }); 
-  const myImage = cld.image('front_face');
+  const myImage = cld.image('cld-sample').resize(fill().width(350).height(350).gravity(autoGravity()));
   return (
     <div>
       <AdvancedImage cldImg={myImage.effect(cartoonify())} />
@@ -26,7 +28,7 @@ export default function CldBuildImg() {
     return (
         <div className="code-container">
             <h2 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Transformation Builder</h2>
-            <p className="mt-1 mb-1">Transformation Builder behaves like a Singleton.  If you modify the instance, you will see all instances on your page modified. If you want to create a new transformation without affecting an existing transformation, create a new instance of CloudinaryImage.</p>
+            <p className="mt-1 mb-1">CloudinaryImage and CloudinaryVideo instantiate objects that are like a Singletons. There is no way to remove a transformation from an asset instance. If you modify the object instance with a url-gen action, you will see all renderings of your instance updated with the new transformation added on to it. If you want to create a new transformation without affecting or adding to an existing transformation, create a new instance of CloudinaryImage or CloudinaryVideo.</p>
             <Sandpack
                 // You can change these examples!
                 // Try uncommenting any of these lines

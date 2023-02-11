@@ -14,7 +14,7 @@ function TransformationBuilderPage() {
         </div>
       )
   // create a new object and apply the outline to the new object
-      const myImage2 = new cld.image("front-face");
+    const myImage2 = cld.image('cld-sample').resize(fill().width(350).height(350).gravity(autoGravity()));
       return (
         <div>
           <AdvancedImage cldImg={myImage.effect(cartoonify())} />

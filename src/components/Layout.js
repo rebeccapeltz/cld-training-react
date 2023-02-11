@@ -24,7 +24,7 @@ export default function Layout() {
         },
         {
             href: 'quality',
-            title: 'Quality (Compression)',
+            title: 'Quality',
         },
         {
             href: 'format',
