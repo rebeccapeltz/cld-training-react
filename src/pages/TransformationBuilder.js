@@ -18,7 +18,7 @@ function TransformationBuilderPage() {
       return (
         <div>
           <AdvancedImage cldImg={myImage.effect(cartoonify())} />
-          <AdvancedImage cldImg={myImage2.effect(outline())} />
+          <AdvancedImage cldImg={myImage2.effect(outline().width(1))} />
         </div>
       )
     `;

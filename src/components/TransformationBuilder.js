@@ -1,8 +1,6 @@
 import '../App.css';
 import { Sandpack } from "@codesandbox/sandpack-react";
-
-const cloudinaryAdvancedImage = `
-import {AdvancedImage} from '@cloudinary/react';
+const cloudinaryAdvancedImage = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {Transformation} from "@cloudinary/url-gen";
 import {fill} from "@cloudinary/url-gen/actions/resize";
@@ -48,10 +46,8 @@ export default function CldBuildImg() {
                 options={{
                     showNavigator: true,
                     showTabs: true,
-                    showLineNumbers: false, // default - true
-                    showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 425, // default - 300
+                    editorHeight: 500, // default - 300
                     // editorWidthPercentage: 60, // default - 50
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
