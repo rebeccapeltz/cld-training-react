@@ -26,7 +26,7 @@ export default function CldBuildImg() {
     return (
         <div className="code-container">
             <h2 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Transformation Builder</h2>
-            <p className="mt-1 mb-1">CloudinaryImage and CloudinaryVideo instantiate objects that are like a Singletons. There is no way to remove a transformation from an asset instance. If you modify the object instance with a url-gen action, you will see all renderings of your instance updated with the new transformation added on to it. If you want to create a new transformation without affecting or adding to an existing transformation, create a new instance of CloudinaryImage or CloudinaryVideo.</p>
+            <p className="mt-1 mb-1">CloudinaryImage and CloudinaryVideo instantiate objects that are mutable. While there is no way to remove a transformation from an asset instance,if you modify the object instance with a url-gen action, you will see all renderings of your instance updated with the new transformation added on to it. If you want to create a new transformation without affecting or adding to an existing transformation, create a new instance of CloudinaryImage or CloudinaryVideo.</p>
             <Sandpack
                 // You can change these examples!
                 // Try uncommenting any of these lines
