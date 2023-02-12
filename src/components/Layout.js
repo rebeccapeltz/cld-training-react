@@ -23,7 +23,7 @@ export default function Layout() {
         href: "/advanced-video",
         title: "Advanced Video",
       },
-    { href: "/transformation-builder", title: "Transformation Builder" },
+    { href: "/transformation-builder", title: "Transformation Builder✅" },
     {
       href: "image",
       title: "Generate Image URL",
@@ -34,11 +34,15 @@ export default function Layout() {
     },
     {
       href: "resize-scale",
-      title: "Resize with Scale",
+      title: "Resize with Scale✅",
     },
     {
       href: "resize-crop-gravity",
-      title: "Resize with Crop/Gravity",
+      title: "Resize with Crop/Gravity✅",
+    },
+    {
+      href: "pad-background",
+      title: "Pad with Background",
     },
     {
       href: "quality",
@@ -49,17 +53,14 @@ export default function Layout() {
       title: "Format",
     },
     {
-      href: "optimization",
-      title: "Optimization",
+      href: "optimize",
+      title: "Optimize",
     },
     {
-      href: "aesthetics",
-      title: "Aesthetic Transformations",
+      href: "effects",
+      title: "Effects",
     },
-    {
-      href: "pad-background",
-      title: "Pad with Background",
-    },
+   
     {
       href: "overlay-image",
       title: "Overlay Image",
@@ -78,72 +79,22 @@ export default function Layout() {
     },
     {
       href: "lazyload",
-      title: "Lazyload Plugin",
+      title: "Lazyload Plugin✅",
     },
     {
       href: "placeholder",
-      title: "Placeholder Plugin",
+      title: "Placeholder Plugin✅",
     },
     {
       href: "responsive",
-      title: "Responsive Plugin",
+      title: "Responsive Plugin✅",
     },
     {
       href: "accessibility",
-      title: "Accessibility Plugin",
+      title: "Accessibility Plugin✅",
     },
   ];
-  // const menuItems = [
-  //   {
-  //     href: '/',
-  //     title: 'Introduction',
-  //   },
-  //   {
-  //     href: '/animated',
-  //     title: 'Animated',
-  //   },
-  //   {
-  //     href: '/about',
-  //     title: 'Border',
-  //   },
-  //   {
-  //     href: '/contact',
-  //     title: 'Delivery',
-  //   },
-  //   {
-  //     href: '/effect',
-  //     title: 'Effect',
-  //   },
-  //   {
-  //     href: '/namedtransformation',
-  //     title: 'Named Transformation',
-  //   },
-  //   {
-  //     href: '/overlay',
-  //     title: 'Overlay',
-  //   },
-  //   {
-  //     href: '/psdtools',
-  //     title: 'PSDTools',
-  //   },
-  //   {
-  //     href: '/resize',
-  //     title: 'Resize',
-  //   },
-  //   {
-  //     href: '/roundcorners',
-  //     title: 'RoundCorners',
-  //   },
-  //   {
-  //     href: '/reshape',
-  //     title: 'Reshape',
-  //   },
-  //   {
-  //     href: '/videoedit',
-  //     title: 'VideoEdit',
-  //   },
-  // ];
-
+  
   <li>
     <NavLink to="/">Home</NavLink>
   </li>;
