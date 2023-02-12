@@ -9,6 +9,16 @@ import Accessibility from "./pages/Accessibility";
 import Placeholder from "./pages/Placeholder";
 import Contact from "./pages/Contact";
 import Layout from "./components/Layout";
+import Introduction from "./pages/Introduction";
+import CloudinaryPackage from "./pages/CloudinaryPackage";
+import UrlGenPackage from "./pages/UrlGenPackage";
+import AdvancedImage from "./pages/AdvancedImage";
+import AdvancedVideo from "./pages/AdvancedVideo";
+import ResizeCropGravity from "./components/ResizeCropGravity";
+import Quality from "./pages/Quality";
+import Format from "./pages/Format";
+import UploadWidget from "./pages/UploadWidget";
+import PadBackground from "./pages/PadBackground";
 
 function App() {
   return (
@@ -16,7 +26,23 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<TransformationBuilderPage />} />
+            <Route path="/" element={<Introduction />} />
+            <Route path="/uw" element={<UploadWidget />} />
+
+            <Route path="/cloudinary-package" element={<CloudinaryPackage />} />
+            <Route path="/url-gen-package" element={<UrlGenPackage />} />
+            <Route path="/advanced-image" element={<AdvancedImage />} />
+            <Route path="/advanced-video" element={<AdvancedVideo />} />
+            <Route path="/resize-crop-gravity" element={<ResizeCropGravity />} />
+            <Route path="/quality" element={<Quality />} />
+            <Route path="/format" element={<Format />} />
+            <Route path="/pad-background" element={<PadBackground />} />
+
+
+            <Route
+              path="/transformation-builder"
+              element={<TransformationBuilderPage />}
+            />
             <Route path="/image" element={<Image />} />
             <Route path="/video" element={<Video />} />
             <Route path="/resize-scale" element={<ResizeScale />} />
