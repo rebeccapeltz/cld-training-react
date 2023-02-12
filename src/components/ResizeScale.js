@@ -1,22 +1,7 @@
 import '../App.css';
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-const cloudinaryAdvancedVideo = `
-import {AdvancedVideo} from '@cloudinary/react';
-import {CloudinaryVideo} from "@cloudinary/url-gen";
-import {scale} from '@cloudinary/url-gen/actions/resize';
 
-
-const video = new CloudinaryVideo('elephants',{cloudName:'demo',analytics:false});
-video.resize(scale().width(350));
-export default function App() {
-  return (
-    <div className="App">
-      <AdvancedVideo cldVid={video} controls cldPoster="auto" />
-    </div>
-  );
-}
-`
 
 const cloudinaryAdvancedImage = `
 import {AdvancedImage} from '@cloudinary/react';
@@ -24,14 +9,30 @@ import {CloudinaryImage} from "@cloudinary/url-gen";
 import {scale} from '@cloudinary/url-gen/actions/resize';
 
 export default function App() {
-  const image = new CloudinaryImage('sample',{cloudName:'demo',analytics:false});
+  const image = new CloudinaryImage('cld-sample',{cloudName:'demo',analytics:false});
 
   image.resize(scale().width(350));
   return (
     <div>
-      <AdvancedImage cldImg={image} />
+      <AdvancedImage  height="250px" width="auto"  cldImg={image} />
     </div>
   )
+}
+`
+const cloudinaryAdvancedVideo = `
+import {AdvancedVideo} from '@cloudinary/react';
+import {CloudinaryVideo} from "@cloudinary/url-gen";
+import {scale} from '@cloudinary/url-gen/actions/resize';
+
+
+const video = new CloudinaryVideo('climbing',{cloudName:'cloudinary-training',analytics:false});
+video.resize(scale().width(350));
+export default function App() {
+  return (
+    <div className="App">
+      <AdvancedVideo cldVid={video} height="250px" width="auto" controls cldPoster="auto" />
+    </div>
+  );
 }
 `
 
@@ -39,7 +40,7 @@ export default function CldBuildVideo() {
 
     return (
         <div className="code-container">
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Advanced Video</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Scale Image</h3>
             <Sandpack
                 theme="dark"
                 template="react"
@@ -65,7 +66,7 @@ export default function CldBuildVideo() {
                     resizablePanels: true, //default
                 }}
             />
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Video URL</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Scale Video</h3>
             <Sandpack
                 theme="dark"
                 template="react"

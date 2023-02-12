@@ -9,8 +9,8 @@ import Accessibility from "./pages/Accessibility";
 import Placeholder from "./pages/Placeholder";
 import Layout from "./components/Layout";
 import Introduction from "./pages/Introduction";
-import CloudinaryPackage from "./pages/CloudinaryPackage";
-import UrlGenPackage from "./pages/UrlGenPackage";
+// import CloudinaryClass from "./pages/CloudinaryClass";
+import UrlGen from "./pages/UrlGen";
 import AdvancedImage from "./pages/AdvancedImage";
 import AdvancedVideo from "./pages/AdvancedVideo";
 import ResizeCropGravity from "./components/ResizeCropGravity";
@@ -34,8 +34,8 @@ function App() {
             <Route path="/" element={<Introduction />} />
             <Route path="/uw" element={<UploadWidget />} />
 
-            <Route path="/cloudinary-package" element={<CloudinaryPackage />} />
-            <Route path="/url-gen-package" element={<UrlGenPackage />} />
+            {/* <Route path="/cloudinary-class" element={<CloudinaryClass />} /> */}
+            <Route path="/url-gen" element={<UrlGen />} />
             <Route path="/advanced-image" element={<AdvancedImage />} />
             <Route path="/advanced-video" element={<AdvancedVideo />} />
             <Route

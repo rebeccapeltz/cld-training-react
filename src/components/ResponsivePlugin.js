@@ -8,7 +8,7 @@ const responsive = `
     import {scale} from "@cloudinary/url-gen/actions/resize";
     import { AdvancedImage, responsive} from "@cloudinary/react";
     export default function App() {
-        const cloudinaryImage = new CloudinaryImage("sample", { cloudName: "demo" });
+        const cloudinaryImage = new CloudinaryImage("cld-sample", { cloudName: "demo" });
         return (
             <div>
             <h3>Render a Responsive Cloudinary Image</h3>

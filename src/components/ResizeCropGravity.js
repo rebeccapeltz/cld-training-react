@@ -12,7 +12,7 @@ video.resize(fill().width(400).height(400).gravity(autoGravity()));
 export default function App() {
   return (
     <div className="App">
-      <AdvancedVideo cldVid={video} controls cldPoster="auto" />
+      <AdvancedVideo cldVid={video} height="250px" width="auto" controls cldPoster="auto" />
     </div>
   );
 }
@@ -30,7 +30,7 @@ export default function App() {
   image.resize(crop().width(400).height(400).gravity(autoGravity()));
   return (
     <div>
-      <AdvancedImage cldImg={image} />
+      <AdvancedImage  height="250px" width="auto"  cldImg={image} />
     </div>
   )
 }
@@ -40,7 +40,7 @@ export default function ResizeCropGravity() {
 
     return (
         <div className="code-container">
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Advanced Video</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Image Resize Crop with Gravity</h3>
             <Sandpack
                 theme="dark"
                 template="react"
@@ -66,7 +66,7 @@ export default function ResizeCropGravity() {
                     resizablePanels: true, //default
                 }}
             />
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Video URL</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Video Resize Crop with Gravity</h3>
             <Sandpack
                 theme="dark"
                 template="react"

@@ -3,17 +3,14 @@ import { NavLink, Outlet } from "react-router-dom";
 export default function Layout() {
   const testMenuItems = [
     { href: "/", title: "Introduction" },
-    {
-        href: "/uw",
-        title: "Upload Widget",
-      },
-    {
-        href: "/cloudinary-package",
-        title: "Cloudinary Package",
-      },
+    // {
+    //     href: "/uw",
+    //     title: "Upload Widget",
+    //   },
+ 
       {
-        href: "/url-gen-package",
-        title: "URL Generate Package",
+        href: "/url-gen",
+        title: "URL Generate✅",
       },
       {
         href: "/advanced-image",
