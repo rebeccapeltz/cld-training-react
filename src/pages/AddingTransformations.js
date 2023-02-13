@@ -1,5 +1,4 @@
 import AddingTransformations from "../components/AddingTransformations";
-import Experiment from "../components/experiments";
 
 function AddingTransformationsPage() {
  
@@ -12,7 +11,6 @@ function AddingTransformationsPage() {
       >
         Adding Transformations
       </h1>
-
       <AddingTransformations />
     </div>
   );
