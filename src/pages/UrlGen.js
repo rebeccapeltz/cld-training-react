@@ -21,7 +21,7 @@ function UrlGen() {
         </span>
       </p>
       <p>
-        You need to supply your Cloudinary   <span className={"font-bold text-white"}>cloud name</span> and an asset  <span className={"font-bold text-white"}>public id</span> to
+        You need to supply your Cloudinary   <span className={"font-bold"}>cloud name</span> and an asset  <span className={"font-bold"}> public id</span> to
         instantiate an asset. Once you have an asset object, you can use url-gen
         to apply transformation functions to build image and video elements. If
         you only need the URL, you can call the toURL() function to generate

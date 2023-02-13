@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import TransformationBuilderPage from "./pages/TransformationBuilder";
+import AddingTransformationsPage from "./pages/AddingTransformations";
 import Image from "./pages/Image";
 import Video from "./pages/Video";
 import ResizeScale from "./pages/ResizeScale";
@@ -48,8 +48,8 @@ function App() {
             <Route path="/pad-background" element={<PadBackground />} />
 
             <Route
-              path="/transformation-builder"
-              element={<TransformationBuilderPage />}
+              path="/adding-transformations"
+              element={<AddingTransformationsPage />}
             />
             <Route path="/image" element={<Image />} />
             <Route path="/video" element={<Video />} />

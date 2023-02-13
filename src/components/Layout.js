@@ -20,7 +20,7 @@ export default function Layout() {
         href: "/advanced-video",
         title: "Advanced Video",
       },
-    { href: "/transformation-builder", title: "Transformation Builder✅" },
+    { href: "/adding-transformations", title: "Adding Transformations✅" },
     {
       href: "image",
       title: "Generate Image URL",
