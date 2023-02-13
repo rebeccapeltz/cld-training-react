@@ -3,13 +3,13 @@ import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
 import docco from "react-syntax-highlighter/dist/esm/styles/hljs/docco";
 SyntaxHighlighter.registerLanguage("javascript", js);
 export default function Experiment(props) {
-  const experimentTitle = 'Experiment by creating a second AdvancedImage that uses the same Image variable.';
-  const instructions = [
-    "Start by running the code.",
-    "Then make a copy of the AdvancedImage component directive. In the second AdvancedImage Element use the outline effect.",
-    "Notice that the effect was applied to both rendered images.",
-    "Now create a new image object and apply the outline to the new object.",
-  ];
+//   const experimentTitle = 'Experiment by creating a second AdvancedImage that uses the same Image variable.';
+//   const instructions = [
+//     "Start by running the code.",
+//     "Then make a copy of the AdvancedImage component directive. In the second AdvancedImage Element use the outline effect.",
+//     "Notice that the effect was applied to both rendered images.",
+//     "Now create a new image object and apply the outline to the new object.",
+//   ];
 
   return (
     <div >
@@ -27,7 +27,7 @@ export default function Experiment(props) {
               </ul>
             </div>
             <SyntaxHighlighter language="javascript" style={docco}>
-              {props.experimentString}
+              {props.codeString}
             </SyntaxHighlighter>
           </div>
         </div>
