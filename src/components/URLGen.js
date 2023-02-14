@@ -1,8 +1,7 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-const cloudinaryImageURLs = `
-import {Cloudinary,CloudinaryImage} from "@cloudinary/url-gen";
+const cloudinaryImageURLs = `import {Cloudinary,CloudinaryImage} from "@cloudinary/url-gen";
 export default function App() {
   // instantiate Cloudinary and call it's image function
   // use toURL() to create a URL and use it in an HTML image element
@@ -25,8 +24,7 @@ export default function App() {
   )
 }`;
 
-const cloudinaryVideoURLs = `
-import {Cloudinary,CloudinaryVideo} from "@cloudinary/url-gen";
+const cloudinaryVideoURLs = `import {Cloudinary,CloudinaryVideo} from "@cloudinary/url-gen";
 export default function App() {
   // instantiate Cloudinary and call it's video function
   // use toURL() to create a URL and use it in an HTML video element

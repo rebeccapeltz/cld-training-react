@@ -42,7 +42,7 @@ export default function Layout() {
     },
     {
       href: "/advanced-video",
-      title: "Advanced Video",
+      title: "Advanced Video✅",
       divider: false,
     },
 

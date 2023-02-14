@@ -1,37 +1,37 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-const singleImage = `
-import {AdvancedImage} from '@cloudinary/react';
-import {CloudinaryImage} from "@cloudinary/url-gen";
+const singleVideo = `import {AdvancedVideo} from '@cloudinary/react';
+import {CloudinaryVideo} from "@cloudinary/url-gen";
 export default function App() {
-  const cldImage = new CloudinaryImage('cld-sample',{cloudName: 'demo'}); 
+  const cldVideo = new CloudinaryVideo('climbing',{cloudName: 'cloudinary-training'}); 
   return (
     <div>
-      <AdvancedImage height="300px" width="auto" alt="Sample Image" cldImg={cldImage} />
-    </div>
-  )
-}`;
-const multipleImages = `
-import {AdvancedImage} from '@cloudinary/react';
-import {Cloudinary} from "@cloudinary/url-gen";
-export default function App() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'demo'
-    }
-  }); 
-  const cldImage1 = cld.image('cld-sample');
-  const cldImage2 = cld.image('cld-sample');
-  return (
-    <div>
-    <AdvancedImage height="300px" width="auto" alt="Sample Image 1" cldImg={cldImage1} />
-    <AdvancedImage height="300px" width="auto" alt="Sample Image 2" cldImg={cldImage2} />
+      <AdvancedVideo height="300px" width="auto" cldVid={cldVideo} />
     </div>
   )
 }`;
 
-export default function RenderingAdvancedImage() {
+const multipleVideos = `import {AdvancedVideo} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+export default function App() {
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'cloudinary-training'
+    }
+  }); 
+  const cldVideo1 = cld.video('climbing');
+  const cldVideo2 = cld.video('climbing');
+  return (
+    <div>
+    <AdvancedVideo height="300px" width="auto" cldVid={cldVideo1} />
+    <AdvancedVideo height="300px" width="auto" cldVid={cldVideo2} />
+
+    </div>
+  )
+}`;
+
+export default function RenderingAdvancedVideo() {
   return (
     <div className="code-container">
       <h2
@@ -39,7 +39,7 @@ export default function RenderingAdvancedImage() {
           "font-medium leading-tight text-4xl mt-0 mb-2 text-white-600"
         }
       >
-        AdvancedImage
+        AdvancedVideo
       </h2>
 
       <h3
@@ -47,11 +47,11 @@ export default function RenderingAdvancedImage() {
           "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-        Single Image
+        Single Video
       </h3>
       <p>
-        When you are rendering just a single image in your component, you can
-        use "CloudinaryImage" and supply both Cloud Name and Public ID.
+        When you are rendering just a single video in your component, you can
+        use "CloudinaryVideo" and supply both Cloud Name and Public ID.
       </p>
       <Sandpack
         // You can change these examples!
@@ -61,7 +61,7 @@ export default function RenderingAdvancedImage() {
         // theme="auto"
         template="react"
         files={{
-          "/App.js": singleImage,
+          "/App.js": singleVideo,
         }}
         customSetup={{
           dependencies: {
@@ -72,7 +72,7 @@ export default function RenderingAdvancedImage() {
         options={{
           showNavigator: true,
           showTabs: true,
-          showLineNumbers: false, // default - true
+          showLineNumbers: true, // default - true
           showInlineErrors: true, // default - false
           wrapContent: true, // default - false
           editorHeight: 300, // default - 300
@@ -88,12 +88,12 @@ export default function RenderingAdvancedImage() {
           "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-        Multiple Images
+        Multiple Videos
       </h3>
       <p>
-        When you are rendering  multiple images in your component, it is more efficient to create a Cloudinary instance, 
-        which has an image method that will generate new CloudinaryImage objects for you.  You only have to specify the Cloud Name 
-        once when you create a Cloudinary instance.  When you create a new image, you specify the Public ID.
+        When you are rendering  multiple videos in your component, it is more efficient to create a Cloudinary instance, 
+        which has a video method that will generate new CloudinaryVideo objects for you.  You only have to specify the Cloud Name 
+        once when you create a Cloudinary instance.  When you create a new video, you specify the Public ID.
       </p>
       <Sandpack
         // You can change these examples!
@@ -103,7 +103,7 @@ export default function RenderingAdvancedImage() {
         // theme="auto"
         template="react"
         files={{
-          "/App.js": multipleImages,
+          "/App.js": multipleVideos,
         }}
         customSetup={{
           dependencies: {
@@ -114,7 +114,7 @@ export default function RenderingAdvancedImage() {
         options={{
           showNavigator: true,
           showTabs: true,
-          showLineNumbers: false, // default - true
+          showLineNumbers: true, // default - true
           showInlineErrors: true, // default - false
           wrapContent: true, // default - false
           editorHeight: 300, // default - 300
