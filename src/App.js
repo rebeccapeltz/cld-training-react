@@ -15,7 +15,6 @@ import AdvancedVideo from "./pages/AdvancedVideo";
 import ResizeCropGravity from "./components/ResizeCropGravity";
 import Quality from "./pages/Quality";
 import Format from "./pages/Format";
-import PadBackground from "./pages/PadBackground";
 import Effects from "./pages/Effects";
 import Optimize from "./pages/Optimize";
 import OverlayImage from "./pages/OverlayImage";
@@ -23,6 +22,7 @@ import OverlayVideo from "./pages/OverlayVideo";
 import OverlayText from "./pages/OverlayText";
 import VideoOnly from "./pages/VideoOnly";
 import UploadWidgetPage from "./pages/UploadWidget";
+import PadWithBackgroundPage from "./pages/PadWithBackground";
 
 function App() {
   return (
@@ -44,7 +44,7 @@ function App() {
             <Route path="/quality" element={<Quality />} />
             <Route path="/format" element={<Format />} />
             <Route path="/optimize" element={<Optimize />} />
-            <Route path="/pad-background" element={<PadBackground />} />
+            <Route path="/pad-with-background" element={<PadWithBackgroundPage />} />
 
             <Route
               path="/adding-transformations"

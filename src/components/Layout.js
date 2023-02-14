@@ -11,7 +11,7 @@ export default function Layout() {
   const testMenuItems = [
     { href: "/", title: "Introduction" },
     {
-      href: "",
+      href: "/",
       title: "Upload",
       divider: true,
     },
@@ -21,7 +21,7 @@ export default function Layout() {
       divider: false,
     },
     {
-      href: "",
+      href: "/",
       title: "Transform",
       divider: true,
     },
@@ -75,7 +75,7 @@ export default function Layout() {
       divider: false,
     },
     {
-      href: "pad-background",
+      href: "pad-with-background",
       title: "Pad with Background",
       divider: false,
     },
@@ -173,8 +173,9 @@ export default function Layout() {
                 <li className="m-1" key={title}>
                   <NavLink
                     to={href}
-                    className={({ isActive }) =>
+                    className={({ isActive, href, divider }) =>
                       isActive ? activeClassName : undefined
+                    
                     }
                   >
                     <p className={styleTitle(divider)}>{title}</p>
