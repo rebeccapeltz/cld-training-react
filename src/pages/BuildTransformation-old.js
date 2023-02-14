@@ -1,4 +1,3 @@
-import BuildTransformation from "../components/TransformationBuilder";
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
 import docco from 'react-syntax-highlighter/dist/esm/styles/hljs/docco';
@@ -33,7 +32,7 @@ function TransformationBuilderPage() {
       </h1>
       <div className="collapse">
         <input type="checkbox" />
-        <div className="collapse-title text-xl font-medium text-indigo-500 bg-black">Click for Experiment</div>
+        <div className="collapse-title text-xl font-medium text-blue-500 bg-black">Click for Experiment</div>
         <div className="collapse-content">
           <div>
             <p>

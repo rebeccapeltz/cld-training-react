@@ -66,7 +66,7 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
               id="inline-cloud-name"
               type="text"
               value={cloudName}
@@ -86,7 +86,7 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
               id="inline-unsigned-preset"
               type="text"
               value={unsignedPreset}
@@ -99,13 +99,13 @@ export default function UploadWidget() {
           <div className="md:w-1/3"></div>
           <div className="md:w-2/3">
             <button
-              className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              className="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
               type="button"
               onClick={uploadWidget}
             >
               Upload Files
             </button>
-            <img src={uploadedImage} alt="uploaded using the upload widget" />
+            <img src={uploadedImage} onLoad={(event) => event.target.style.display = 'inline-block'} onError={(event) => event.target.style.display = 'none'} alt="uploaded using the upload widget" />
           </div>
         </div>
       </form>

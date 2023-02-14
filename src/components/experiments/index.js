@@ -15,7 +15,7 @@ export default function Experiment(props) {
     <div >
       <div className="collapse">
         <input type="checkbox" />
-        <div className="collapse-title text-xl font-medium text-indigo-500 bg-black">
+        <div className="collapse-title text-xl font-medium text-blue-500 bg-black">
           Click for Experiment
         </div>
         <div className="collapse-content">
