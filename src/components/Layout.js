@@ -20,6 +20,10 @@ export default function Layout() {
         title: "URL Generate✅",
       },
       {
+        href: "",
+        title: "----------Deliver---------------",
+      },
+      {
         href: "/advanced-image",
         title: "Advanced Image",
       },
@@ -27,11 +31,12 @@ export default function Layout() {
         href: "/advanced-video",
         title: "Advanced Video",
       },
-      {
-        href: "",
-        title: "----------Deliver---------------",
-      },
+     
     { href: "/adding-transformations", title: "Adding Transformations✅" },
+    {
+      href: "",
+      title: "---------Optimization----------",
+    },
     // {
     //   href: "image",
     //   title: "Generate Image URL",
@@ -64,6 +69,11 @@ export default function Layout() {
       href: "optimize",
       title: "Optimize",
     },
+    {
+      href:"",
+      title: "-----Effects and Overlays-----",
+    },
+  
     {
       href: "effects",
       title: "Effects",
