@@ -3,11 +3,18 @@ import { NavLink, Outlet } from "react-router-dom";
 export default function Layout() {
   const testMenuItems = [
     { href: "/", title: "Introduction" },
-    // {
-    //     href: "/uw",
-    //     title: "Upload Widget",
-    //   },
- 
+    {
+      href: "",
+      title: "----------Upload--------------",
+    },
+    {
+        href: "/uw",
+        title: "Upload Widget✅",
+      },
+      {
+        href: "",
+        title: "---------Transform------------",
+      },
       {
         href: "/url-gen",
         title: "URL Generate✅",
@@ -20,15 +27,19 @@ export default function Layout() {
         href: "/advanced-video",
         title: "Advanced Video",
       },
+      {
+        href: "",
+        title: "----------Deliver---------------",
+      },
     { href: "/adding-transformations", title: "Adding Transformations✅" },
-    {
-      href: "image",
-      title: "Generate Image URL",
-    },
-    {
-      href: "video",
-      title: "Generate Video URL",
-    },
+    // {
+    //   href: "image",
+    //   title: "Generate Image URL",
+    // },
+    // {
+    //   href: "video",
+    //   title: "Generate Video URL",
+    // },
     {
       href: "resize-scale",
       title: "Resize with Scale✅",
@@ -72,7 +83,11 @@ export default function Layout() {
     },
     {
       href: "video-only",
-      title: "Video Only",
+      title: "Video Only Transformations",
+    },
+    {
+      href: "",
+      title: "----------Plugins--------------",
     },
     {
       href: "lazyload",

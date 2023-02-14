@@ -1,11 +1,13 @@
-import React from "react";
+import UploadWidget from "../components/UploadWidget";
 
-function UploadWidget() {
+function UploadWidgetPage() {
+ 
   return (
     <div>
-      <h1>This is the upload widget page</h1>
+      <h1>Upload with <a style={{color:"black", "textDecoration":"underline"}} href="https://cloudinary.com/documentation/upload_widget#unsigned_uploads">Unsigned Preset</a></h1>
+      <UploadWidget />
     </div>
   );
 }
 
-export default UploadWidget;
+export default UploadWidgetPage;

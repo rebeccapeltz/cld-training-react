@@ -9,14 +9,12 @@ import Accessibility from "./pages/Accessibility";
 import Placeholder from "./pages/Placeholder";
 import Layout from "./components/Layout";
 import Introduction from "./pages/Introduction";
-// import CloudinaryClass from "./pages/CloudinaryClass";
 import UrlGen from "./pages/UrlGen";
 import AdvancedImage from "./pages/AdvancedImage";
 import AdvancedVideo from "./pages/AdvancedVideo";
 import ResizeCropGravity from "./components/ResizeCropGravity";
 import Quality from "./pages/Quality";
 import Format from "./pages/Format";
-import UploadWidget from "./pages/UploadWidget";
 import PadBackground from "./pages/PadBackground";
 import Effects from "./pages/Effects";
 import Optimize from "./pages/Optimize";
@@ -24,6 +22,7 @@ import OverlayImage from "./pages/OverlayImage";
 import OverlayVideo from "./pages/OverlayVideo";
 import OverlayText from "./pages/OverlayText";
 import VideoOnly from "./pages/VideoOnly";
+import UploadWidgetPage from "./pages/UploadWidget";
 
 function App() {
   return (
@@ -32,7 +31,7 @@ function App() {
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Introduction />} />
-            <Route path="/uw" element={<UploadWidget />} />
+            <Route path="/uw" element={<UploadWidgetPage />} />
 
             {/* <Route path="/cloudinary-class" element={<CloudinaryClass />} /> */}
             <Route path="/url-gen" element={<UrlGen />} />
