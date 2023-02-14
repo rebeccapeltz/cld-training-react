@@ -10,7 +10,6 @@ import Placeholder from "./pages/Placeholder";
 import Layout from "./components/Layout";
 import Introduction from "./pages/Introduction";
 import UrlGen from "./pages/UrlGen";
-import AdvancedImage from "./pages/AdvancedImage";
 import AdvancedVideo from "./pages/AdvancedVideo";
 import ResizeCropGravity from "./components/ResizeCropGravity";
 import Quality from "./pages/Quality";
@@ -23,6 +22,7 @@ import OverlayText from "./pages/OverlayText";
 import VideoOnly from "./pages/VideoOnly";
 import UploadWidgetPage from "./pages/UploadWidget";
 import PadWithBackgroundPage from "./pages/PadWithBackground";
+import RenderingAdvancedImagePage from "./pages/RenderingAdvancedImage";
 
 function App() {
   return (
@@ -35,7 +35,6 @@ function App() {
 
             {/* <Route path="/cloudinary-class" element={<CloudinaryClass />} /> */}
             <Route path="/url-gen" element={<UrlGen />} />
-            <Route path="/advanced-image" element={<AdvancedImage />} />
             <Route path="/advanced-video" element={<AdvancedVideo />} />
             <Route
               path="/resize-crop-gravity"
@@ -44,7 +43,7 @@ function App() {
             <Route path="/quality" element={<Quality />} />
             <Route path="/format" element={<Format />} />
             <Route path="/optimize" element={<Optimize />} />
-            <Route path="/pad-with-background" element={<PadWithBackgroundPage />} />
+            <Route path="advanced-image" element={<RenderingAdvancedImagePage />} />
 
             <Route
               path="/adding-transformations"
@@ -60,7 +59,7 @@ function App() {
             <Route path="/video-only" element={<VideoOnly />} />
 
             <Route path="/resize-scale" element={<ResizeScale />} />
-
+            <Route path="/pad-with-background" element={<PadWithBackgroundPage />} />
 
             <Route path="/responsive" element={<Responsive />} />
             <Route path="/placeholder" element={<Placeholder />} />

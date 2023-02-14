@@ -37,7 +37,7 @@ export default function Layout() {
     },
     {
       href: "/advanced-image",
-      title: "Advanced Image",
+      title: "Advanced Image✅",
       divider: false,
     },
     {
