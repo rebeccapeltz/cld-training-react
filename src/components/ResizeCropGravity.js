@@ -1,4 +1,4 @@
-import '../App.css';
+import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
 const cloudinaryAdvancedVideo = `
@@ -16,7 +16,7 @@ export default function App() {
     </div>
   );
 }
-`
+`;
 
 const cloudinaryAdvancedImage = `
 import {AdvancedImage} from '@cloudinary/react';
@@ -34,65 +34,76 @@ export default function App() {
     </div>
   )
 }
-`
+`;
 
 export default function ResizeCropGravity() {
+  return (
+    <div className="code-container">
+      <h3
+        className={
+          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+        }
+      >
+        Image Resize Crop with Gravity
+      </h3>
 
-    return (
-        <div className="code-container">
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Image Resize Crop with Gravity</h3>
-            <Sandpack
-                theme="dark"
-                template="react"
-                files={{
-                    "/App.js": cloudinaryAdvancedImage,
-                }}
-                customSetup={{
-                    dependencies: {
-                        "@cloudinary/react": "^1.9.0",
-                        "@cloudinary/url-gen": "^1.9.0",
-                    },
-                }}
-                options={{
-                    showNavigator: true,
-                    showTabs: true,
-                    showLineNumbers: false, // default - true
-                    showInlineErrors: true, // default - false
-                    wrapContent: true, // default - false
-                    editorHeight: 300, // default - 300
-                    autorun: false,
-                    recompileMode: "delayed", //default is immediate
-                    recompileDelay: 400,
-                    resizablePanels: true, //default
-                }}
-            />
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600'}>Video Resize Crop with Gravity</h3>
-            <Sandpack
-                theme="dark"
-                template="react"
-                files={{
-                    "/App.js": cloudinaryAdvancedVideo,
-                }}
-                customSetup={{
-                    dependencies: {
-                        "@cloudinary/react": "^1.9.0",
-                        "@cloudinary/url-gen": "^1.9.0",
-                    },
-                }}
-                options={{
-                    showNavigator: true,
-                    showTabs: true,
-                    showLineNumbers: false, // default - true
-                    showInlineErrors: true, // default - false
-                    wrapContent: true, // default - false
-                    editorHeight: 300, // default - 300
-                    autorun: false,
-                    recompileMode: "delayed", //default is immediate
-                    recompileDelay: 400,
-                    resizablePanels: true, //default
-                }}
-            />
-        </div>
-    )
+      <Sandpack
+        theme="dark"
+        template="react"
+        files={{
+          "/App.js": cloudinaryAdvancedImage,
+        }}
+        customSetup={{
+          dependencies: {
+            "@cloudinary/react": "^1.9.0",
+            "@cloudinary/url-gen": "^1.9.0",
+          },
+        }}
+        options={{
+          showNavigator: true,
+          showTabs: true,
+          showLineNumbers: false, // default - true
+          showInlineErrors: true, // default - false
+          wrapContent: true, // default - false
+          editorHeight: 300, // default - 300
+          autorun: false,
+          recompileMode: "delayed", //default is immediate
+          recompileDelay: 400,
+          resizablePanels: true, //default
+        }}
+      />
+      <h3
+         className={
+            "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          }
+      >
+        Video Resize Crop with Gravity
+      </h3>
+      <Sandpack
+        theme="dark"
+        template="react"
+        files={{
+          "/App.js": cloudinaryAdvancedVideo,
+        }}
+        customSetup={{
+          dependencies: {
+            "@cloudinary/react": "^1.9.0",
+            "@cloudinary/url-gen": "^1.9.0",
+          },
+        }}
+        options={{
+          showNavigator: true,
+          showTabs: true,
+          showLineNumbers: false, // default - true
+          showInlineErrors: true, // default - false
+          wrapContent: true, // default - false
+          editorHeight: 300, // default - 300
+          autorun: false,
+          recompileMode: "delayed", //default is immediate
+          recompileDelay: 400,
+          resizablePanels: true, //default
+        }}
+      />
+    </div>
+  );
 }
-

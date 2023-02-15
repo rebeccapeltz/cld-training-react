@@ -10,8 +10,8 @@ import Placeholder from "./pages/Placeholder";
 import Layout from "./components/Layout";
 import Introduction from "./pages/Introduction";
 import UrlGen from "./pages/UrlGen";
-import ResizeCropGravity from "./components/ResizeCropGravity";
-import Quality from "./pages/Quality";
+import ResizeCropGravityPage from "./pages/ResizeCropGravity";
+import QualityPage from "./pages/QualityPage";
 import Format from "./pages/Format";
 import Effects from "./pages/Effects";
 import Optimize from "./pages/Optimize";
@@ -39,9 +39,9 @@ function App() {
             <Route path="/advanced-video" element={<RenderingAdvancedVideoPage />} />
             <Route
               path="/resize-crop-gravity"
-              element={<ResizeCropGravity />}
+              element={<ResizeCropGravityPage />}
             />
-            <Route path="/quality" element={<Quality />} />
+            <Route path="/quality" element={<QualityPage />} />
             <Route path="/format" element={<Format />} />
             <Route path="/optimize" element={<Optimize />} />
             <Route path="advanced-image" element={<RenderingAdvancedImagePage />} />
