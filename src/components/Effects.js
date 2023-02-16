@@ -1,7 +1,7 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-const multipleImageandVideo=`import {AdvancedImage,AdvancedVideo} from '@cloudinary/react';
+const multipleImageandVideo = `import {AdvancedImage,AdvancedVideo} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {thumbnail, fill} from "@cloudinary/url-gen/actions/resize";
 import {Adjust} from "@cloudinary/url-gen/actions/adjust"; // for contrast
@@ -38,22 +38,33 @@ export default function App() {
       </div>
     </div>
   )
-}`
+}`;
 
 const multipleImages = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
+// import {focusOn} from "@cloudinary/url-gen/qualifiers/gravity";
+// import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
+import {thumbnail} from "@cloudinary/url-gen/actions/resize";
+import {Effect} from "@cloudinary/url-gen/actions/effect";
 export default function App() {
   const cld = new Cloudinary({
     cloud: {
       cloudName: 'demo'
     }
   }); 
-  const cldBlur = cld.image('cld-sample');
-  const cldContrast = cld.image('cld-sample');
+  const cldImage = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face"));
+  const cldGrayScale = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.grayscale());
+  const cldSepia = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.sepia());
+  const cldBlackWhite = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.blackwhite());
+
+
   return (
-    <div>
-    <AdvancedImage height="300px" width="auto" alt="Sample Image 1" cldImg={cldBlur} />
-    <AdvancedImage height="300px" width="auto" alt="Sample Image 2" cldImg={cldContrast} />
+    <div className={"flex space-x-4"}>
+      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldImage} />
+      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldGrayScale} />
+      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldSepia} />
+      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldBlackWhite} />
+
     </div>
   )
 }`;
@@ -64,7 +75,7 @@ export default function App() {
 //     cloud: {
 //       cloudName: 'cloudinary-training'
 //     }
-//   }); 
+//   });
 //   const cldVideo1 = cld.video('climbing');
 //   const cldVideo2 = cld.video('climbing');
 //   return (
@@ -84,7 +95,7 @@ export default function Effects() {
           "font-medium leading-tight text-4xl mt-0 mb-2 text-white-600"
         }
       >
-        Effects 
+        Effects
       </h2>
 
       <h3
@@ -92,11 +103,9 @@ export default function Effects() {
           "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-       Apply Effects to both Image and Video: blur and contrast 
+        Apply Effects to both Image and Video: blur and contrast
       </h3>
-      <p>
-       Apply blur and contrast effects to Images and Videos
-      </p>
+      <p>Apply blur and contrast effects to Images and Videos</p>
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -126,13 +135,13 @@ export default function Effects() {
           recompileDelay: 400,
           resizablePanels: true, //default
         }}
-      /> 
+      />
       <h3
         className={
           "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-        Image Only Effects
+        Image Only Effects: Grayscale, Sepia, Black and White
       </h3>
       <Sandpack
         // You can change these examples!
@@ -153,7 +162,7 @@ export default function Effects() {
         options={{
           showNavigator: true,
           showTabs: true,
-          showLineNumbers: false, // default - true
+          showLineNumbers: true, // default - true
           showInlineErrors: true, // default - false
           wrapContent: true, // default - false
           editorHeight: 300, // default - 300
