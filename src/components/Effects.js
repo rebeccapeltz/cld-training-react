@@ -45,24 +45,24 @@ export default function App() {
     </div>
   )
 }`;
-const multipleVideos = `import {AdvancedVideo} from '@cloudinary/react';
-import {Cloudinary} from "@cloudinary/url-gen";
-export default function App() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'cloudinary-training'
-    }
-  }); 
-  const cldVideo1 = cld.video('climbing');
-  const cldVideo2 = cld.video('climbing');
-  return (
-    <div>
-    <AdvancedVideo height="300px" width="auto" cldVid={cldVideo1} />
-    <AdvancedVideo height="300px" width="auto" cldVid={cldVideo2} />
+// const multipleVideos = `import {AdvancedVideo} from '@cloudinary/react';
+// import {Cloudinary} from "@cloudinary/url-gen";
+// export default function App() {
+//   const cld = new Cloudinary({
+//     cloud: {
+//       cloudName: 'cloudinary-training'
+//     }
+//   }); 
+//   const cldVideo1 = cld.video('climbing');
+//   const cldVideo2 = cld.video('climbing');
+//   return (
+//     <div>
+//     <AdvancedVideo height="300px" width="auto" cldVid={cldVideo1} />
+//     <AdvancedVideo height="300px" width="auto" cldVid={cldVideo2} />
 
-    </div>
-  )
-}`;
+//     </div>
+//   )
+// }`;
 
 export default function Effects() {
   return (
