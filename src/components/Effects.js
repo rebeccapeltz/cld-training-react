@@ -3,7 +3,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 
 const multipleImageandVideo=`import {AdvancedImage,AdvancedVideo} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
-import {thumbnail, scale} from "@cloudinary/url-gen/actions/resize";
+import {thumbnail, fill} from "@cloudinary/url-gen/actions/resize";
 import {Adjust} from "@cloudinary/url-gen/actions/adjust"; // for contrast
 import {focusOn} from "@cloudinary/url-gen/qualifiers/gravity";
 import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
@@ -18,11 +18,19 @@ export default function App() {
   const cldBlur = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face()))).effect(blur().strength(800));
   const cldContrast = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face()))).adjust(Adjust.contrast().level(100));
 
+  const cldVideo = cld.video('climbing').resize(fill().width(150).height(150).gravity("auto"));
+  console.log(cldVideo.toURL());
+
   return (
-    <div className={"flex space-x-4"}>
+    <div>
+      <div className={"flex space-x-4"}>
         <AdvancedImage  alt="Sample" cldImg={cldImage} />
         <AdvancedImage  alt="Sample" cldImg={cldBlur} />
         <AdvancedImage  alt="Sample" cldImg={cldContrast} />
+      </div>
+      <div>
+        <AdvancedVideo controls cldVid={cldVideo} />
+      </div>
     </div>
   )
 }`
