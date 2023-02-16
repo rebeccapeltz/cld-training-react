@@ -14,10 +14,8 @@ export default function App() {
       cloudName: 'cloudinary-training'
     }
   }); 
-  const myImag = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face())));  // Crop the image.
   const cldImage = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face())));
   const cldBlur = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face()))).effect(blur().strength(800));
-//   const cldContrast = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face()))).adjust(contrast(level70());
   const cldContrast = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face()))).adjust(Adjust.contrast().level(100));
 
   return (
