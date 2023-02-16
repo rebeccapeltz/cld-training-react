@@ -14,7 +14,6 @@ import ResizeCropGravityPage from "./pages/ResizeCropGravity";
 import QualityPage from "./pages/QualityPage";
 import FormatPage from "./pages/FormatPage";
 import Format from "./pages/Format";
-import Effects from "./pages/Effects";
 import OptimizePage from "./pages/OptimizePage";
 import OverlayImage from "./pages/OverlayImage";
 import OverlayVideo from "./pages/OverlayVideo";
@@ -24,6 +23,7 @@ import UploadWidgetPage from "./pages/UploadWidget";
 import PadWithBackgroundPage from "./pages/PadWithBackground";
 import RenderingAdvancedImagePage from "./pages/RenderingAdvancedImage";
 import RenderingAdvancedVideoPage from "./pages/RenderingAdvancedVideo";
+import EffectsPage from "./pages/EffectsPage";
 
 
 function App() {
@@ -57,7 +57,7 @@ function App() {
             <Route path="/image" element={<Image />} />
             <Route path="/video" element={<Video />} />
             <Route path="/resize-scale" element={<ResizeScale />} />
-            <Route path="/Effects" element={<Effects />} />
+            <Route path="/effects" element={<EffectsPage />} />
             <Route path="/overlay-video" element={<OverlayVideo />} />
             <Route path="/overlay-image" element={<OverlayImage />} />
             <Route path="/overlay-text" element={<OverlayText />} />
