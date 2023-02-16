@@ -12,9 +12,10 @@ import Introduction from "./pages/Introduction";
 import UrlGen from "./pages/UrlGen";
 import ResizeCropGravityPage from "./pages/ResizeCropGravity";
 import QualityPage from "./pages/QualityPage";
+import FormatPage from "./pages/FormatPage";
 import Format from "./pages/Format";
 import Effects from "./pages/Effects";
-import Optimize from "./pages/Optimize";
+import OptimizePage from "./pages/OptimizePage";
 import OverlayImage from "./pages/OverlayImage";
 import OverlayVideo from "./pages/OverlayVideo";
 import OverlayText from "./pages/OverlayText";
@@ -42,8 +43,9 @@ function App() {
               element={<ResizeCropGravityPage />}
             />
             <Route path="/quality" element={<QualityPage />} />
+            <Route path="/format" element={<FormatPage />} />
             <Route path="/format" element={<Format />} />
-            <Route path="/optimize" element={<Optimize />} />
+            <Route path="/optimize" element={<OptimizePage />} />
             <Route path="advanced-image" element={<RenderingAdvancedImagePage />} />
             <Route path="advanced-video" element={<RenderingAdvancedVideoPage />} />
 

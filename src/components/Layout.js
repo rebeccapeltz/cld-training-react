@@ -76,7 +76,7 @@ export default function Layout() {
     },
     {
       href: "pad-with-background",
-      title: "Pad with Background❓",
+      title: "Pad with Background✅",
       divider: false,
     },
     {
@@ -86,12 +86,12 @@ export default function Layout() {
     },
     {
       href: "format",
-      title: "Format",
+      title: "Format✅❓",
       divider: false,
     },
     {
       href: "optimize",
-      title: "Optimize",
+      title: "Optimize✅❓",
       divider: false,
     },
     {

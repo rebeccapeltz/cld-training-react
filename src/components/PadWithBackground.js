@@ -8,29 +8,29 @@ import { color } from "@cloudinary/url-gen/qualifiers/background";
 export default function App() {
    
   const cld = new Cloudinary({ cloud: {cloudName: 'demo'}});
-  const myImage = cld.image('cld-sample').resize(pad().width(350).height(100).background(color("#FF0000")));
+  const cldImage = cld.image('cld-sample').resize(pad().width(350).height(200).background(color("auto")));
   return (
     <div>
-      <AdvancedImage cldImg={myImage} />
+      <AdvancedImage cldImg={cldImage} />
     </div>
   )
 }
 `;
-// const cloudinaryAdvancedVideo = `
-// import {AdvancedVideo} from '@cloudinary/react';
-// import {CloudinaryVideo} from "@cloudinary/url-gen";
-// import {scale} from '@cloudinary/url-gen/actions/resize';
+const cloudinaryAdvancedVideo = `import {AdvancedVideo} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+import {pad} from '@cloudinary/url-gen/actions/resize';
+import { color } from "@cloudinary/url-gen/qualifiers/background";
 
-// const video = new CloudinaryVideo('climbing',{cloudName:'cloudinary-training',analytics:false});
-// video.resize(scale().width(350));
-// export default function App() {
-//   return (
-//     <div className="App">
-//       <AdvancedVideo cldVid={video} height="250px" width="auto" controls cldPoster="auto" />
-//     </div>
-//   );
-// }
-// `
+const cld = new Cloudinary({ cloud: {cloudName: 'cloudinary-training'}});
+const cldVideo = cld.video('climbing').resize(pad().width(300).height(400).background(color("#ff0000")));
+export default function App() {
+  return (
+    <div className="App">
+      <AdvancedVideo cldVid={cldVideo} controls cldPoster="auto" />
+    </div>
+  );
+}
+`
 
 export default function PadWithBackground() {
   return (
@@ -60,14 +60,14 @@ export default function PadWithBackground() {
           showLineNumbers: true, // default - true
           showInlineErrors: true, // default - false
           wrapContent: true, // default - false
-          editorHeight: 500, // default - 300
+          editorHeight: 400, // default - 300
           autorun: false,
           recompileMode: "delayed", //default is immediate
           recompileDelay: 400,
           resizablePanels: true, //default
         }}
       />
-      {/* <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Scale Video</h3>
+       <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Scale Video</h3>
             <Sandpack
                 theme="dark"
                 template="react"
@@ -83,16 +83,16 @@ export default function PadWithBackground() {
                 options={{
                     showNavigator: true,
                     showTabs: true,
-                    showLineNumbers: false, // default - true
+                    showLineNumbers: true, // default - true
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 300, // default - 300
+                    editorHeight: 400, // default - 300
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
                     recompileDelay: 400,
                     resizablePanels: true, //default
                 }}
-            /> */}
+            />
     </div>
   );
 }
