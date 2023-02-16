@@ -1,6 +1,8 @@
 import UploadWidget from "../components/UploadWidget";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
+import docco from "react-syntax-highlighter/dist/esm/styles/hljs/docco";
+SyntaxHighlighter.registerLanguage("javascript", js);
 
 function UploadWidgetPage() {
   const codeString = `import "../App.css";
