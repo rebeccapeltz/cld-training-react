@@ -19,6 +19,9 @@ export default function App() {
   const cldContrast = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face()))).adjust(Adjust.contrast().level(100));
 
   const cldVideo = cld.video('climbing').resize(fill().width(150).height(150).gravity("auto"));
+  const cldVideoBlur = cld.video('climbing').resize(fill().width(150).height(150).gravity("auto")).effect(blur().strength(70));
+  const cldVideoContrast = cld.video('climbing').resize(fill().width(150).height(150).gravity("auto")).adjust(Adjust.contrast().level(100));
+
   console.log(cldVideo.toURL());
 
   return (
@@ -30,13 +33,14 @@ export default function App() {
       </div>
       <div>
         <AdvancedVideo controls cldVid={cldVideo} />
+        <AdvancedVideo controls cldVid={cldVideoBlur} />
+        <AdvancedVideo controls cldVid={cldVideoContrast} />
       </div>
     </div>
   )
 }`
 
-const multipleImages = `
-import {AdvancedImage} from '@cloudinary/react';
+const multipleImages = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 export default function App() {
   const cld = new Cloudinary({
@@ -128,13 +132,8 @@ export default function Effects() {
           "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-        Multiple Images
+        Image Only Effects
       </h3>
-      <p>
-        When you are rendering  multiple images in your component, it is more efficient to create a Cloudinary instance, 
-        which has an image method that will generate new CloudinaryImage objects for you.  You only have to specify the Cloud Name 
-        once when you create a Cloudinary instance.  When you create a new image, you specify the Public ID.
-      </p>
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
