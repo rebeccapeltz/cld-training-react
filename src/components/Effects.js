@@ -68,24 +68,37 @@ export default function App() {
     </div>
   )
 }`;
-// const multipleVideos = `import {AdvancedVideo} from '@cloudinary/react';
-// import {Cloudinary} from "@cloudinary/url-gen";
-// export default function App() {
-//   const cld = new Cloudinary({
-//     cloud: {
-//       cloudName: 'cloudinary-training'
-//     }
-//   });
-//   const cldVideo1 = cld.video('climbing');
-//   const cldVideo2 = cld.video('climbing');
-//   return (
-//     <div>
-//     <AdvancedVideo height="300px" width="auto" cldVid={cldVideo1} />
-//     <AdvancedVideo height="300px" width="auto" cldVid={cldVideo2} />
+const multipleVideos = `import {AdvancedVideo} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+import {fill} from "@cloudinary/url-gen/actions/resize";
+// import {Effect} from "@cloudinary/url-gen/effect";
+import { VideoEdit, trim, preview} from "@cloudinary/url-gen/actions/videoEdit";
 
-//     </div>
-//   )
-// }`;
+import {Effect} from "@cloudinary/url-gen/actions/effect";
+export default function App() {
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'cloudinary-training'
+    }
+  });
+  const cldVideo = cld.video('climbing').resize(fill().width(350).height(350).gravity("auto"));;
+  const cldVideoReverse = cld.video('climbing').resize(fill().width(350).height(350).gravity("auto")).effect(Effect.reverse());
+  const cldVideoBoomerang = cld.video('climbing').resize(fill().width(350).height(350).gravity("auto")).effect(Effect.boomerang());
+  const cldVideoPreview = cld.video('climbing').videoEdit(VideoEdit.preview()).resize(fill().width(350).height(350).gravity("auto"));
+
+  return (
+    <div>
+      <p> <a target="_blank" href={cldVideo.toURL()}>{cldVideo.toURL()}</a></p>
+      <AdvancedVideo controls cldVid={cldVideo} />
+      <p> <a target="_blank" href={cldVideoReverse.toURL()}>{cldVideoReverse.toURL()}</a></p>
+      <AdvancedVideo controls cldVid={cldVideoReverse} />
+      <p> <a target="_blank" href={cldVideoBoomerang.toURL()}>{cldVideoBoomerang.toURL()}</a></p>
+      <AdvancedVideo controls cldVid={cldVideoBoomerang} />
+      <p> <a target="_blank" href={cldVideoPreview.toURL()}>{cldVideoPreview.toURL()}</a></p>
+      <AdvancedVideo controls cldVid={cldVideoPreview} />
+    </div>
+  )
+}`;
 
 export default function Effects() {
   return (
@@ -141,7 +154,7 @@ export default function Effects() {
           "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-        Image Only Effects: Grayscale, Sepia, Black and White
+        Video Only Effects: Grayscale, Sepia, Black and White
       </h3>
       <Sandpack
         // You can change these examples!
@@ -166,6 +179,43 @@ export default function Effects() {
           showInlineErrors: true, // default - false
           wrapContent: true, // default - false
           editorHeight: 300, // default - 300
+          // editorWidthPercentage: 60, // default - 50
+          autorun: false,
+          recompileMode: "delayed", //default is immediate
+          recompileDelay: 300,
+          resizablePanels: true, //default
+        }}
+      />
+       <h3
+        className={
+          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+        }
+      >
+        Video Only Effects: Reverse, Boomerang, Preview
+      </h3>
+      <Sandpack
+        // You can change these examples!
+        // Try uncommenting any of these lines
+        theme="dark"
+        // theme="light"
+        // theme="auto"
+        template="react"
+        files={{
+          "/App.js": multipleVideos,
+        }}
+        customSetup={{
+          dependencies: {
+            "@cloudinary/react": "^1.9.0",
+            "@cloudinary/url-gen": "^1.8.7",
+          },
+        }}
+        options={{
+          showNavigator: true,
+          showTabs: true,
+          showLineNumbers: true, // default - true
+          showInlineErrors: true, // default - false
+          wrapContent: true, // default - false
+          editorHeight: 500, // default - 300
           // editorWidthPercentage: 60, // default - 50
           autorun: false,
           recompileMode: "delayed", //default is immediate
