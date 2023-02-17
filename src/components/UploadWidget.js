@@ -48,7 +48,7 @@ export default function UploadWidget() {
     <div>
       <h3
         className={
-          "font-medium leading-tight text-4xl mt-0 mb-2 text-white-600"
+          "font-sans leading-tight text-4xl mt-0 mb-2 text-white-600"
         }
       >
         Upload Widget
@@ -58,7 +58,7 @@ export default function UploadWidget() {
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <label
-              className="block text-cldblue font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="font-sans block text-cldblue font-bold md:text-right mb-1 md:mb-0 pr-4"
               htmlFor="inline-cloud-name"
             >
               Cloud Name
@@ -77,7 +77,7 @@ export default function UploadWidget() {
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <label
-              className="block text-cldblue font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="font-sans block text-cldblue font-bold md:text-right mb-1 md:mb-0 pr-4"
               htmlFor="inline-unsigned-preset"
             >
               Unsigned Preset
@@ -85,7 +85,7 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldlightblue leading-tight focus:outline-none focus:bg-white focus:border-cldblue-500"
+              className="font-sans bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldlightblue leading-tight focus:outline-none focus:bg-white focus:border-cldblue-500"
               id="inline-unsigned-preset"
               type="text"
               value={unsignedPreset}
@@ -98,7 +98,7 @@ export default function UploadWidget() {
           <div className="md:w-1/3"></div>
           <div className="md:w-2/3">
             <button
-              className="shadow bg-cldblue hover:bg-cldblue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              className="font-sans shadow bg-cldblue hover:bg-cldblue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
               type="button"
               onClick={uploadWidget}
             >

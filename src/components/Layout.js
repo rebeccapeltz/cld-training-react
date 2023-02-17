@@ -163,7 +163,7 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-cldgray text-clddarkblue sticky top-0 h-14 flex justify-center items-center font-semibold uppercase">
-        <h2 className="text-lg">
+        <h2 className="text-lg font-sans">
           {" "}
           Upload, Transform, Deliver with Cloudinary React SDK
         </h2>
