@@ -101,7 +101,7 @@ export default function Layout() {
     },
     {
       href: "effects",
-      title: "Effects",
+      title: "Effects✅",
       divider: false,
     },
     {
