@@ -2,7 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
   let activeClassName = "underline";
-  let dividerStyle = "bg-blue-500 text-white";
+  let dividerStyle = "font-bold bg-clddarkblue text-white";
 
   function styleTitle(isDivider) {
     if (isDivider) return dividerStyle
@@ -162,14 +162,14 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="bg-gray-200 text-black sticky top-0 h-14 flex justify-center items-center font-semibold uppercase">
+      <header className="bg-cldgray text-clddarkblue sticky top-0 h-14 flex justify-center items-center font-semibold uppercase">
         <h2 className="text-lg">
           {" "}
           Upload, Transform, Deliver with Cloudinary React SDK
         </h2>
       </header>
       <div className="flex flex-col md:flex-row flex-1">
-        <aside className="bg-gray-100 w-full md:w-60">
+        <aside className={"bg-cldgray text-clddarkblue w-full md:w-60"}>
           <nav>
             <ul>
               {testMenuItems.map(({ href, title, divider }) => (

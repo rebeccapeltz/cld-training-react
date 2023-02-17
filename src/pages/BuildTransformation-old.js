@@ -32,7 +32,7 @@ function TransformationBuilderPage() {
       </h1>
       <div className="collapse">
         <input type="checkbox" />
-        <div className="collapse-title text-xl font-medium text-blue-500 bg-black">Click for Experiment</div>
+        <div className="collapse-title text-xl font-medium text-cldblue-500 bg-black">Click for Experiment</div>
         <div className="collapse-content">
           <div>
             <p>

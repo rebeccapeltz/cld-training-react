@@ -73,7 +73,7 @@ function UploadWidgetPage() {
             </div>
             <div className="md:w-2/3">
               <input
-                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-cldblue-500"
                 id="inline-cloud-name"
                 type="text"
                 value={cloudName}
@@ -93,7 +93,7 @@ function UploadWidgetPage() {
             </div>
             <div className="md:w-2/3">
               <input
-                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+                className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-cldblue-500"
                 id="inline-unsigned-preset"
                 type="text"
                 value={unsignedPreset}
@@ -106,11 +106,11 @@ function UploadWidgetPage() {
             <div className="md:w-1/3"></div>
             <div className="md:w-2/3">
               <button
-                className="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                className="shadow bg-cldblue-500 hover:bg-cldblue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                 type="button"
                 onClick={uploadWidget}
               >
-                Upload Files
+                Upload File
               </button>
               <img src={uploadedImage} alt="uploaded using the upload widget" />
             </div>
@@ -123,10 +123,11 @@ function UploadWidgetPage() {
 
   return (
     <div>
-      <h1>Upload with <a style={{color:"black", "textDecoration":"underline"}} href="https://cloudinary.com/documentation/upload_widget#unsigned_uploads">Unsigned Preset</a></h1>
+      <h1 className={"font-medium leading-tight text-4xl mt-0 mb-2 text-white-600"}>Upload with Unsigned Preset</h1>
+      <p>Get more information on creating an <a style={{color:"clddarkblue", "textDecoration":"underline"}} href="https://cloudinary.com/documentation/upload_widget#unsigned_uploads">Unsigned Preset</a></p>
       <div className="collapse">
         <input type="checkbox" />
-        <div className="collapse-title text-xl font-medium text-blue-200 bg-black">
+        <div className="collapse-title text-xl font-medium text-white bg-cldblue">
           Click to view/hide code
         </div>
         <div className="collapse-content">

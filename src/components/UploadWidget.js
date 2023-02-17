@@ -58,7 +58,7 @@ export default function UploadWidget() {
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <label
-              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="block text-cldblue font-bold md:text-right mb-1 md:mb-0 pr-4"
               htmlFor="inline-cloud-name"
             >
               Cloud Name
@@ -66,7 +66,7 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+              className="bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldlightblue leading-tight focus:outline-none focus:bg-white focus:border-cldblue-500"
               id="inline-cloud-name"
               type="text"
               value={cloudName}
@@ -74,11 +74,10 @@ export default function UploadWidget() {
             />
           </div>
         </div>
-
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <label
-              className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="block text-cldblue font-bold md:text-right mb-1 md:mb-0 pr-4"
               htmlFor="inline-unsigned-preset"
             >
               Unsigned Preset
@@ -86,7 +85,7 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+              className="bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldlightblue leading-tight focus:outline-none focus:bg-white focus:border-cldblue-500"
               id="inline-unsigned-preset"
               type="text"
               value={unsignedPreset}
@@ -99,11 +98,11 @@ export default function UploadWidget() {
           <div className="md:w-1/3"></div>
           <div className="md:w-2/3">
             <button
-              className="shadow bg-blue-500 hover:bg-blue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              className="shadow bg-cldblue hover:bg-cldblue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
               type="button"
               onClick={uploadWidget}
             >
-              Upload Files
+              Upload File
             </button>
             <img src={uploadedImage} onLoad={(event) => event.target.style.display = 'inline-block'} onError={(event) => event.target.style.display = 'none'} alt="uploaded using the upload widget" />
           </div>
