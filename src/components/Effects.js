@@ -81,10 +81,11 @@ export default function App() {
       cloudName: 'cloudinary-training'
     }
   });
-  const cldVideo = cld.video('climbing').resize(fill().width(350).height(350).gravity("auto"));;
-  const cldVideoReverse = cld.video('climbing').resize(fill().width(350).height(350).gravity("auto")).effect(Effect.reverse());
-  const cldVideoBoomerang = cld.video('climbing').resize(fill().width(350).height(350).gravity("auto")).effect(Effect.boomerang());
-  const cldVideoPreview = cld.video('climbing').videoEdit(VideoEdit.preview()).resize(fill().width(350).height(350).gravity("auto"));
+  const cldVideo = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto"));;
+  const cldVideoReverse = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto")).effect(Effect.reverse());
+  const cldVideoBoomerang = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto")).effect(Effect.boomerang());
+  const cldVideoBarneysFirstCar = cld.video('video-trn/barneys-first-car');
+  const cldVideoPreview = cld.video('video-trn/barneys-first-car').videoEdit(VideoEdit.preview());
 
   return (
     <div>
@@ -94,6 +95,8 @@ export default function App() {
       <AdvancedVideo controls cldVid={cldVideoReverse} />
       <p> <a target="_blank" href={cldVideoBoomerang.toURL()}>{cldVideoBoomerang.toURL()}</a></p>
       <AdvancedVideo controls cldVid={cldVideoBoomerang} />
+      <p> <a target="_blank" href={cldVideoBarneysFirstCar.toURL()}>{cldVideoBarneysFirstCar.toURL()}</a></p>
+      <AdvancedVideo controls cldVid={cldVideoBarneysFirstCar} />
       <p> <a target="_blank" href={cldVideoPreview.toURL()}>{cldVideoPreview.toURL()}</a></p>
       <AdvancedVideo controls cldVid={cldVideoPreview} />
     </div>
