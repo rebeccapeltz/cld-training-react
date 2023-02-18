@@ -10,7 +10,7 @@ import {source} from "@cloudinary/url-gen/actions/overlay";
 import {Position} from "@cloudinary/url-gen/qualifiers/position";
 import {image} from "@cloudinary/url-gen/qualifiers/source";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
-// import { Adjust, brightness, opacity } from "@cloudinary/url-gen/actions/adjust";
+import { Adjust, brightness, opacity } from "@cloudinary/url-gen/actions/adjust";
 // import { relative} from "@cloudinary/url-gen/qualifiers/flag";
 
 
@@ -22,15 +22,20 @@ export default function App() {
   }); 
   const cldImage = cld.image('cld-sample');
   
-  cldImage.resize(fill().height(250).width(250).gravity("auto"))
+  cldImage
+  .resize(fill().height(250).width(250).gravity("auto"))
   .overlay(
     source(
-      image("logo-big")
-          .transformation(new Transformation()
-          .resize(scale().width(50).regionRelative()))
-          )
-         .position(new Position().gravity(compass('south_east')).offsetX(20).offsetY(20)) 
-      );
+      image("logo-big").transformation(
+        new Transformation()
+        .adjust(Adjust.opacity(50))
+        .adjust(Adjust.brightness().level(10))
+        .resize(scale().width(50).regionRelative())
+      )
+    ).position(
+      new Position().gravity(compass("south_east")).offsetX(20).offsetY(20)
+    )
+  );
 
   return (
     <div>
@@ -55,15 +60,17 @@ export default function App() {
   }); 
   const cldVideo = cld.video('wave');
   
-  cldVideo.resize(fill().height(250).width(250).gravity("auto"))
-  .overlay(
-    source(
-      image("cld-white-logo")
-          .transformation(new Transformation()
-          .resize(scale().width(50).regionRelative()))
-       )
-      .position(new Position().gravity(compass('north_east')).offsetX(20).offsetY(20)) 
-   );
+  cldVideo
+  .resize(fill().height(250).width(250).gravity("auto"))
+    .overlay(
+      source(
+        image("cld-white-logo").transformation(
+          new Transformation().resize(scale().width(50).regionRelative())
+        )
+      ).position(
+        new Position().gravity(compass("north_east")).offsetX(20).offsetY(20)
+      )
+    );
 
   return (
     <div className={"flex"}>
