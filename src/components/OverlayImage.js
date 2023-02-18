@@ -11,7 +11,6 @@ import {Position} from "@cloudinary/url-gen/qualifiers/position";
 import {image} from "@cloudinary/url-gen/qualifiers/source";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
 import { Adjust, brightness, opacity } from "@cloudinary/url-gen/actions/adjust";
-// import { relative} from "@cloudinary/url-gen/qualifiers/flag";
 
 
 export default function App() {
