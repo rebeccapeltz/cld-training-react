@@ -2,11 +2,11 @@ import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
   let activeClassName = "underline";
-  let dividerStyle = "font-bold bg-clddarkblue text-white";
+  let dividerStyle = "font-sans font-bold bg-clddarkblue text-white";
 
   function styleTitle(isDivider) {
     if (isDivider) return dividerStyle
-    else return ""
+    else return "font-sans"
   }
   const testMenuItems = [
     { href: "/", title: "Introduction" },
