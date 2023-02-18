@@ -111,7 +111,7 @@ export default function Layout() {
     },
     {
       href: "overlay-image",
-      title: "Overlay Image",
+      title: "Overlay Image✅",
       divider: false,
     },
     {

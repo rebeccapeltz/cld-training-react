@@ -15,7 +15,7 @@ import QualityPage from "./pages/QualityPage";
 import FormatPage from "./pages/FormatPage";
 import Format from "./pages/Format";
 import OptimizePage from "./pages/OptimizePage";
-import OverlayImage from "./pages/OverlayImage";
+import OverlayImagePage from "./pages/OverlayImagePage";
 import OverlayVideo from "./pages/OverlayVideo";
 import OverlayText from "./pages/OverlayText";
 import VideoOnly from "./pages/VideoOnly";
@@ -59,7 +59,7 @@ function App() {
             <Route path="/resize-scale" element={<ResizeScale />} />
             <Route path="/effects" element={<EffectsPage />} />
             <Route path="/overlay-video" element={<OverlayVideo />} />
-            <Route path="/overlay-image" element={<OverlayImage />} />
+            <Route path="/overlay-image" element={<OverlayImagePage />} />
             <Route path="/overlay-text" element={<OverlayText />} />
             <Route path="/video-only" element={<VideoOnly />} />
 
