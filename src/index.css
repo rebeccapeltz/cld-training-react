@@ -15,7 +15,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-<p class="font-sans font-bold bg-clddarkblue text-white">Transform</p>
 .code-container {
   background-color: "#0c163b";
   font-family: "Inter var";
