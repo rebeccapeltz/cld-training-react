@@ -111,19 +111,19 @@ export default function Layout() {
     },
     {
       href: "overlay-image",
-      title: "Overlay Image✅",
+      title: "Overlay with Image✅",
       divider: false,
     },
     {
       href: "overlay-text",
-      title: "Overlay Text✅",
+      title: "Overlay with Text✅",
       divider: false,
     },
-    {
-      href: "overlay-video",
-      title: "Overlay Video",
-      divider: false,
-    },
+    // {
+    //   href: "overlay-video",
+    //   title: "Overlay Video",
+    //   divider: false,
+    // },
     {
       href: "",
       title: "Asset Specific",

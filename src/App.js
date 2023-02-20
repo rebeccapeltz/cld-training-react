@@ -18,13 +18,14 @@ import OptimizePage from "./pages/OptimizePage";
 import OverlayImagePage from "./pages/OverlayImagePage";
 import OverlayTextPage from "./pages/OverlayTextPage";
 
-import OverlayVideo from "./pages/OverlayVideo";
 import VideoOnly from "./pages/VideoOnly";
 import UploadWidgetPage from "./pages/UploadWidget";
 import PadWithBackgroundPage from "./pages/PadWithBackground";
 import RenderingAdvancedImagePage from "./pages/RenderingAdvancedImage";
 import RenderingAdvancedVideoPage from "./pages/RenderingAdvancedVideo";
 import EffectsPage from "./pages/EffectsPage";
+import ImageOnlyPage from "./pages/ImageOnlyPage";
+import VideoOnlyPage from "./pages/VideoOnlyPage";
 
 
 function App() {
@@ -49,8 +50,6 @@ function App() {
             <Route path="/optimize" element={<OptimizePage />} />
             <Route path="advanced-image" element={<RenderingAdvancedImagePage />} />
             <Route path="advanced-video" element={<RenderingAdvancedVideoPage />} />
-
-
             <Route
               path="/adding-transformations"
               element={<AddingTransformationsPage />}
@@ -59,13 +58,16 @@ function App() {
             <Route path="/video" element={<Video />} />
             <Route path="/resize-scale" element={<ResizeScale />} />
             <Route path="/effects" element={<EffectsPage />} />
-            <Route path="/overlay-video" element={<OverlayVideo />} />
             <Route path="/overlay-image" element={<OverlayImagePage />} />
             <Route path="/overlay-text" element={<OverlayTextPage />} />
-            <Route path="/video-only" element={<VideoOnly />} />
 
             <Route path="/resize-scale" element={<ResizeScale />} />
             <Route path="/pad-with-background" element={<PadWithBackgroundPage />} />
+
+            <Route path="/image-only" element={<ImageOnlyPage />} />
+            <Route path="/video-only" element={<VideoOnlyPage />} />
+
+
 
             <Route path="/responsive" element={<Responsive />} />
             <Route path="/placeholder" element={<Placeholder />} />

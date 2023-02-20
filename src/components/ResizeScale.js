@@ -9,7 +9,7 @@ import {CloudinaryImage} from "@cloudinary/url-gen";
 import {scale} from '@cloudinary/url-gen/actions/resize';
 
 export default function App() {
-  const image = new CloudinaryImage('cld-sample',{cloudName:'demo',analytics:false});
+  const image = new CloudinaryImage('cld-sample',{cloudName:'demo'});
 
   image.resize(scale().width(350));
   return (
@@ -25,7 +25,7 @@ import {CloudinaryVideo} from "@cloudinary/url-gen";
 import {scale} from '@cloudinary/url-gen/actions/resize';
 
 
-const video = new CloudinaryVideo('climbing',{cloudName:'cloudinary-training',analytics:false});
+const video = new CloudinaryVideo('climbing',{cloudName:'cloudinary-training'});
 video.resize(scale().width(350));
 export default function App() {
   return (

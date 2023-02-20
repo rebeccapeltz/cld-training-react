@@ -7,7 +7,7 @@ import {CloudinaryVideo} from "@cloudinary/url-gen";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 
-const video = new CloudinaryVideo('climbing',{cloudName:'cloudinary-training',analytics:false});
+const video = new CloudinaryVideo('climbing',{cloudName:'cloudinary-training'});
 video.resize(fill().width(400).height(400).gravity(autoGravity()));
 export default function App() {
   return (
@@ -25,7 +25,7 @@ import { crop } from "@cloudinary/url-gen/actions/resize";
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 
 export default function App() {
-  const image = new CloudinaryImage('cld-sample',{cloudName:'demo',analytics:false});
+  const image = new CloudinaryImage('cld-sample',{cloudName:'demo'});
 
   image.resize(crop().width(400).height(400).gravity(autoGravity()));
   return (

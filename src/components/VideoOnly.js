@@ -34,7 +34,7 @@ export default function App() {
 }
 `
 
-export default function CldBuildVideo() {
+export default function VideoOnly() {
 
     return (
         <div className="code-container">
