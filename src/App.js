@@ -18,7 +18,6 @@ import OptimizePage from "./pages/OptimizePage";
 import OverlayImagePage from "./pages/OverlayImagePage";
 import OverlayTextPage from "./pages/OverlayTextPage";
 
-import VideoOnly from "./pages/VideoOnly";
 import UploadWidgetPage from "./pages/UploadWidget";
 import PadWithBackgroundPage from "./pages/PadWithBackground";
 import RenderingAdvancedImagePage from "./pages/RenderingAdvancedImage";
