@@ -159,14 +159,13 @@ export default function Layout() {
   <li>
     <NavLink to="/">Home</NavLink>
   </li>;
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="bg-cldgray text-clddarkblue sticky top-0 h-14 flex justify-center items-center font-semibold uppercase">
-        <h2 className="text-lg font-sans">
+    <div className="bg-clddarkblue min-h-screen flex flex-col">
+      <header className="bg-cldgray sticky top-0 h-14 flex justify-center items-center font-semibold uppercase">
+        <div className="text-lg font-sans text-clddarkblue">
           {" "}
           Upload, Transform, Deliver with Cloudinary React SDK
-        </h2>
+        </div>
       </header>
       <div className="flex flex-col md:flex-row flex-1">
         <aside className={"bg-cldgray text-clddarkblue w-full md:w-60"}>
