@@ -1,17 +1,15 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-
 const image = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {Transformation} from "@cloudinary/url-gen";
-import {scale, fill} from "@cloudinary/url-gen/actions/resize";
+import {fill} from "@cloudinary/url-gen/actions/resize";
 import {source} from "@cloudinary/url-gen/actions/overlay";
+import {text} from "@cloudinary/url-gen/qualifiers/source";
+import {TextStyle} from "@cloudinary/url-gen/qualifiers/textStyle";
 import {Position} from "@cloudinary/url-gen/qualifiers/position";
-import {image} from "@cloudinary/url-gen/qualifiers/source";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
-import { Adjust, brightness, opacity } from "@cloudinary/url-gen/actions/adjust";
-
 
 export default function App() {
   const cld = new Cloudinary({
@@ -20,22 +18,18 @@ export default function App() {
     }
   }); 
   const cldImage = cld.image('cld-sample');
-  
+
   cldImage
   .resize(fill().height(250).width(250).gravity("auto"))
   .overlay(
     source(
-      image("logo-big").transformation(
-        new Transformation()
-        .adjust(Adjust.opacity(50))
-        .adjust(Adjust.brightness().level(10))
-        .resize(scale().width(50).regionRelative())
-      )
+      text("Sprinkles and Spots", new TextStyle("Arial", 20))
+      .textColor("white")
+      .backgroundColor("#0c163b")
     ).position(
-      new Position().gravity(compass("south_east")).offsetX(20).offsetY(20)
+      new Position().gravity(compass("south")).offsetY(20)
     )
   );
-
   return (
     <div>
       <AdvancedImage alt="Sample Image" cldImg={cldImage} />
@@ -47,28 +41,26 @@ import {Cloudinary} from "@cloudinary/url-gen";
 import {Transformation} from "@cloudinary/url-gen";
 import {scale, fill} from "@cloudinary/url-gen/actions/resize";
 import {source} from "@cloudinary/url-gen/actions/overlay";
+import {text} from "@cloudinary/url-gen/qualifiers/source";
+import {TextStyle} from "@cloudinary/url-gen/qualifiers/textStyle";
 import {Position } from "@cloudinary/url-gen/qualifiers/position";
-import {image} from "@cloudinary/url-gen/qualifiers/source";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
 
 export default function App() {
-  const cld = new Cloudinary({
-    cloud: {
-      cloudName: 'cloudinary-training'
-    }
+  const cld = new Cloudinary({cloud: {cloudName: 'picturecloud7'}
   }); 
-  const cldVideo = cld.video('wave');
+  const cldVideo = cld.video('long-wave');
   
   cldVideo
   .resize(fill().height(250).width(250).gravity("auto"))
     .overlay(
-      source(
-        image("cld-white-logo").transformation(
-          new Transformation().resize(scale().width(50).regionRelative())
-        )
-      ).position(
-        new Position().gravity(compass("north_west")).offsetX(20).offsetY(20)
-      )
+        source(
+            text(" Long Wave ", new TextStyle("Pacifico", 30))
+            .textColor("gold")
+            .backgroundColor("#0c163b")
+            ).position(
+            new Position().gravity(compass("north")).offsetY(10)
+            )
     );
 
   return (
@@ -78,26 +70,19 @@ export default function App() {
   )
 }`;
 
-export default function OverlayImage() {
+export default function OverlayText() {
   return (
     <div className="code-container">
-      {/* <h2
-        className={
-          "font-medium leading-tight text-4xl mt-0 mb-2 text-white-600"
-        }
-      >
-        ImageOverlay
-      </h2> */}
 
-      <h3
+   <h3
         className={
           "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-       Image Overlaid on Image
+        Text Overlaid on Image
       </h3>
-      <p className={"font-sans"}>        
-        Look for the watermark in the lower right or south east corner of the image.
+      <p className="font-sans">
+        Look for the message in the central, lower area the image.
       </p>
       <Sandpack
         // You can change these examples!
@@ -129,16 +114,17 @@ export default function OverlayImage() {
           resizablePanels: true, //default
         }}
       />
-      
+
       <h3
         className={
           "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-       Image Overlaid on Video
+        Text Overlaid on Video
       </h3>
       <p className={"font-sans"}>
-      Look for the watermark in the upper left or north west corner of the video.
+        Look for the watermark in the central, upper area of the
+        video.
       </p>
       <Sandpack
         // You can change these examples!

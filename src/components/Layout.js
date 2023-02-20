@@ -2,14 +2,14 @@ import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
   let activeClassName = "underline";
-  let dividerStyle = "font-sans font-bold bg-clddarkblue text-white";
+  let dividerStyle = "font-sans font-bold bg-clddarkblue text-white pl-1";
+  let titleStyle = "font-sans text-sm font-semibold bg-cldgray text-black pl-4"
 
   function styleTitle(isDivider) {
     if (isDivider) return dividerStyle
-    else return "font-sans"
+    else return titleStyle
   }
   const testMenuItems = [
-    { href: "/", title: "Introduction" },
     {
       href: "/",
       title: "Upload",
@@ -116,12 +116,22 @@ export default function Layout() {
     },
     {
       href: "overlay-text",
-      title: "Overlay Text",
+      title: "Overlay Text✅",
       divider: false,
     },
     {
       href: "overlay-video",
       title: "Overlay Video",
+      divider: false,
+    },
+    {
+      href: "",
+      title: "Asset Specific",
+      divider: true,
+    },
+    {
+      href: "image-only",
+      title: "Image Only Transformations",
       divider: false,
     },
     {
@@ -172,12 +182,11 @@ export default function Layout() {
           <nav>
             <ul>
               {testMenuItems.map(({ href, title, divider }) => (
-                <li className="m-1" key={title}>
+                <li className="m-0.25" key={title}>
                   <NavLink
                     to={href}
                     className={({ isActive, href, divider }) =>
-                      isActive ? activeClassName : undefined
-                    
+                      isActive ? activeClassName : undefined         
                     }
                   >
                     <p className={styleTitle(divider)}>{title}</p>
@@ -190,7 +199,6 @@ export default function Layout() {
         <main className={"flex-1 mr-2 ml-2"}>
           <Outlet />
         </main>
-        {/* <main className='flex-1'>{children}</main> */}
       </div>
     </div>
   );
