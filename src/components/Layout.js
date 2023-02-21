@@ -119,11 +119,6 @@ export default function Layout() {
       title: "Overlay with Text✅",
       divider: false,
     },
-    // {
-    //   href: "overlay-video",
-    //   title: "Overlay Video",
-    //   divider: false,
-    // },
     {
       href: "",
       title: "Asset Specific",
@@ -131,7 +126,7 @@ export default function Layout() {
     },
     {
       href: "image-only",
-      title: "Image Only Transformations",
+      title: "Image Only Transformations✅",
       divider: false,
     },
     {
