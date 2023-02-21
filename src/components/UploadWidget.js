@@ -58,7 +58,7 @@ export default function UploadWidget() {
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <label
-              className="font-sans block text-cldblue font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="font-sans block text-white font-bold md:text-right mb-1 md:mb-0 pr-4"
               htmlFor="inline-cloud-name"
             >
               Cloud Name
@@ -77,7 +77,7 @@ export default function UploadWidget() {
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
             <label
-              className="font-sans block text-cldblue font-bold md:text-right mb-1 md:mb-0 pr-4"
+              className="font-sans block text-white font-bold md:text-right mb-1 md:mb-0 pr-4"
               htmlFor="inline-unsigned-preset"
             >
               Unsigned Preset
