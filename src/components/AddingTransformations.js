@@ -59,11 +59,11 @@ export default function AddingTransformations() {
       >
         Adding Transformation to An Image Instance
       </h2>
-      <p className="mt-1 mb-1">
+      <p className="font-sans mt-1 mb-1">
         Both new <span className={"font-bold"}>Cloudinary.image()</span> and{" "}
         <span className={"font-bold"}>new CloudinaryImage()</span> instantiate
         objects that are mutable. While there is no way to remove a
-        transformation from an image instance,if you modify the instance
+        transformation from an image instance, if you modify the instance
         by adding a url-gen action, you will see all renderings of your instance
         updated with the new transformation added on to it. If you want to
         create a new transformation without affecting or adding to an existing

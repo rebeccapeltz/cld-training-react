@@ -46,8 +46,8 @@ const lazyload = `
 function LazyloadPlugin() {
     return (
         <div className="code-container">
-            <p>This code has <span style={{color: "white"}}>strict mode turned off</span>.  With strict mode enable, you will see the images render twice in development mode.</p>
-            <p>Read more about <a style={{color:"white", "textDecoration":"underline"}} href="https://beta.reactjs.org/reference/react/StrictMode" rel="noreferrer" target="_blank">React 18 Strict Mode</a> and re-rendering in Development.</p>
+            <p className="font-sans">This code has <span style={{color: "white"}}>strict mode turned off</span>.  With strict mode enabled, you will see the images render twice in development mode.</p>
+            <p className="font-sans">Read more about <a style={{color:"white", "textDecoration":"underline"}} href="https://beta.reactjs.org/reference/react/StrictMode" rel="noreferrer" target="_blank">React 18 Strict Mode</a> and re-rendering in Development.</p>
             <Sandpack
                 theme="dark"
                 template="react"

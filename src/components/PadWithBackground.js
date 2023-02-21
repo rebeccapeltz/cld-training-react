@@ -8,7 +8,9 @@ import { color } from "@cloudinary/url-gen/qualifiers/background";
 export default function App() {
    
   const cld = new Cloudinary({ cloud: {cloudName: 'demo'}});
-  const cldImage = cld.image('cld-sample').resize(pad().width(350).height(200).background(color("auto")));
+  const cldImage = cld.image('cld-sample')
+      .resize(pad().width(350).height(200)
+      .background(color("auto")));
   return (
     <div>
       <AdvancedImage cldImg={cldImage} />
@@ -40,7 +42,7 @@ export default function PadWithBackground() {
           "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }
       >
-        Pad with Backgroud
+        Pad Image with Auto Background 
       </h3>
       <Sandpack
         theme="dark"
@@ -67,7 +69,7 @@ export default function PadWithBackground() {
           resizablePanels: true, //default
         }}
       />
-       <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Scale Video</h3>
+       <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Pad Video with Background Auto</h3>
             <Sandpack
                 theme="dark"
                 template="react"

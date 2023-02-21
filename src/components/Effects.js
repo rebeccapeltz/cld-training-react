@@ -121,7 +121,7 @@ export default function Effects() {
       >
         Apply Effects to both Image and Video: blur and contrast
       </h3>
-      <p>Apply blur and contrast effects to Images and Videos</p>
+      <p className="font-sans">Apply blur and contrast effects to Images and Videos</p>
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
