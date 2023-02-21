@@ -1,10 +1,12 @@
 import React from "react";
+import VideoOnly from "../components/VideoOnly";
 
 function VideoOnly() {
   return (
-    <div>
-      <h1>This is the video only page</h1>
-    </div>
+    <div className={'mr-2'}>
+        <h1 className={'font-medium leading-tight text-4xl mt-0 mb-2 text-white-600'}>Video Only Transformations</h1>
+        <VideoOnly />
+      </div>
   );
 }
 

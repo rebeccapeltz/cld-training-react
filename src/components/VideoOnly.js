@@ -1,44 +1,61 @@
 import '../App.css';
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-const cloudinaryAdvancedVideo = `
-import {AdvancedVideo} from '@cloudinary/react';
-import {CloudinaryVideo} from "@cloudinary/url-gen";
-const video = new CloudinaryVideo('elephants',{cloudName:'demo'});
+const cloudinaryAdvancedVideo = `import {AdvancedVideo,AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+import {scale, fill} from "@cloudinary/url-gen/actions/resize";
+import { VideoEdit, trim} from "@cloudinary/url-gen/actions/videoEdit";
+
+const cld = new Cloudinary({
+cloud: {
+    cloudName: 'cloudinary-training'
+}
+});
+
+// show the first 20 seconds by ending at 20 seconds
+const first20Seconds = cld.video('video-trn/barneys-first-car');
+first20Seconds
+    .videoEdit(VideoEdit.trim().endOffset("20.0"))  
+    .resize(fill().width(400).height(300))
+
+// show the last 20 seconds by starting at 
+let start = ((23*60 + 51) - 20) + "";
+const last20Seconds = cld.video('video-trn/barneys-first-car');
+last20Seconds
+    .videoEdit(VideoEdit.trim().startOffset(start))
+    .resize(fill().width(400).height(300));
+
+// show 20 seconds at about 17 minutes seconds
+const cldVideoInTheMiddle = cld.video('video-trn/barneys-first-car');
+cldVideoInTheMiddle
+    .videoEdit(VideoEdit.trim().startOffset("1000.0").duration("20.0"))
+    .resize(fill().width(400).height(300));
+console.log("url",cldVideoInTheMiddle.toURL());
+
+// create an image from a video frame
+const imageFromFrame = cld.video('video-trn/barneys-first-car')
+    .resize(fill().width(400).height(300))
+    .videoEdit(VideoEdit.trim().startOffset("10.0"))
+    .format("jpg");
+
 export default function App() {
   return (
     <div className="App">
-      <AdvancedVideo cldVid={video} style={{width:"auto", maxHeight: "300px"}} controls cldPoster="auto" />
+      <AdvancedVideo cldVid={first20Seconds} controls />
+      <AdvancedVideo cldVid={last20Seconds} controls />
+      <AdvancedVideo cldVid={cldVideoInTheMiddle} controls />
+      <AdvancedImage cldImg={imageFromFrame} />
     </div>
   );
-}
-`
+}`
 
-const cloudinaryVideoURL = `
-import {AdvancedVideo} from '@cloudinary/react';
-import {CloudinaryVideo} from "@cloudinary/url-gen";
-import {format} from "@cloudinary/url-gen/actions/delivery";
-const video = new CloudinaryVideo('elephants',{cloudName:'demo'});
-const videoURL = video.toURL();
-const posterURL = video.format('jpg').toURL();
-console.log(videoURL);
-export default function App() {
-  return (
-    <div className="App">
-        <video style={{width:"auto", height:"300px"}} controls poster={posterURL}>
-            <source src={videoURL} type="video/mp4" />
-            Your browser does not support the video tag.
-        </video>    
-  </div>
-  );
-}
-`
 
 export default function VideoOnly() {
 
     return (
         <div className="code-container">
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Advanced Video</h3>
+            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Video Editing: Start Offset, End Offset, Duration</h3>
+            <p className={'font-sans'}>Credit: <a href="https://archive.org/details/Andy_Griffith_Barneys_First_Car" rel="noreferrer" target="_blank">Barney's First Car </a></p>
             <Sandpack
                 theme="dark"
                 template="react"
@@ -54,42 +71,17 @@ export default function VideoOnly() {
                 options={{
                     showNavigator: true,
                     showTabs: true,
-                    showLineNumbers: false, // default - true
+                    showLineNumbers: true, // default - true
                     showInlineErrors: true, // default - false
                     wrapContent: true, // default - false
-                    editorHeight: 350, // default - 300
+                    editorHeight: 500, // default - 300
                     autorun: false,
                     recompileMode: "delayed", //default is immediate
                     recompileDelay: 400,
                     resizablePanels: true, //default
                 }}
             />
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Video URL</h3>
-            <Sandpack
-                theme="dark"
-                template="react"
-                files={{
-                    "/App.js": cloudinaryVideoURL,
-                }}
-                customSetup={{
-                    dependencies: {
-                        "@cloudinary/react": "^1.9.0",
-                        "@cloudinary/url-gen": "^1.8.7",
-                    },
-                }}
-                options={{
-                    showNavigator: true,
-                    showTabs: true,
-                    showLineNumbers: false, // default - true
-                    showInlineErrors: true, // default - false
-                    wrapContent: true, // default - false
-                    editorHeight: 350, // default - 300
-                    autorun: false,
-                    recompileMode: "delayed", //default is immediate
-                    recompileDelay: 400,
-                    resizablePanels: true, //default
-                }}
-            />
+          
         </div>
     )
 }
