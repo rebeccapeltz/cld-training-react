@@ -46,7 +46,7 @@ export default function Quality() {
     <div className="code-container">
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Using Quality with Images
@@ -83,7 +83,7 @@ export default function Quality() {
       />
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Using Format with Video

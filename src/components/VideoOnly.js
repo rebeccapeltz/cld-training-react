@@ -54,12 +54,12 @@ export default function VideoOnly() {
     <div className="code-container">
       <h2
        className={
-        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
       }
       >
         Video Only Transformations
       </h2>{" "}
-      <p className={"font-sans text-white underline"}>
+      <p className={"font-sans text-clddarkblue underline"}>
         Credit:{" "}
         <a
           href="https://archive.org/details/Andy_Griffith_Barneys_First_Car"

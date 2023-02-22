@@ -55,7 +55,7 @@ export default function App() {
   const cldImage = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face"));
   const cldGrayScale = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.grayscale());
   const cldSepia = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.sepia());
-  const cldBlackWhite = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.blackwhite());
+  const cldBlackclddarkblue = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.blackclddarkblue());
 
 
   return (
@@ -63,7 +63,7 @@ export default function App() {
       <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldImage} />
       <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldGrayScale} />
       <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldSepia} />
-      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldBlackWhite} />
+      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldBlackclddarkblue} />
 
     </div>
   )
@@ -108,19 +108,19 @@ export default function Effects() {
     <div className="code-container">
       <h2
        className={
-        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
       }
       >
         Effects
       </h2>{" "}
       <h3
        className={
-        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
       }
       >
         Apply Effects to both Image and Video: blur and contrast
       </h3>
-      <p className="font-sans text-white">
+      <p className="font-sans text-clddarkblue">
         There are many effects! In a URL they all begin with{" "}
         <span class="font-bold">e_</span>. Some effects can be are exclusive to
         either images for video, while many can be used on both image and video.
@@ -160,10 +160,10 @@ export default function Effects() {
       />
       <h3
        className={
-        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
       }
       >
-        Video Only Effects: Grayscale, Sepia, Black and White
+        Video Only Effects: Grayscale, Sepia, Black and clddarkblue
       </h3>
       <Sandpack
         // You can change these examples!
@@ -197,7 +197,7 @@ export default function Effects() {
       />
       <h3
         className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Video Only Effects: Reverse, Boomerang, Preview

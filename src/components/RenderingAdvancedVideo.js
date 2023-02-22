@@ -36,25 +36,25 @@ export default function RenderingAdvancedVideo() {
     <div className="code-container">
       <h2
        className={
-        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
       }
       >
         AdvancedVideo: Deliver Video Elements
       </h2>
-      <p className={"font-sans mt-1 mb-1 text-white"}>All Cloudinary assets are delivered via CDN.  This is a big step in optimization. The AdvancedVideo component
+      <p className={"font-sans mt-1 mb-1 text-clddarkblue"}>All Cloudinary assets are delivered via CDN.  This is a big step in optimization. The AdvancedVideo component
         creates an HTML5 video elements.  You can include HTML5 video attributes such as control, to add controls to the video.  You only 
         need to specify a Cloudinary Cloud Name and Public ID to create an video object.  Once you have that object, you can 
         hand it off to the AdvancedVideo component to render it.  </p>
 
       <h3
         className={
-          "font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Single Video
       </h3>
 
-      <p className={"font-sans mt-1 mb-1 text-white"}>
+      <p className={"font-sans mt-1 mb-1 text-clddarkblue"}>
       When you are rendering just a single video in your component, you can
         use "CloudinaryVideo" and supply both Cloud Name and Public ID.
       </p>
@@ -91,12 +91,12 @@ export default function RenderingAdvancedVideo() {
       />
       <h3
         className={
-          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Multiple Videos
       </h3>
-      <p  className={"font-sans mt-1 mb-1 text-white"}>
+      <p  className={"font-sans mt-1 mb-1 text-clddarkblue"}>
         When you are rendering  multiple videos in your component, it is more efficient to create a Cloudinary instance, 
         which has a video method that will generate new CloudinaryVideo objects for you.  You only have to specify the Cloud Name 
         once when you create a Cloudinary instance.  When you create a new video, you specify the Public ID.

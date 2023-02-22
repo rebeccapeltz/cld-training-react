@@ -82,12 +82,12 @@ export default function OverlayImage() {
     <div className="code-container">
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Image Overlaid on Image
       </h3>{" "}
-      <p className={"font-sans text-white"}>
+      <p className={"font-sans text-clddarkblue"}>
         Look for the watermark in the lower right or south east corner of the
         image.
       </p>
@@ -123,12 +123,12 @@ export default function OverlayImage() {
       />
       <h2
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Text Overlaid on Video
       </h2>{" "}
-      <p className={"font-sans white"}>
+      <p className={"font-sans clddarkblue"}>
         Look for the watermark in the upper left or north west corner of the
         video.
       </p>

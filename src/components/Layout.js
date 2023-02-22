@@ -163,7 +163,7 @@ export default function Layout() {
 
 
   return (
-    <div className="bg-clddarkblue min-h-screen flex flex-col">
+    <div className="bg-cldgray min-h-screen flex flex-col">
       <header className="bg-cldgray sticky top-0 h-14 flex justify-center items-center font-semibold uppercase">
         <div className="text-lg font-sans text-clddarkblue">
           {" "}

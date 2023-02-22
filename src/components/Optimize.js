@@ -49,14 +49,14 @@ export default function Format() {
   return (
     <div className="code-container">
       <h2 className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
         }>
         Optimize: "Auto Everything"
       </h2>
 
       <h3
        className={
-        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
       }
       >
         Crop with Gravity Auto, Format Auto, and Quality Auto
@@ -93,7 +93,7 @@ export default function Format() {
       />
       <h3
        className={
-        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
       }
       >
         Optimize Video with Crop, Auto Gravity, Auto Format and Auto Quality

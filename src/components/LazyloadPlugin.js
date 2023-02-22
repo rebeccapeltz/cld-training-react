@@ -47,28 +47,28 @@ function LazyloadPlugin() {
     <div className="code-container">
       <h2
       className={
-        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
       }
       >
         Lazyload Plugin
       </h2>
       <h3
        className={
-        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
       }
       >
         Scroll down to see images lazyload
       </h3>
-      <p className="font-sans text-white">
+      <p className="font-sans text-clddarkblue">
         This code has{" "}
         <span className="font-bold">strict mode turned off</span>. With
         strict mode enabled, you will see the images render twice in development
         mode.
       </p>
-      <p className="font-sans text-white">
+      <p className="font-sans text-clddarkblue">
         Read more about{" "}
         <a
-          style={{ color: "white", textDecoration: "underline" }}
+          className="font sans text-clddarkblue underline"
           href="https://beta.reactjs.org/reference/react/StrictMode"
           rel="noreferrer"
           target="_blank"

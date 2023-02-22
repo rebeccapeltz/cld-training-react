@@ -54,21 +54,21 @@ export default function URLGenComponent() {
     <div className="code-container">
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Image URL Generator
       </h3>
-      <p className={"font-sans mt-1 mb-1 text-white"}>
+      <p className={"font-sans mt-1 mb-1 text-clddarblue"}>
         The URL Generator is available as an npm package. It provides three
         classes that can be used to configure and generate image and video URLs
         and elements:{" "}
-        <span className={"font-bold text-cldlightblue"}>
+        <span className={"font-bold text-clddarkblue"}>
           {" "}
           Cloudinary, CloudinaryImage, and CloudinaryVideo.
         </span>
       </p>
-      <p className={"font-sans mt-1 mb-1 text-white"}>
+      <p className={"font-sans mt-1 mb-1 text-clddarkblue"}>
         You need to supply your Cloudinary{" "}
         <span className={"font-bold"}>cloud name</span> and an asset{" "}
         <span className={"font-bold"}> public id</span> to instantiate an asset.
@@ -77,7 +77,7 @@ export default function URLGenComponent() {
         need the URL, you can call the toURL() function to generate just the
         URL.
       </p>
-      <p className={"font-sans mt-1 mb-1 text-white"}>
+      <p className={"font-sans mt-1 mb-1 text-clddarkblue"}>
         See how to generate URLs to use with HTML5 Image and Video Elements.
       </p>
 
@@ -113,7 +113,7 @@ export default function URLGenComponent() {
       />
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Video URL Generator
