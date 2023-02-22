@@ -1,7 +1,11 @@
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import js from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
+import xml from "react-syntax-highlighter/dist/esm/languages/hljs/xml";
+
 import docco from "react-syntax-highlighter/dist/esm/styles/hljs/docco";
 SyntaxHighlighter.registerLanguage("javascript", js);
+SyntaxHighlighter.registerLanguage('html', xml);
+
 export default function Experiment(props) {
 //   const experimentTitle = 'Experiment by creating a second AdvancedImage that uses the same Image variable.';
 //   const instructions = [
