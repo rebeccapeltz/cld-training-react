@@ -17,7 +17,7 @@ export default function Layout() {
     },
     {
       href: "/",
-      title: "Upload Widget✅",
+      title: "Upload Widget",
       divider: false,
     },
     {
@@ -27,7 +27,7 @@ export default function Layout() {
     },
     {
       href: "/url-gen",
-      title: "URL Generate✅",
+      title: "URL Generate",
       divider: false,
     },
     {
@@ -37,18 +37,18 @@ export default function Layout() {
     },
     {
       href: "/advanced-image",
-      title: "Advanced Image✅",
+      title: "Advanced Image",
       divider: false,
     },
     {
       href: "/advanced-video",
-      title: "Advanced Video✅",
+      title: "Advanced Video",
       divider: false,
     },
 
     {
       href: "/adding-transformations",
-      title: "Adding Transformations✅",
+      title: "Adding Transformations",
       divider: false,
     },
     {
@@ -66,42 +66,42 @@ export default function Layout() {
     // },
     {
       href: "resize-scale",
-      title: "Resize with Scale✅",
+      title: "Resize with Scale",
       divider: false,
     },
     {
       href: "resize-crop-gravity",
-      title: "Resize with Crop/Gravity✅",
+      title: "Resize with Crop/Gravity",
       divider: false,
     },
     {
       href: "pad-with-background",
-      title: "Pad with Background✅",
+      title: "Pad with Background",
       divider: false,
     },
     {
       href: "quality",
-      title: "Quality✅",
+      title: "Quality",
       divider: false,
     },
     {
       href: "format",
-      title: "Format✅❓",
+      title: "Format❓",
       divider: false,
     },
     {
       href: "optimize",
-      title: "Optimize✅❓",
+      title: "Optimize❓",
       divider: false,
     },
     {
       href: "",
-      title: "Effects and Overlays",
+      title: "Effects",
       divider: true,
     },
     {
       href: "effects",
-      title: "Effects✅",
+      title: "Effects",
       divider: false,
     },
     {
@@ -111,12 +111,12 @@ export default function Layout() {
     },
     {
       href: "overlay-image",
-      title: "Overlay with Image✅",
+      title: "Overlay with Image",
       divider: false,
     },
     {
       href: "overlay-text",
-      title: "Overlay with Text✅",
+      title: "Overlay with Text",
       divider: false,
     },
     {
@@ -126,12 +126,12 @@ export default function Layout() {
     },
     {
       href: "image-only",
-      title: "Image Only Transformations✅",
+      title: "Image Only Transformations",
       divider: false,
     },
     {
       href: "video-only",
-      title: "Video Only Transformations✅",
+      title: "Video Only Transformations",
       divider: false,
     },
     {
@@ -141,22 +141,22 @@ export default function Layout() {
     },
     {
       href: "lazyload",
-      title: "Lazyload Plugin✅",
+      title: "Lazyload Plugin",
       divider: false,
     },
     {
       href: "placeholder",
-      title: "Placeholder Plugin✅",
+      title: "Placeholder Plugin",
       divider: false,
     },
     {
       href: "responsive",
-      title: "Responsive Plugin✅",
+      title: "Responsive Plugin",
       divider: false,
     },
     {
       href: "accessibility",
-      title: "Accessibility Plugin✅",
+      title: "Accessibility Plugin",
       divider: false,
     },
   ];
@@ -175,7 +175,7 @@ export default function Layout() {
           <nav>
             <ul>
               {testMenuItems.map(({ href, title, divider }) => (
-                <li className="m-0.25" key={title}>
+                <li className="m-1" key={title}>
                   <NavLink
                     to={href}
                     className={({ isActive, href, divider }) =>
