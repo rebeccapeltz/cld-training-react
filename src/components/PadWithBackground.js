@@ -6,7 +6,6 @@ import {Cloudinary} from "@cloudinary/url-gen";
 import {pad} from '@cloudinary/url-gen/actions/resize';
 import { color } from "@cloudinary/url-gen/qualifiers/background";
 export default function App() {
-   
   const cld = new Cloudinary({ cloud: {cloudName: 'demo'}});
   const cldImage = cld.image('cld-sample')
       .resize(pad().width(350).height(200)
@@ -32,18 +31,21 @@ export default function App() {
     </div>
   );
 }
-`
-
+`;
 export default function PadWithBackground() {
   return (
     <div className="code-container">
       <h3
         className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
         }
       >
-        Pad Image with Auto Background 
+        Pad Images with Background
       </h3>
+      <p className={"font-sans mt-1 mb-1 text-white"}>
+        You can assign a color or use auto to use the predominant color in the
+        image.
+      </p>
       <Sandpack
         theme="dark"
         template="react"
@@ -69,32 +71,39 @@ export default function PadWithBackground() {
           resizablePanels: true, //default
         }}
       />
-       <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Pad Video with Background Auto</h3>
-            <Sandpack
-                theme="dark"
-                template="react"
-                files={{
-                    "/App.js": cloudinaryAdvancedVideo,
-                }}
-                customSetup={{
-                    dependencies: {
-                        "@cloudinary/react": "^1.9.0",
-                        "@cloudinary/url-gen": "^1.8.7",
-                    },
-                }}
-                options={{
-                    showNavigator: true,
-                    showTabs: true,
-                    showLineNumbers: true, // default - true
-                    showInlineErrors: true, // default - false
-                    wrapContent: true, // default - false
-                    editorHeight: 400, // default - 300
-                    autorun: false,
-                    recompileMode: "delayed", //default is immediate
-                    recompileDelay: 400,
-                    resizablePanels: true, //default
-                }}
-            />
+      <h3
+        className={
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+        }
+      >
+        Pad Video with Background Auto
+      </h3>
+
+      <Sandpack
+        theme="dark"
+        template="react"
+        files={{
+          "/App.js": cloudinaryAdvancedVideo,
+        }}
+        customSetup={{
+          dependencies: {
+            "@cloudinary/react": "^1.9.0",
+            "@cloudinary/url-gen": "^1.8.7",
+          },
+        }}
+        options={{
+          showNavigator: true,
+          showTabs: true,
+          showLineNumbers: true, // default - true
+          showInlineErrors: true, // default - false
+          wrapContent: true, // default - false
+          editorHeight: 400, // default - 300
+          autorun: false,
+          recompileMode: "delayed", //default is immediate
+          recompileDelay: 400,
+          resizablePanels: true, //default
+        }}
+      />
     </div>
   );
 }

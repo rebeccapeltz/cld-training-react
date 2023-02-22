@@ -29,7 +29,7 @@ export default function App() {
   const cld = new Cloudinary({cloud: {cloudName: 'cloudinary-training'}});
   const cldVideo = cld.video('climbing');
   const cldVideoAutoFormat = cld.video('climbing');
-  cldVideoAutoFormat.format("auto");
+  cldVideoAutoFormat.format("auto:video");
 
   return (
     <div>
@@ -44,14 +44,12 @@ export default function App() {
 export default function Format() {
   return (
     <div className="code-container">
-      {/* <h2 className={'<h2 class="font-medium leading-tight text-4xl mt-0 mb-2 text-white-600">Tailwind Elements</h2>'}>Cloudinary URL Generator</h2> */}
-
       <h3
         className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
         }
       >
-       Using Format with Images
+        Using Format with Images
       </h3>
       <Sandpack
         // You can change these examples!
@@ -85,10 +83,10 @@ export default function Format() {
       />
       <h3
         className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
         }
       >
-       Using Format with Video
+        Using Format with Video
       </h3>
       <Sandpack
         // You can change these examples!

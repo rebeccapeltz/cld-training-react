@@ -1,4 +1,4 @@
-import '../App.css';
+import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
 const cloudinaryAdvancedVideo = `import {AdvancedVideo,AdvancedImage} from '@cloudinary/react';
@@ -47,42 +47,53 @@ export default function App() {
       <AdvancedImage cldImg={imageFromFrame} />
     </div>
   );
-}`
-
+}`;
 
 export default function VideoOnly() {
-
-    return (
-        <div className="code-container">
-            <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Video Editing: Start Offset, End Offset, Duration</h3>
-            <p className={'font-sans'}>Credit: <a href="https://archive.org/details/Andy_Griffith_Barneys_First_Car" rel="noreferrer" target="_blank">Barney's First Car </a></p>
-            <Sandpack
-                theme="dark"
-                template="react"
-                files={{
-                    "/App.js": cloudinaryAdvancedVideo,
-                }}
-                customSetup={{
-                    dependencies: {
-                        "@cloudinary/react": "^1.9.0",
-                        "@cloudinary/url-gen": "^1.8.7",
-                    },
-                }}
-                options={{
-                    showNavigator: true,
-                    showTabs: true,
-                    showLineNumbers: true, // default - true
-                    showInlineErrors: true, // default - false
-                    wrapContent: true, // default - false
-                    editorHeight: 500, // default - 300
-                    autorun: false,
-                    recompileMode: "delayed", //default is immediate
-                    recompileDelay: 400,
-                    resizablePanels: true, //default
-                }}
-            />
-          
-        </div>
-    )
+  return (
+    <div className="code-container">
+      <h2
+       className={
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+      }
+      >
+        Video Only Transformations
+      </h2>{" "}
+      <p className={"font-sans text-white underline"}>
+        Credit:{" "}
+        <a
+          href="https://archive.org/details/Andy_Griffith_Barneys_First_Car"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Barney's First Car{" "}
+        </a>
+      </p>
+      <Sandpack
+        theme="dark"
+        template="react"
+        files={{
+          "/App.js": cloudinaryAdvancedVideo,
+        }}
+        customSetup={{
+          dependencies: {
+            "@cloudinary/react": "^1.9.0",
+            "@cloudinary/url-gen": "^1.8.7",
+          },
+        }}
+        options={{
+          showNavigator: true,
+          showTabs: true,
+          showLineNumbers: true, // default - true
+          showInlineErrors: true, // default - false
+          wrapContent: true, // default - false
+          editorHeight: 500, // default - 300
+          autorun: false,
+          recompileMode: "delayed", //default is immediate
+          recompileDelay: 400,
+          resizablePanels: true, //default
+        }}
+      />
+    </div>
+  );
 }
-

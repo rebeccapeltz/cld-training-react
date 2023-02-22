@@ -52,22 +52,23 @@ export default function AddingTransformations() {
 
   return (
     <div className="code-container">
-      <h2
+      <h3
         className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
         }
       >
-        Adding Transformation to An Image Instance
-      </h2>
-      <p className="font-sans mt-1 mb-1">
+        Adding a Transformation to an Image Instance
+      </h3>
+      <p className="font-sans mt-1 mb-1 text-white">
         Both new <span className={"font-bold"}>Cloudinary.image()</span> and{" "}
         <span className={"font-bold"}>new CloudinaryImage()</span> instantiate
         objects that are mutable. While there is no way to remove a
-        transformation from an image instance, if you modify the instance
-        by adding a url-gen action, you will see all renderings of your instance
+        transformation from an image instance, if you modify the instance by
+        adding a url-gen action, you will see all renderings of your instance
         updated with the new transformation added on to it. If you want to
         create a new transformation without affecting or adding to an existing
-        transformation, create a new instance of <span className={"font-bold"}>Cloudinary.image</span> or
+        transformation, create a new instance of{" "}
+        <span className={"font-bold"}>Cloudinary.image</span> or
         <span className={"font-bold"}> CloudinaryImage</span>.
       </p>
       <Experiment

@@ -2,18 +2,16 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import AddingTransformationsPage from "./pages/AddingTransformations";
 import Image from "./pages/Image";
 import Video from "./pages/Video";
-import ResizeScale from "./pages/ResizeScale";
+import ResizeScalePage from "./pages/ResizeScalePage";
 import Responsive from "./pages/Responsive";
 import LazyLoad from "./pages/Lazyload";
 import Accessibility from "./pages/Accessibility";
 import Placeholder from "./pages/Placeholder";
 import Layout from "./components/Layout";
-import Introduction from "./pages/Introduction";
 import UrlGen from "./pages/UrlGen";
 import ResizeCropGravityPage from "./pages/ResizeCropGravity";
 import QualityPage from "./pages/QualityPage";
 import FormatPage from "./pages/FormatPage";
-import Format from "./pages/Format";
 import OptimizePage from "./pages/OptimizePage";
 import OverlayImagePage from "./pages/OverlayImagePage";
 import OverlayTextPage from "./pages/OverlayTextPage";
@@ -26,47 +24,48 @@ import EffectsPage from "./pages/EffectsPage";
 import ImageOnlyPage from "./pages/ImageOnlyPage";
 import VideoOnlyPage from "./pages/VideoOnlyPage";
 
-
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
-            <Route path="/" element={<Introduction />} />
-            <Route path="/uw" element={<UploadWidgetPage />} />
+            <Route path="/" element={<UploadWidgetPage />} />
 
-            {/* <Route path="/cloudinary-class" element={<CloudinaryClass />} /> */}
             <Route path="/url-gen" element={<UrlGen />} />
-            <Route path="/advanced-video" element={<RenderingAdvancedVideoPage />} />
             <Route
               path="/resize-crop-gravity"
               element={<ResizeCropGravityPage />}
             />
             <Route path="/quality" element={<QualityPage />} />
             <Route path="/format" element={<FormatPage />} />
-            <Route path="/format" element={<Format />} />
             <Route path="/optimize" element={<OptimizePage />} />
-            <Route path="advanced-image" element={<RenderingAdvancedImagePage />} />
-            <Route path="advanced-video" element={<RenderingAdvancedVideoPage />} />
+            <Route
+              path="advanced-image"
+              element={<RenderingAdvancedImagePage />}
+            />
+            <Route
+              path="advanced-video"
+              element={<RenderingAdvancedVideoPage />}
+            />
             <Route
               path="/adding-transformations"
               element={<AddingTransformationsPage />}
             />
             <Route path="/image" element={<Image />} />
             <Route path="/video" element={<Video />} />
-            <Route path="/resize-scale" element={<ResizeScale />} />
             <Route path="/effects" element={<EffectsPage />} />
             <Route path="/overlay-image" element={<OverlayImagePage />} />
             <Route path="/overlay-text" element={<OverlayTextPage />} />
 
-            <Route path="/resize-scale" element={<ResizeScale />} />
-            <Route path="/pad-with-background" element={<PadWithBackgroundPage />} />
+            <Route path="/resize-scale" element={<ResizeScalePage />} />
+            <Route
+              path="/pad-with-background"
+              element={<PadWithBackgroundPage />}
+            />
 
             <Route path="/image-only" element={<ImageOnlyPage />} />
             <Route path="/video-only" element={<VideoOnlyPage />} />
-
-
 
             <Route path="/responsive" element={<Responsive />} />
             <Route path="/placeholder" element={<Placeholder />} />

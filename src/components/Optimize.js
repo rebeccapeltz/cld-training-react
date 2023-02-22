@@ -48,14 +48,18 @@ export default function App() {
 export default function Format() {
   return (
     <div className="code-container">
-      {/* <h2 className={'<h2 class="font-medium leading-tight text-4xl mt-0 mb-2 text-white-600">Tailwind Elements</h2>'}>Cloudinary URL Generator</h2> */}
+      <h2 className={
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+        }>
+        Optimize: "Auto Everything"
+      </h2>
 
       <h3
-        className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
-        }
+       className={
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+      }
       >
-      Optimize Images with Crop, Auto Gravity, Auto Format and Auto Quality
+        Crop with Gravity Auto, Format Auto, and Quality Auto
       </h3>
       <Sandpack
         // You can change these examples!
@@ -88,11 +92,11 @@ export default function Format() {
         }}
       />
       <h3
-        className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
-        }
+       className={
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+      }
       >
-      Optimize Video with Crop, Auto Gravity, Auto Format and Auto Quality
+        Optimize Video with Crop, Auto Gravity, Auto Format and Auto Quality
       </h3>
       <Sandpack
         // You can change these examples!

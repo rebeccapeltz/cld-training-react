@@ -41,7 +41,7 @@ export default function ResizeCropGravity() {
     <div className="code-container">
       <h3
         className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
         }
       >
         Image Resize Crop with Gravity
@@ -73,9 +73,9 @@ export default function ResizeCropGravity() {
         }}
       />
       <h3
-         className={
-            "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
-          }
+        className={
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+        }
       >
         Video Resize Crop with Gravity
       </h3>

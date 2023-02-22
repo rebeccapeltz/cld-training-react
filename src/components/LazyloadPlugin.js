@@ -1,5 +1,5 @@
-import React from 'react'
-import '../App.css';
+import React from "react";
+import "../App.css";
 
 import { Sandpack } from "@codesandbox/sandpack-react";
 
@@ -11,7 +11,7 @@ import "./styles.css";
 import App from "./App";
 const root = createRoot(document.getElementById("root"));
 root.render(<App />);
-`
+`;
 const lazyload = `
     import {CloudinaryImage} from "@cloudinary/url-gen";
     import { AdvancedImage,lazyload} from "@cloudinary/react";
@@ -40,44 +40,72 @@ const lazyload = `
 
             </div>
         )
-    }`
-
+    }`;
 
 function LazyloadPlugin() {
-    return (
-        <div className="code-container">
-            <p className="font-sans">This code has <span style={{color: "white"}}>strict mode turned off</span>.  With strict mode enabled, you will see the images render twice in development mode.</p>
-            <p className="font-sans">Read more about <a style={{color:"white", "textDecoration":"underline"}} href="https://beta.reactjs.org/reference/react/StrictMode" rel="noreferrer" target="_blank">React 18 Strict Mode</a> and re-rendering in Development.</p>
-            <Sandpack
-                theme="dark"
-                template="react"
-                files={{
-                    "/index.js": index,
-                    "/App.js": lazyload,
-                }}
-                customSetup={{
-                    dependencies: {
-                        "@cloudinary/react": "^1.9.0",
-                        "@cloudinary/url-gen": "^1.8.7",
-                    },
-                }}
-                options={{
-                    showNavigator: true,
-                    showTabs: true,
-                    showLineNumbers: false, // default - true
-                    showInlineErrors: true, // default - false
-                    wrapContent: true, // default - false
-                    editorHeight: 600, // default - 300
-                    autorun: false,
-                    editorWidthPercentage: 60, // default - 50
-                    // recompileMode: "delayed", //default is immediate
-                    // recompileDelay: 400,
-                    resizablePanels: true, //default
-                }}
-            />
-
-        </div>
-    )
+  return (
+    <div className="code-container">
+      <h2
+      className={
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+      }
+      >
+        Lazyload Plugin
+      </h2>
+      <h3
+       className={
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+      }
+      >
+        Scroll down to see images lazyload
+      </h3>
+      <p className="font-sans text-white">
+        This code has{" "}
+        <span className="font-bold">strict mode turned off</span>. With
+        strict mode enabled, you will see the images render twice in development
+        mode.
+      </p>
+      <p className="font-sans text-white">
+        Read more about{" "}
+        <a
+          style={{ color: "white", textDecoration: "underline" }}
+          href="https://beta.reactjs.org/reference/react/StrictMode"
+          rel="noreferrer"
+          target="_blank"
+        >
+          React 18 Strict Mode
+        </a>{" "}
+        and re-rendering in Development.
+      </p>
+      <Sandpack
+        theme="dark"
+        template="react"
+        files={{
+          "/index.js": index,
+          "/App.js": lazyload,
+        }}
+        customSetup={{
+          dependencies: {
+            "@cloudinary/react": "^1.9.0",
+            "@cloudinary/url-gen": "^1.8.7",
+          },
+        }}
+        options={{
+          showNavigator: true,
+          showTabs: true,
+          showLineNumbers: false, // default - true
+          showInlineErrors: true, // default - false
+          wrapContent: true, // default - false
+          editorHeight: 600, // default - 300
+          autorun: false,
+          editorWidthPercentage: 60, // default - 50
+          // recompileMode: "delayed", //default is immediate
+          // recompileDelay: 400,
+          resizablePanels: true, //default
+        }}
+      />
+    </div>
+  );
 }
 
 export default LazyloadPlugin;

@@ -123,8 +123,6 @@ function UploadWidgetPage() {
 
   return (
     <div>
-      <h1 className={"font-sans font-medium leading-tight text-4xl mt-0 mb-2 text-white-600"}>Upload Widget with Unsigned Preset</h1>
-      <p className={"font-sans"}>Get more information on creating an <a style={{color:"clddarkblue", "textDecoration":"underline"}} href="https://cloudinary.com/documentation/upload_widget#unsigned_uploads">Unsigned Preset</a></p>
       <div className="collapse">
         <input type="checkbox" />
         <div className="font-sans font-bold collapse-title text-xl font-sans text-white bg-cldblue">

@@ -16,7 +16,7 @@ export default function Layout() {
       divider: true,
     },
     {
-      href: "/uw",
+      href: "/",
       title: "Upload Widget✅",
       divider: false,
     },
@@ -161,9 +161,7 @@ export default function Layout() {
     },
   ];
 
-  <li>
-    <NavLink to="/">Home</NavLink>
-  </li>;
+
   return (
     <div className="bg-clddarkblue min-h-screen flex flex-col">
       <header className="bg-cldgray sticky top-0 h-14 flex justify-center items-center font-semibold uppercase">

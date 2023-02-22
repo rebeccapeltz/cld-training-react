@@ -107,21 +107,27 @@ export default function Effects() {
   return (
     <div className="code-container">
       <h2
-        className={
-          "font-medium leading-tight text-4xl mt-0 mb-2 text-white-600"
-        }
+       className={
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+      }
       >
         Effects
-      </h2>
-
+      </h2>{" "}
       <h3
-        className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
-        }
+       className={
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+      }
       >
         Apply Effects to both Image and Video: blur and contrast
       </h3>
-      <p className="font-sans">Apply blur and contrast effects to Images and Videos</p>
+      <p className="font-sans text-white">
+        There are many effects! In a URL they all begin with{" "}
+        <span class="font-bold">e_</span>. Some effects can be are exclusive to
+        either images for video, while many can be used on both image and video.
+      </p>
+      <p className="font-sans">
+        Apply blur and contrast effects to Images and Videos
+      </p>
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -153,9 +159,9 @@ export default function Effects() {
         }}
       />
       <h3
-        className={
-          "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
-        }
+       className={
+        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-white"
+      }
       >
         Video Only Effects: Grayscale, Sepia, Black and White
       </h3>
@@ -189,7 +195,7 @@ export default function Effects() {
           resizablePanels: true, //default
         }}
       />
-       <h3
+      <h3
         className={
           "font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
         }

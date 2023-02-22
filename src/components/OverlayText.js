@@ -73,15 +73,14 @@ export default function App() {
 export default function OverlayText() {
   return (
     <div className="code-container">
-
-   <h3
-        className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
-        }
+      <h2
+       className={
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+      }
       >
         Text Overlaid on Image
-      </h3>
-      <p className="font-sans">
+      </h2>{" "}
+      <p className="font-sans text-white">
         Look for the message in the central, lower area the image.
       </p>
       <Sandpack
@@ -114,17 +113,15 @@ export default function OverlayText() {
           resizablePanels: true, //default
         }}
       />
-
-      <h3
-        className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
-        }
+      <h2
+      className={
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+      }
       >
         Text Overlaid on Video
-      </h3>
-      <p className={"font-sans"}>
-        Look for the watermark in the central, upper area of the
-        video.
+      </h2>{" "}
+      <p className={"font-sans text-white"}>
+        Look for the watermark in the central, upper area of the video.
       </p>
       <Sandpack
         // You can change these examples!

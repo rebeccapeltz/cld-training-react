@@ -1,7 +1,6 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
 
-
 const image = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {Transformation} from "@cloudinary/url-gen";
@@ -81,23 +80,16 @@ export default function App() {
 export default function OverlayImage() {
   return (
     <div className="code-container">
-      {/* <h2
-        className={
-          "font-medium leading-tight text-4xl mt-0 mb-2 text-white-600"
-        }
-      >
-        ImageOverlay
-      </h2> */}
-
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
         }
       >
-       Image Overlaid on Image
-      </h3>
-      <p className={"font-sans"}>        
-        Look for the watermark in the lower right or south east corner of the image.
+        Image Overlaid on Image
+      </h3>{" "}
+      <p className={"font-sans text-white"}>
+        Look for the watermark in the lower right or south east corner of the
+        image.
       </p>
       <Sandpack
         // You can change these examples!
@@ -129,16 +121,16 @@ export default function OverlayImage() {
           resizablePanels: true, //default
         }}
       />
-      
-      <h3
+      <h2
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white-600"
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
         }
       >
-       Image Overlaid on Video
-      </h3>
-      <p className={"font-sans"}>
-      Look for the watermark in the upper left or north west corner of the video.
+        Text Overlaid on Video
+      </h2>{" "}
+      <p className={"font-sans white"}>
+        Look for the watermark in the upper left or north west corner of the
+        video.
       </p>
       <Sandpack
         // You can change these examples!

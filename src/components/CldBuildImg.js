@@ -29,7 +29,6 @@ export default function App() {
     }
   }); 
   const myImageURL = cld.image('front_face').toURL();
-  // return <h1>Hello Sandpack</h1>
   return (
     <div>
       <img src={myImageURL} />

@@ -1,5 +1,5 @@
-import React from 'react'
-import '../App.css';
+import React from "react";
+import "../App.css";
 
 import { Sandpack } from "@codesandbox/sandpack-react";
 
@@ -19,41 +19,45 @@ const responsive = `
             />
             </div>
         )
-    }`
-
+    }`;
 
 function ResponsivePlugin() {
-    return (
-        <div className="code-container">
-            {/* <h3 className={'font-medium leading-tight text-3xl mt-0 mb-2 text-white-600'}>Responsive Plugin</h3> */}
-            <Sandpack
-                theme="dark"
-                template="react"
-                files={{
-                    "/App.js": responsive,
-                }}
-                customSetup={{
-                    dependencies: {
-                        "@cloudinary/react": "^1.9.0",
-                        "@cloudinary/url-gen": "^1.8.7",
-                    },
-                }}
-                options={{
-                    showNavigator: true,
-                    showTabs: true,
-                    showLineNumbers: false, // default - true
-                    showInlineErrors: true, // default - false
-                    wrapContent: true, // default - false
-                    editorHeight: 600, // default - 300
-                    autorun: false,
-                    recompileMode: "delayed", //default is immediate
-                    recompileDelay: 400,
-                    resizablePanels: true, //default
-                }}
-            />
-
-        </div>
-    )
+  return (
+    <div className="code-container">
+      <h2
+       className={
+        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-white"
+      }
+      >
+        Responsive Plugin
+      </h2>
+      <Sandpack
+        theme="dark"
+        template="react"
+        files={{
+          "/App.js": responsive,
+        }}
+        customSetup={{
+          dependencies: {
+            "@cloudinary/react": "^1.9.0",
+            "@cloudinary/url-gen": "^1.8.7",
+          },
+        }}
+        options={{
+          showNavigator: true,
+          showTabs: true,
+          showLineNumbers: false, // default - true
+          showInlineErrors: true, // default - false
+          wrapContent: true, // default - false
+          editorHeight: 600, // default - 300
+          autorun: false,
+          recompileMode: "delayed", //default is immediate
+          recompileDelay: 400,
+          resizablePanels: true, //default
+        }}
+      />
+    </div>
+  );
 }
 
 export default ResponsivePlugin;
