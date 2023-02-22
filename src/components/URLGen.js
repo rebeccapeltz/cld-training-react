@@ -1,17 +1,18 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import Experiment from "./experiments";
 
 const cloudinaryImageURLs = `import {Cloudinary,CloudinaryImage} from "@cloudinary/url-gen";
 export default function App() {
   // instantiate Cloudinary and call it's image function
   // use toURL() to create a URL and use it in an HTML image element
-  const cld = new Cloudinary({cloud: {cloudName: 'demo'}}); 
+  const cld = new Cloudinary({cloud: {cloudName: 'cloudinary-training'}}); 
   const cldImage = cld.image('cld-sample');
   const cldURL = cldImage.toURL();
 
   // instantiate CloudinaryImage
   // use toURL() to create a URL and use it in an HTML image element
-  const cloudinaryImage = new CloudinaryImage("cld-sample", { cloudName: "demo" })
+  const cloudinaryImage = new CloudinaryImage("cld-sample", { cloudName: "cloudinary-training" })
   cloudinaryImageURL = cloudinaryImage.toURL();
 
   return (
@@ -28,12 +29,12 @@ const cloudinaryVideoURLs = `import {Cloudinary,CloudinaryVideo} from "@cloudina
 export default function App() {
   // instantiate Cloudinary and call it's video function
   // use toURL() to create a URL and use it in an HTML video element
-  const cld = new Cloudinary({cloud: {cloudName: 'picturecloud7'}}); 
+  const cld = new Cloudinary({cloud: {cloudName: 'cloudinary-training'}}); 
   const cldVideo = cld.video('hike-up');
 
   // instantiate CloudinaryVideo
   // use toURL() to create a URL and use it in an HTML image element
-  const cloudinaryVideo = new CloudinaryVideo("hike-up", { cloudName: "picturecloud7" })
+  const cloudinaryVideo = new CloudinaryVideo("hike-up", { cloudName: "cloudinary-training" })
   const cloudinaryVideoURL = cloudinaryVideo.toURL(); 
   return (
     <div>
@@ -67,6 +68,8 @@ export default function URLGenComponent() {
           {" "}
           Cloudinary, CloudinaryImage, and CloudinaryVideo.
         </span>
+        As you see how to create Cloudinary transformations for image and video URLs, 
+        you will learn learn how to generate URLs for images and video. 
       </p>
       <p className={"font-sans mt-1 mb-1 text-clddarkblue"}>
         You need to supply your Cloudinary{" "}
@@ -77,9 +80,19 @@ export default function URLGenComponent() {
         need the URL, you can call the toURL() function to generate just the
         URL.
       </p>
-      <p className={"font-sans mt-1 mb-1 text-clddarkblue"}>
-        See how to generate URLs to use with HTML5 Image and Video Elements.
-      </p>
+      <Experiment
+        codeString={`const cld = new Cloudinary({cloud: {cloudName: '<my cloud name>'}}); 
+const cldImage = cld.image('<my public id>');
+const cldVideo = cld.video('<my public id>');
+const cloudinaryImage = new CloudinaryImage("<my public id>", { cloudName: "<my cloud name>" });
+const cloudinaryVideo = new CloudinaryVideo("<my public id>", { cloudName: "<my cloud name>" })
+        `}
+        experimentTitle={"Experiment by modifying the public id and cloud name."}
+        instructions={[
+          "Replace cld.image() and cloudinaryImage() public ids with public ids from your own cloud",
+          `Try some of these other public ids from the "cloudinary-training" cloud: cld-sample-3, cld-sample-5`
+        ]}
+      />
 
       <Sandpack
         // You can change these examples!

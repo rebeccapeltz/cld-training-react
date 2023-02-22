@@ -20,9 +20,9 @@ export default function Experiment(props) {
         </div>
         <div className="collapse-content">
           <div>
-            <p className="font-sans text-white experiment-intro">{props.experimentTitle}</p>
+            <p className="font-sans text-clddarkblue experiment-intro">{props.experimentTitle}</p>
             <div className="ml-4">
-              <ul className="font-sans text-white list-decimal">
+              <ul className="font-sans text-clddarkblue list-decimal">
                 {props.instructions.map((inst,n) => <li key={n} >{inst}</li>)}
               </ul>
             </div>
