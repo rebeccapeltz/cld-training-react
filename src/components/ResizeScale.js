@@ -1,8 +1,9 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import {INDEX} from "./Index.js";
+import Experiment from "./experiments";
 
-const cloudinaryAdvancedImage = `
-import {AdvancedImage} from '@cloudinary/react';
+const cloudinaryAdvancedImage = `import {AdvancedImage} from '@cloudinary/react';
 import {CloudinaryImage} from "@cloudinary/url-gen";
 import {scale} from '@cloudinary/url-gen/actions/resize';
 
@@ -12,13 +13,12 @@ export default function App() {
   image.resize(scale().width(350));
   return (
     <div>
-      <AdvancedImage  height="250px" width="auto"  cldImg={image} />
+      <AdvancedImage cldImg={image} />
     </div>
   )
 }
 `;
-const cloudinaryAdvancedVideo = `
-import {AdvancedVideo} from '@cloudinary/react';
+const cloudinaryAdvancedVideo = `import {AdvancedVideo} from '@cloudinary/react';
 import {CloudinaryVideo} from "@cloudinary/url-gen";
 import {scale} from '@cloudinary/url-gen/actions/resize';
 
@@ -28,7 +28,7 @@ video.resize(scale().width(350));
 export default function App() {
   return (
     <div className="App">
-      <AdvancedVideo cldVid={video} height="250px" width="auto" controls cldPoster="auto" />
+      <AdvancedVideo cldVid={video} controls cldPoster="auto" />
     </div>
   );
 }
@@ -44,10 +44,20 @@ export default function CldBuildVideo() {
       >
         Scale Image
       </h3>
+      <Experiment
+          codeString={`image.resize(scale().width(350).height(350))`}
+          experimentTitle={"Experiment by adding both height and width to the image transformation."}
+          instructions={[
+          `Scaling can result in skewed images if you supply a height and width that don't match the original aspect ratio`,
+          "Add a height function call to the transformation.",
+          "Try different values for height and width"
+          ]}
+        />
       <Sandpack
         theme="dark"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": cloudinaryAdvancedImage,
         }}
         customSetup={{
@@ -76,10 +86,20 @@ export default function CldBuildVideo() {
       >
         Scale Video
       </h3>
+      <Experiment
+          codeString={`video.resize(scale().width(350).height(350))`}
+          experimentTitle={"Experiment by adding both height and width to the video transformation."}
+          instructions={[
+          `Scaling can result in skewed images if you supply a height and width that don't match the original aspect ratio`,
+          "Add a height function call to the transformation.",
+          "Try different values for height and width"
+          ]}
+        />
       <Sandpack
         theme="dark"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": cloudinaryAdvancedVideo,
         }}
         customSetup={{
