@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 
 export default function Layout() {
-  let activeClassName = "underline";
+  let activeClassName = "text-cldcoral";
   let dividerStyle = "font-sans font-bold bg-clddarkblue text-white pl-1";
   let titleStyle = "font-sans text-sm font-semibold bg-cldgray text-black pl-4"
 
@@ -21,7 +21,7 @@ export default function Layout() {
       divider: false,
     },
     {
-      href: "/",
+      href: "/url-gen",
       title: "Transform",
       divider: true,
     },
@@ -31,7 +31,7 @@ export default function Layout() {
       divider: false,
     },
     {
-      href: "",
+      href: "/advanced-image",
       title: "Deliver",
       divider: true,
     },
@@ -52,18 +52,10 @@ export default function Layout() {
       divider: false,
     },
     {
-      href: "",
+      href: "/resize-scale",
       title: "Optimization",
       divider: true,
     },
-    // {
-    //   href: "image",
-    //   title: "Generate Image URL",
-    // },
-    // {
-    //   href: "video",
-    //   title: "Generate Video URL",
-    // },
     {
       href: "resize-scale",
       title: "Resize with Scale",
@@ -95,32 +87,32 @@ export default function Layout() {
       divider: false,
     },
     {
-      href: "",
+      href: "/effects",
       title: "Effects",
       divider: true,
     },
     {
-      href: "effects",
+      href: "/effects",
       title: "Effects",
       divider: false,
     },
     {
-      href: "",
+      href: "/overlay-image",
       title: "Overlays",
       divider: true,
     },
     {
-      href: "overlay-image",
+      href: "/overlay-image",
       title: "Overlay with Image",
       divider: false,
     },
     {
-      href: "overlay-text",
+      href: "/overlay-text",
       title: "Overlay with Text",
       divider: false,
     },
     {
-      href: "",
+      href: "/image-only",
       title: "Asset Specific",
       divider: true,
     },
@@ -130,32 +122,32 @@ export default function Layout() {
       divider: false,
     },
     {
-      href: "video-only",
+      href: "/video-only",
       title: "Video Only Transformations",
       divider: false,
     },
     {
-      href: "",
+      href: "/lazyload",
       title: "Plugins",
       divider: true,
     },
     {
-      href: "lazyload",
+      href: "/lazyload",
       title: "Lazyload Plugin",
       divider: false,
     },
     {
-      href: "placeholder",
+      href: "/placeholder",
       title: "Placeholder Plugin",
       divider: false,
     },
     {
-      href: "responsive",
+      href: "/responsive",
       title: "Responsive Plugin",
       divider: false,
     },
     {
-      href: "accessibility",
+      href: "/accessibility",
       title: "Accessibility Plugin",
       divider: false,
     },

@@ -1,5 +1,6 @@
 import "../App.css";
 import React, { useEffect, useState } from "react";
+import UploadWidgetSyntax from "./UploadWidgetSyntax";
 
 export default function UploadWidget() {
   const [loaded, setLoaded] = useState(false);
@@ -53,6 +54,7 @@ export default function UploadWidget() {
       >
         Upload Widget with Unsigned Preset
       </h3>
+      <UploadWidgetSyntax />
       <p className={"font-sans text-clddarkblue"}>Get more information on creating an <a style={{color:"clddarkblue", "textDecoration":"underline"}} href="https://cloudinary.com/documentation/upload_widget#unsigned_uploads">Unsigned Preset</a></p>
       <br/>
       <form className="w-full max-w-sm">
@@ -67,7 +69,7 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldlightblue leading-tight focus:outline-none focus:bg-white focus:border-cldblue-500"
+              className="bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldgray leading-tight focus:outline-none focus:bg-white focus:border-cldblue"
               id="inline-cloud-name"
               type="text"
               value={cloudName}
@@ -86,7 +88,7 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="font-sans bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldlightblue leading-tight focus:outline-none focus:bg-white focus:border-cldblue-500"
+              className="font-sans bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldgray leading-tight focus:outline-none focus:bg-white focus:border-cldlightblue"
               id="inline-unsigned-preset"
               type="text"
               value={unsignedPreset}
@@ -99,7 +101,7 @@ export default function UploadWidget() {
           <div className="md:w-1/3"></div>
           <div className="md:w-2/3">
             <button
-              className="font-sans shadow bg-cldblue hover:bg-cldblue-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+              className="font-sans shadow bg-cldblue hover:bg-cldblue focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
               type="button"
               onClick={uploadWidget}
             >

@@ -21,7 +21,9 @@ module.exports = {
       cldlightblue: "#b6d2ff",
       cldgray: "#eeeef1",
       white: "#ffffff",
-      clddarkblue: "#0c163b"
+      clddarkblue: "#0c163b",
+      cldyellow: "#f7bc00",
+      cldcoral: "#ff5050"
     },
   },
   plugins: [require("daisyui")],
