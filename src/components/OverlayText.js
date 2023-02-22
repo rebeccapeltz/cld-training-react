@@ -24,8 +24,8 @@ export default function App() {
   .overlay(
     source(
       text("Sprinkles and Spots", new TextStyle("Arial", 20))
-      .textColor("clddarkblue")
-      .backgroundColor("#0c163b")
+      .textColor("#eeeef1")
+      .backgroundColor("#ff5050")
     ).position(
       new Position().gravity(compass("south")).offsetY(20)
     )
