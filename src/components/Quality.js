@@ -1,5 +1,7 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import { INDEX } from "./Index.js";
+import Experiment from "./experiments";
 
 const cloudinaryImages = `import {Cloudinary} from "@cloudinary/url-gen";
 import { AdvancedImage} from "@cloudinary/react";
@@ -51,6 +53,18 @@ export default function Quality() {
       >
         Using Quality with Images
       </h3>
+      <Experiment
+        codeString={`cldImageQ.quality("auto:best");
+cldImageQ.quality("80");`}
+        experimentTitle={"Determine File Size Change Due to Quality."}
+        instructions={[
+          "Right click image and open in new tab",
+          "Open Chrome inspector Network tab and refresh",
+          "Locate size column for image an note the size of the image file with and with out quality",
+          "Try different quality options like q_auto:good, q_auto:eco and q_auto:best",
+          "Try using numeric quality values like q_80"
+        ]}
+      />
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -59,6 +73,7 @@ export default function Quality() {
         // theme="auto"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": cloudinaryImages,
         }}
         customSetup={{
@@ -86,8 +101,22 @@ export default function Quality() {
           "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
         }
       >
-        Using Format with Video
+        Using Quality with Video
       </h3>
+      <Experiment
+        codeString={`cldVideoQ.quality("auto:eco");
+cldVideoQ.quality("auto:good");`}
+        experimentTitle={"Determine File Size Change Due to Quality."}
+        instructions={[
+          "Right click video and open in new tab",
+          "Open Chrome inspector",
+          "Click on vertical ellipses and Add more tools", 
+          "Add Media and this should create a media tab",
+          "Open Chrome inspector Network tab and refresh",
+          "Click on the video file and you'll find the file size there",
+          "Try different quality options like q_auto:good, q_auto:eco and q_auto:best",
+        ]}
+      />
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -96,6 +125,7 @@ export default function Quality() {
         // theme="auto"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": cloudinaryVideoURLs,
         }}
         customSetup={{
