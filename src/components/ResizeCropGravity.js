@@ -3,8 +3,7 @@ import { Sandpack } from "@codesandbox/sandpack-react";
 import { INDEX } from "./Index.js";
 import Experiment from "./experiments";
 
-const cloudinaryAdvancedVideo = `
-import {AdvancedVideo} from '@cloudinary/react';
+const cloudinaryAdvancedVideo = `import {AdvancedVideo} from '@cloudinary/react';
 import {CloudinaryVideo} from "@cloudinary/url-gen";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
@@ -20,8 +19,7 @@ export default function App() {
 }
 `;
 
-const cloudinaryAdvancedImage = `
-import {AdvancedImage} from '@cloudinary/react';
+const cloudinaryAdvancedImage = `import {AdvancedImage} from '@cloudinary/react';
 import {CloudinaryImage} from "@cloudinary/url-gen";
 import { crop } from "@cloudinary/url-gen/actions/resize";
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";

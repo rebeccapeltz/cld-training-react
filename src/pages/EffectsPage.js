@@ -4,7 +4,6 @@ import Effects from "../components/Effects";
 function EffectsPage() {
   return (
     <div>
-    
       <Effects />
     </div>
   );

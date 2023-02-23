@@ -122,7 +122,7 @@ export default function Effects() {
       </h3>
       <p className="font-sans text-clddarkblue">
         There are many effects! In a URL they all begin with{" "}
-        <span class="font-bold">e_</span>. Some effects can be are exclusive to
+        <span className="font-bold">e_</span>. Some effects can be are exclusive to
         either images for video, while many can be used on both image and video.
       </p>
       <p className="font-sans">
