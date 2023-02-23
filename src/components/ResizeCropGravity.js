@@ -1,5 +1,7 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import { INDEX } from "./Index.js";
+import Experiment from "./experiments";
 
 const cloudinaryAdvancedVideo = `
 import {AdvancedVideo} from '@cloudinary/react';
@@ -7,8 +9,8 @@ import {CloudinaryVideo} from "@cloudinary/url-gen";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 
-const video = new CloudinaryVideo('climbing',{cloudName:'cloudinary-training'});
-video.resize(fill().width(400).height(400).gravity(autoGravity()));
+const video = new CloudinaryVideo('dog-frisbee',{cloudName:'cloudinary-training'});
+video.resize(fill().width(244).height(400).gravity(autoGravity()));
 export default function App() {
   return (
     <div className="App">
@@ -46,11 +48,22 @@ export default function ResizeCropGravity() {
       >
         Image Resize Crop with Gravity
       </h3>
+      <Experiment
+        codeString={`image.resize(crop().width(400).height(400));`}
+        experimentTitle={
+          "Experiment by removing gravity from the transformation."
+        }
+        instructions={[
+          `Remove gravity from the image tranformation`,
+          "View the image with and without gravity and note the differences"
+        ]}
+      />
 
       <Sandpack
         theme="dark"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": cloudinaryAdvancedImage,
         }}
         customSetup={{
@@ -79,10 +92,21 @@ export default function ResizeCropGravity() {
       >
         Video Resize Crop with Gravity
       </h3>
+      <Experiment
+        codeString={`video.resize(fill().width(244).height(400));`}
+        experimentTitle={
+          "Experiment by removing gravity from the transformation."
+        }
+        instructions={[
+          `Remove gravity from the video tranformation`,
+          "View the video with and without gravity and note the differences"
+        ]}
+      />
       <Sandpack
         theme="dark"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": cloudinaryAdvancedVideo,
         }}
         customSetup={{
