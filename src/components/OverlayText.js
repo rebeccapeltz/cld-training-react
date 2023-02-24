@@ -1,5 +1,7 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import { INDEX } from "./Index.js";
+import Experiment from "./experiments";
 
 const image = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
@@ -47,7 +49,7 @@ import {Position } from "@cloudinary/url-gen/qualifiers/position";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
 
 export default function App() {
-  const cld = new Cloudinary({cloud: {cloudName: 'picturecloud7'}
+  const cld = new Cloudinary({cloud: {cloudName: 'cloudinary-training'}
   }); 
   const cldVideo = cld.video('long-wave');
   
@@ -83,6 +85,27 @@ export default function OverlayText() {
       <p className="font-sans text-clddarkblue">
         Look for the message in the central, lower area the image.
       </p>
+      <Experiment
+        codeString={ ` .overlay(
+          source(
+            text("Sprinkles and Spots", new TextStyle("Arial", 20))
+            .textColor("#eeeef1")
+            .backgroundColor("#ff5050")
+          ).position(
+            new Position().gravity(compass("center")).offsetY(-100).offsetX(-30)
+          )
+        )`}
+        experimentTitle={
+          "Experiment with Different Text Messages, Fonts, Sizes, and Locations"
+        }
+        instructions={[
+          `Add your own text`,
+          `Many Google fonts are supported for use as the font family for text overlays, so try one of those`,
+          `Modify the compass locations: north, north_east, east, south_east, south, south_west, west, and northwest`,
+          `Modify the X,Y offsets? You can use positive and negative values for the x and y offset`,
+          `What happens if you remove the Position transformation? What is the default?`
+        ]}
+      />
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -91,6 +114,7 @@ export default function OverlayText() {
         // theme="auto"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": image,
         }}
         customSetup={{
@@ -121,8 +145,29 @@ export default function OverlayText() {
         Text Overlaid on Video
       </h2>{" "}
       <p className={"font-sans text-clddarkblue"}>
-        Look for the watermark in the central, upper area of the video.
+        Look for the message in the central, upper area of the video.
       </p>
+      <Experiment
+        codeString={ ` .overlay(
+          source(
+            text("Sprinkles and Spots", new TextStyle("Arial", 20))
+            .textColor("#eeeef1")
+            .backgroundColor("#ff5050")
+          ).position(
+            new Position().gravity(compass("center")).offsetY(-100).offsetX(-30)
+          )
+        )`}
+        experimentTitle={
+          "Experiment with Different Text Messages, Fonts, Sizes, and locations"
+        }
+        instructions={[
+          `Add your own text`,
+          `Many Google fonts are supported for use as the font family for text overlays, so try one of those`,
+          `Modify the compass locations: north, north_east, east, south_east, south, south_west, west, and northwest`,
+          `Modify the X,Y offsets? You can use positive and negative values for the x and y offset`,
+          `What happens if you remove the Position transformation? What is the default?`
+        ]}
+      />
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -131,6 +176,7 @@ export default function OverlayText() {
         // theme="auto"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": video,
         }}
         customSetup={{

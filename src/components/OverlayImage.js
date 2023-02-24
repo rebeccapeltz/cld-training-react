@@ -1,5 +1,7 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import { INDEX } from "./Index.js";
+import Experiment from "./experiments";
 
 const image = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
@@ -10,7 +12,6 @@ import {Position} from "@cloudinary/url-gen/qualifiers/position";
 import {image} from "@cloudinary/url-gen/qualifiers/source";
 import {compass} from "@cloudinary/url-gen/qualifiers/gravity";
 import { Adjust, brightness, opacity } from "@cloudinary/url-gen/actions/adjust";
-
 
 export default function App() {
   const cld = new Cloudinary({
@@ -91,6 +92,28 @@ export default function OverlayImage() {
         Look for the watermark in the lower right or south east corner of the
         image.
       </p>
+      <Experiment
+        codeString={ `.overlay(
+  source(
+    image("logo-big").transformation(
+      new Transformation()
+      .adjust(Adjust.opacity(50))
+      .adjust(Adjust.brightness().level(10))
+      .resize(scale().width(50).regionRelative())
+    )
+  ).position(
+    new Position().gravity(compass("center")).offsetX(-90).offsetY(-90)
+  )"`}
+        experimentTitle={
+          "Experiment with Different Images, Images Sizes, and Positioning"
+        }
+        instructions={[
+          `Try assets from your own cloud and remember both images need to be in the same cloud`,
+          `Modify the compass locations: north, north_east, east, south_east, south, south_west, west, and northwest`,
+          `Modify the X,Y offsets? You can use positive and negative values for the x and y offset`,
+          `What happens if you remove the Position transformation? What is the default?`
+        ]}
+      />
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -99,6 +122,7 @@ export default function OverlayImage() {
         // theme="auto"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": image,
         }}
         customSetup={{
@@ -132,6 +156,26 @@ export default function OverlayImage() {
         Look for the watermark in the upper left or north west corner of the
         video.
       </p>
+      <Experiment
+        codeString={ `.overlay(
+  source(
+    image("cld-white-logo").transformation(
+      new Transformation().resize(scale().width(50).regionRelative())
+    )
+  ).position(
+    new Position().gravity(compass("center")).offsetX(-90).offsetY(-90)
+  )
+)`}
+        experimentTitle={
+          "Experiment with Different Images, Images Sizes, and Positioning"
+        }
+        instructions={[
+          `Try assets from your own cloud and remember both images need to be in the same cloud`,
+          `Modify the compass locations: north, north_east, east, south_east, south, south_west, west, and northwest`,
+          `Modify the X,Y offsets? You can use positive and negative values for the x and y offset`,
+          `What happens if you remove the Position transformation? What is the default?`
+        ]}
+      />
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -140,6 +184,7 @@ export default function OverlayImage() {
         // theme="auto"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": video,
         }}
         customSetup={{
