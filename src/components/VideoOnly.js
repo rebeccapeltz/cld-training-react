@@ -1,5 +1,7 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import { INDEX } from "./Index.js";
+import Experiment from "./experiments";
 
 const cloudinaryAdvancedVideo = `import {AdvancedVideo,AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
@@ -53,26 +55,55 @@ export default function VideoOnly() {
   return (
     <div className="code-container">
       <h2
-       className={
-        "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
-      }
+        className={
+          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+        }
       >
         Video Only Transformations
       </h2>{" "}
-      <p className={"font-sans text-clddarkblue underline"}>
-        Credit:{" "}
+      <p className="font-sans text-clddarkblue">
+        Find the{" "}
         <a
-          href="https://archive.org/details/Andy_Griffith_Barneys_First_Car"
-          rel="noreferrer"
+          className={"underline"}
+          href="https://cloudinary.com/documentation/transformation_reference"
           target="_blank"
+          rel="noreferrer"
         >
-          Barney's First Car{" "}
-        </a>
+          Transformation URL API Reference
+        </a>{" "}
+        in the documentation. If you need help figuring out which functions to
+        import to get the transformation working, consult this{" "}
+        <a
+          className={"underline"}
+          href="https://codesandbox.io/s/github/cloudinary-devs/cld-react-sdk-docs-examples/tree/main/?from-embed&initialpath=%2Fimages"
+        >
+          codesandbox
+        </a>{" "}
+        and the{" "}
+        <a
+          className={"underline"}
+          href="https://github.com/cloudinary/js-url-gen/blob/master/__TESTS__/compilationsOutput.test.ts"
+          target="_blank"
+          rel="noreferrer"
+        >
+          compilation test
+        </a>{" "}
+        in the open source url-gen code.
       </p>
+      <Experiment
+        codeString={``}
+        experimentTitle={`Discover and Experiment with Transformations that can only be applied to Video`}
+        instructions={[
+          `Find "video only" transformation in the documention`,
+          `Write code to render them`,
+          `Remember to import the functions the image transformations require`,
+        ]}
+      />
       <Sandpack
         theme="dark"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": cloudinaryAdvancedVideo,
         }}
         customSetup={{
@@ -94,6 +125,16 @@ export default function VideoOnly() {
           resizablePanels: true, //default
         }}
       />
+      <p className={"font-sans text-xs italic text-clddarkblue underline"}>
+        Credit:{" "}
+        <a
+          href="https://archive.org/details/Andy_Griffith_Barneys_First_Car"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Barney's First Car{" "}
+        </a>
+      </p>
     </div>
   );
 }
