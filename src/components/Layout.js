@@ -78,12 +78,12 @@ export default function Layout() {
     },
     {
       href: "format",
-      title: "Format❓",
+      title: "Format",
       divider: false,
     },
     {
       href: "optimize",
-      title: "Optimize❓",
+      title: "Optimize",
       divider: false,
     },
     {

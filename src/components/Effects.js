@@ -1,12 +1,11 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import { nightOwl } from "@codesandbox/sandpack-themes";
 
 const multipleImageandVideo = `import {AdvancedImage,AdvancedVideo} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {thumbnail, fill} from "@cloudinary/url-gen/actions/resize";
 import {Adjust} from "@cloudinary/url-gen/actions/adjust"; // for contrast
-import {focusOn} from "@cloudinary/url-gen/qualifiers/gravity";
-import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
 import {blur, contrast} from "@cloudinary/url-gen/actions/effect";
 export default function App() {
   const cld = new Cloudinary({
@@ -14,9 +13,9 @@ export default function App() {
       cloudName: 'cloudinary-training'
     }
   }); 
-  const cldImage = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face())));
-  const cldBlur = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face()))).effect(blur().strength(800));
-  const cldContrast = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity(focusOn(FocusOn.face()))).adjust(Adjust.contrast().level(100));
+  const cldImage = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face"));
+  const cldBlur = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(blur().strength(800));
+  const cldContrast = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).adjust(Adjust.contrast().level(100));
 
   const cldVideo = cld.video('climbing').resize(fill().width(150).height(150).gravity("auto"));
   const cldVideoBlur = cld.video('climbing').resize(fill().width(150).height(150).gravity("auto")).effect(blur().strength(70));
@@ -42,10 +41,8 @@ export default function App() {
 
 const multipleImages = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
-// import {focusOn} from "@cloudinary/url-gen/qualifiers/gravity";
-// import {FocusOn} from "@cloudinary/url-gen/qualifiers/focusOn";
+import {grayscale, sepia, blackwhite} from "@cloudinary/url-gen/actions/effect";
 import {thumbnail} from "@cloudinary/url-gen/actions/resize";
-import {Effect} from "@cloudinary/url-gen/actions/effect";
 export default function App() {
   const cld = new Cloudinary({
     cloud: {
@@ -53,9 +50,9 @@ export default function App() {
     }
   }); 
   const cldImage = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face"));
-  const cldGrayScale = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.grayscale());
-  const cldSepia = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.sepia());
-  const cldBlackclddarkblue = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(Effect.blackclddarkblue());
+  const cldGrayScale = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(grayscale());
+  const cldSepia = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(sepia());
+  const cldBlackclddarkblue = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face")).effect(blackwhite());
 
 
   return (
@@ -71,9 +68,7 @@ export default function App() {
 const multipleVideos = `import {AdvancedVideo} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {fill} from "@cloudinary/url-gen/actions/resize";
-// import {Effect} from "@cloudinary/url-gen/effect";
 import { VideoEdit, trim, preview} from "@cloudinary/url-gen/actions/videoEdit";
-
 import {Effect} from "@cloudinary/url-gen/actions/effect";
 export default function App() {
   const cld = new Cloudinary({
@@ -123,15 +118,19 @@ export default function Effects() {
       <p className="font-sans text-clddarkblue">
         There are many effects! In a URL they all begin with{" "}
         <span className="font-bold">e_</span>. Some effects can be are exclusive to
-        either images for video, while many can be used on both image and video.
+        either images for video, while many can be used on both image and video. Notice that 
+        we are using <span className="font-bold">gravity("face")</span>. It produces the 
+        <span className="font-bold">g_face</span> transformation, and looks for an 
+        interesting face in the image to focus on.
+       
       </p>
       <p className="font-sans">
         Apply blur and contrast effects to Images and Videos
       </p>
-      <Sandpack
+      <Sandpack theme={nightOwl}
         // You can change these examples!
         // Try uncommenting any of these lines
-        theme="dark"
+        // theme="nightowl"
         // theme="light"
         // theme="auto"
         template="react"
@@ -147,7 +146,7 @@ export default function Effects() {
         options={{
           showNavigator: true,
           showTabs: true,
-          showLineNumbers: false, // default - true
+          showLineNumbers: true, // default - true
           showInlineErrors: true, // default - false
           wrapContent: true, // default - false
           editorHeight: 300, // default - 300
@@ -163,7 +162,7 @@ export default function Effects() {
         "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
       }
       >
-        Video Only Effects: Grayscale, Sepia, Black and clddarkblue
+        Image Only Effects: Grayscale, Sepia, Black and White
       </h3>
       <Sandpack
         // You can change these examples!
