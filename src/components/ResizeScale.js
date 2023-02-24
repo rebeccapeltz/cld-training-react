@@ -8,7 +8,7 @@ import {CloudinaryImage} from "@cloudinary/url-gen";
 import {scale} from '@cloudinary/url-gen/actions/resize';
 
 export default function App() {
-  const image = new CloudinaryImage('cld-sample',{cloudName:'demo'});
+  const image = new CloudinaryImage('cld-sample',{cloudName:'cloudinary-training'});
 
   image.resize(scale().width(350));
   return (

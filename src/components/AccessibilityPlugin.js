@@ -7,7 +7,7 @@ const accessbility = `import {CloudinaryImage} from "@cloudinary/url-gen";
     import {scale} from "@cloudinary/url-gen/actions/resize";
     import { AdvancedImage, accessibility} from "@cloudinary/react";
     export default function App() {
-        const cloudinaryImage = new CloudinaryImage("sample", { cloudName: "demo" });
+        const cloudinaryImage = new CloudinaryImage("sample", { cloudName: "cloudinary-training" });
         return (
             <div>
             <h3>Render a Cloudinary Image</h3>

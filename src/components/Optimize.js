@@ -9,7 +9,7 @@ import { fill } from "@cloudinary/url-gen/actions/resize";
 
 export default function App() {
   // instantiate Cloudinary and call it's image function
-  const cld = new Cloudinary({cloud: {cloudName: 'demo'}});
+  const cld = new Cloudinary({cloud: {cloudName: 'cloudinary-training'}});
   const cldImage = cld.image('cld-sample');
   const cldImageOptimize = cld.image('cld-sample');
   cldImageOptimize.resize(fill().width(400).height(400).gravity("auto")).format("auto").quality("auto");

@@ -11,7 +11,7 @@ import {outline, cartoonify} from "@cloudinary/url-gen/actions/effect";
 export default function App() {
   const cld = new Cloudinary({
     cloud: {
-      cloudName: 'demo'
+      cloudName: 'cloudinary-training'
     }
   }); 
   const myImage = cld.image('cld-sample').resize(fill().width(350).height(350).gravity("auto"));

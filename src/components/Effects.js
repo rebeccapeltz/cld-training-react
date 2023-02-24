@@ -48,7 +48,7 @@ import {thumbnail} from "@cloudinary/url-gen/actions/resize";
 export default function App() {
   const cld = new Cloudinary({
     cloud: {
-      cloudName: 'demo'
+      cloudName: 'cloudinary-training'
     }
   }); 
   const cldImage = cld.image('cld-sample').resize(thumbnail().width(150).height(150).gravity("face"));

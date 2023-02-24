@@ -1,7 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import AddingTransformationsPage from "./pages/AddingTransformations";
-import Image from "./pages/Image";
-import Video from "./pages/Video";
 import ResizeScalePage from "./pages/ResizeScalePage";
 import Responsive from "./pages/Responsive";
 import LazyLoad from "./pages/Lazyload";
@@ -52,8 +50,6 @@ function App() {
               path="/adding-transformations"
               element={<AddingTransformationsPage />}
             />
-            <Route path="/image" element={<Image />} />
-            <Route path="/video" element={<Video />} />
             <Route path="/effects" element={<EffectsPage />} />
             <Route path="/overlay-image" element={<OverlayImagePage />} />
             <Route path="/overlay-text" element={<OverlayTextPage />} />

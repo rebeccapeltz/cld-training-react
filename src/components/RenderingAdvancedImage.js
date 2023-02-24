@@ -17,7 +17,7 @@ import {Cloudinary} from "@cloudinary/url-gen";
 export default function App() {
   const cld = new Cloudinary({
     cloud: {
-      cloudName: 'demo'
+      cloudName: 'cloudinary-training'
     }
   }); 
   const cldImage1 = cld.image('cld-sample');

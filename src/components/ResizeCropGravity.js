@@ -23,7 +23,7 @@ import {CloudinaryImage} from "@cloudinary/url-gen";
 import { crop } from "@cloudinary/url-gen/actions/resize";
 
 export default function App() {
-  const image = new CloudinaryImage('cld-sample',{cloudName:'demo'});
+  const image = new CloudinaryImage('cld-sample',{cloudName:'cloudinary-training'});
 
   image.resize(crop().width(400).height(400).gravity("auto"));
   return (
