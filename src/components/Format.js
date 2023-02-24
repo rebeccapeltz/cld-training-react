@@ -81,9 +81,7 @@ export default function Format() {
       <Experiment
         codeString={`<div style={{width: "150px",height: "150px", backgroundColor: "coral"}} >
 //change original file format to png
-cldImage.format("png");
-
-        `}
+cldImage.format("png");`}
         experimentTitle={
           "Experiment with file formats, radius max and transparency."
         }
@@ -138,8 +136,7 @@ cldImage.format("png");
   const cldGIFtoMP4 = cld.image("earth-spinning-GIF");
   console.log(cldGIFtoMP4.format("mp4").toURL());
   <p>Convert GIF to video: <a target="_blank" href={cldGIFToVideo.toURL()}>{cldGIFToVideo.toURL()}</a></p>
-  <AdvancedVideo controls height="300px" width="auto" cldVid={cldGIFToVideo} />
-        `}
+  <AdvancedVideo controls height="300px" width="auto" cldVid={cldGIFToVideo} />`}
         experimentTitle={
           "Experiment with converting GIFs to videos and the interchange between image and video formats"
         }
