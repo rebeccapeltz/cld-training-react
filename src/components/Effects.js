@@ -1,5 +1,7 @@
 import "../App.css";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import { INDEX } from "./Index.js";
+import Experiment from "./experiments";
 import { nightOwl } from "@codesandbox/sandpack-themes";
 
 const multipleImageandVideo = `import {AdvancedImage,AdvancedVideo} from '@cloudinary/react';
@@ -69,7 +71,9 @@ const multipleVideos = `import {AdvancedVideo} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 import { VideoEdit, trim, preview} from "@cloudinary/url-gen/actions/videoEdit";
-import {Effect} from "@cloudinary/url-gen/actions/effect";
+import {reverse, boomerang} from "@cloudinary/url-gen/actions/effect";
+
+// import {Effect} from "@cloudinary/url-gen/actions/effect";
 export default function App() {
   const cld = new Cloudinary({
     cloud: {
@@ -77,8 +81,8 @@ export default function App() {
     }
   });
   const cldVideo = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto"));;
-  const cldVideoReverse = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto")).effect(Effect.reverse());
-  const cldVideoBoomerang = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto")).effect(Effect.boomerang());
+  const cldVideoReverse = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto")).effect(reverse());
+  const cldVideoBoomerang = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto")).effect(boomerang());
   const cldVideoBarneysFirstCar = cld.video('video-trn/barneys-first-car');
   const cldVideoPreview = cld.video('video-trn/barneys-first-car').videoEdit(VideoEdit.preview());
 
@@ -116,14 +120,23 @@ export default function Effects() {
         Apply Effects to both Image and Video: blur and contrast
       </h3>
       <p className="font-sans text-clddarkblue">
-        There are many effects! In a URL they all begin with{" "}
+        There are many effects! In a URL they begin with{" "}
         <span className="font-bold">e_</span>. Some effects can be are exclusive to
-        either images for video, while many can be used on both image and video. Notice that 
+        either images for video, while many can be used on both image and video. 
+        Find the <a className={"underline"} href="https://cloudinary.com/documentation/transformation_reference" target="_blank" rel="noreferrer" >
+          Transformation URL API Reference</a> in the documentation.
+        </p>
+         <p className="font-sans text-clddarkblue">Notice that 
         we are using <span className="font-bold">gravity("face")</span>. It produces the 
-        <span className="font-bold">g_face</span> transformation, and looks for an 
-        interesting face in the image to focus on.
-       
-      </p>
+        <span className="font-bold"> g_face</span> transformation, and looks for an 
+        interesting face in the image to focus on.</p>
+    
+      <Experiment
+        codeString={`import { Effect, vignette, sepia, accelerate, advancedRedEye, artisticFilter, assistColorBlind, blackwhite, blur, boomerang, cartoonify, colorize, deshake, dither, EffectActions, fadeIn, fadeOut, gradientFade, grayscale, loop, makeTransparent, negate, noise, oilPaint, outline, pixelate, redEye, removeBackground, reverse, shadow, simulateColorBlind, styleTransfer, theme, transition, vectorize} from "@cloudinary/url-gen/actions/effect";`}
+        experimentTitle={"Find the Transformation URL API Reference in the Documenation"}
+        instructions={[`Find Image only transformation effects and Video only transformation effects`,
+          `Remember to import them from "effect"`]}
+      />
       <p className="font-sans">
         Apply blur and contrast effects to Images and Videos
       </p>
@@ -135,6 +148,7 @@ export default function Effects() {
         // theme="auto"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": multipleImageandVideo,
         }}
         customSetup={{
@@ -164,6 +178,16 @@ export default function Effects() {
       >
         Image Only Effects: Grayscale, Sepia, Black and White
       </h3>
+      <Experiment
+        codeString={`import {grayscale, sepia, blackwhite} from "@cloudinary/url-gen/actions/effect";`}
+        experimentTitle={
+          "Experiment with other image effects"
+        }
+        instructions={[
+          `Try these effects: colorize, simulateColorBlind, vectorize, pixelate`,
+          `Remember to import them from "effect"`
+        ]}
+      />
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
@@ -172,6 +196,7 @@ export default function Effects() {
         // theme="auto"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": multipleImages,
         }}
         customSetup={{
@@ -201,6 +226,16 @@ export default function Effects() {
       >
         Video Only Effects: Reverse, Boomerang, Preview
       </h3>
+      <Experiment
+        codeString={` const cldVideoaccel = cld.video('purple-hourglass').resize(fill().width(350).height(350).gravity("auto")).effect(accelerate().rate(100));`}
+        experimentTitle={
+          "Experiment with other video effects"
+        }
+        instructions={[
+          `Try the accelerate effect and experiment with different rates `,
+          `Remember to import it from "effect"`
+        ]}
+      />
       <Sandpack
         // You can change these examples!
         // Try uncommenting any of these lines
