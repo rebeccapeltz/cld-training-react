@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <div>
-      <div className={"flex space-x-4"}>
+      <div>
         <AdvancedImage  alt="Sample" cldImg={cldImage} />
         <AdvancedImage  alt="Sample" cldImg={cldBlur} />
         <AdvancedImage  alt="Sample" cldImg={cldContrast} />
@@ -56,7 +56,7 @@ export default function App() {
 
 
   return (
-    <div className={"flex space-x-4"}>
+    <div>
       <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldImage} />
       <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldGrayScale} />
       <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldSepia} />

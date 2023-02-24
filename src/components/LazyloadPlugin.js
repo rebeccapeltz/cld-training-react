@@ -16,7 +16,6 @@ const lazyload = `
     import {CloudinaryImage} from "@cloudinary/url-gen";
     import { AdvancedImage,lazyload} from "@cloudinary/react";
     import {fill} from "@cloudinary/url-gen/actions/resize";
-    import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
     export default function App() {
         const brownSheep = new CloudinaryImage("brown_sheep", { cloudName: "demo" });
         brownSheep.resize(fill().width(400).height(400))
@@ -25,7 +24,7 @@ const lazyload = `
         const cat = new CloudinaryImage("fat_cat", { cloudName: "demo" });
         cat.resize(fill().width(400).height(400))
         const bear = new CloudinaryImage("bear", { cloudName: "demo" });
-        bear.resize(fill().width(400).height(400).gravity(autoGravity()));
+        bear.resize(fill().width(400).height(400).gravity("gravity"));
         return (
             <div>
             <h3>Scroll down to see images lazyload</h3>

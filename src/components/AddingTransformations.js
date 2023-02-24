@@ -6,7 +6,6 @@ const cloudinaryAdvancedImage = `import {AdvancedImage} from '@cloudinary/react'
 import {Cloudinary} from "@cloudinary/url-gen";
 import {Transformation} from "@cloudinary/url-gen";
 import {fill} from "@cloudinary/url-gen/actions/resize";
-import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
 import {outline, cartoonify} from "@cloudinary/url-gen/actions/effect";
 
 export default function App() {
@@ -15,7 +14,7 @@ export default function App() {
       cloudName: 'demo'
     }
   }); 
-  const myImage = cld.image('cld-sample').resize(fill().width(350).height(350).gravity(autoGravity()));
+  const myImage = cld.image('cld-sample').resize(fill().width(350).height(350).gravity("auto"));
   return (
     <div>
       <AdvancedImage cldImg={myImage.effect(cartoonify())} />
@@ -33,7 +32,7 @@ export default function AddingTransformations() {
         </div>
       )
   // create a new object and apply the outline to the new object
-    const myImage2 = cld.image('cld-sample').resize(fill().width(350).height(350).gravity(autoGravity()));
+    const myImage2 = cld.image('cld-sample').resize(fill().width(350).height(350).gravity("auto"));
       return (
         <div>
           <AdvancedImage cldImg={myImage.effect(cartoonify())} />
