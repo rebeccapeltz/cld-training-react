@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import { INDEX } from "./Index.js";
+import Experiment from "./experiments";
 
 import { Sandpack } from "@codesandbox/sandpack-react";
 
@@ -8,13 +10,13 @@ const placeholder = `
     import { AdvancedImage, placeholder} from "@cloudinary/react";
     export default function App() {
         const doctor = new CloudinaryImage("doctor", { cloudName: "cloudinary-training" });
-        const feature = "blur"
+        // if no modeType is specified "blur" is the default
+        const modeType = "blur" 
         return (
             <div>
             <h3>Render a Placeholder Image</h3>
-            <p>Try changing the <strong>feature</strong> variable to "pixelate", "vectorize", and "predominant"</p>
-            <h4>Image with {feature} Placeholder </h4>
-            <AdvancedImage width="100%" cldImg={doctor} plugins={[placeholder({mode: feature})]}/>
+            <h4>Image with {modeType} Placeholder </h4>
+            <AdvancedImage width="100%" cldImg={doctor} plugins={[placeholder({mode: modeType})]}/>
         </div>
         )
     }`;
@@ -29,10 +31,22 @@ function PlaceholderPlugin() {
       >
         Placeholder Plugin
       </h2>{" "}
+      <Experiment
+codeString={`const modeType = "pixelate";
+<AdvancedImage width="100%" cldImg={doctor} plugins={[placeholder({mode: modeType})]}/>`}
+        experimentTitle={`Discover and Experiment with Placeholder Mode Types`}
+        instructions={[
+          `There are 4 mode types to experiment with: blur, pixelate, vectorize, and predominant`,
+          `Change the mode types`,
+          `Note the sizes of the images downloaded as placeholders`,
+          `Note the types you would prefer as a user`,
+        ]}
+      />
       <Sandpack
         theme="dark"
         template="react"
         files={{
+          "/index.js": INDEX,
           "/App.js": placeholder,
         }}
         customSetup={{
