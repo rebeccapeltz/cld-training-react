@@ -1,7 +1,6 @@
 import "../App.css";
-import { Sandpack } from "@codesandbox/sandpack-react";
-import { INDEX } from "./Index.js";
 import Experiment from "./experiments";
+import SandpackWrapper from "./SandpackWrapper";
 
 const cloudinaryAdvancedImage = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
@@ -61,35 +60,11 @@ return (
         instructions={[
           `Remove background functionality from the transformation`,
           "Add CSS to the AdvancedImage component to see the actual size of the image rendered",
-          "Add colors as demonstrated with the AdvancedVideo component to the background"
+          "Add colors as demonstrated with the AdvancedVideo component to the background",
         ]}
       />
-      <Sandpack
-        theme="dark"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryAdvancedImage,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: true, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 400, // default - 300
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryAdvancedImage} />
+
       <h3
         className={
           "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
@@ -111,33 +86,7 @@ const cldVideo = cld.video('dog-frisbee').resize(pad().width(300).height(400));
           "Refresh the page, remove background from the video, and add CSS to the Advanced Video component to see the actual size of the video rendered",
         ]}
       />
-
-      <Sandpack
-        theme="dark"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryAdvancedVideo,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: true, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 400, // default - 300
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryAdvancedVideo} />
     </div>
   );
 }

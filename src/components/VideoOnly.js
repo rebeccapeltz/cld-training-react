@@ -1,7 +1,6 @@
 import "../App.css";
-import { Sandpack } from "@codesandbox/sandpack-react";
-import { INDEX } from "./Index.js";
 import Experiment from "./experiments";
+import SandpackWrapper from "./SandpackWrapper";
 
 const cloudinaryAdvancedVideo = `import {AdvancedVideo,AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
@@ -99,32 +98,7 @@ export default function VideoOnly() {
           `Remember to import the functions the image transformations require`,
         ]}
       />
-      <Sandpack
-        theme="dark"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryAdvancedVideo,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: true, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 500, // default - 300
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="1" scriptName={cloudinaryAdvancedVideo} />
       <p className={"font-sans text-xs italic text-clddarkblue underline"}>
         Credit:{" "}
         <a

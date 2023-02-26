@@ -6,14 +6,14 @@ import Experiment from "./experiments";
 const placeholder = `import {CloudinaryImage} from "@cloudinary/url-gen";
     import { AdvancedImage, placeholder} from "@cloudinary/react";
     export default function App() {
-        const doctor = new CloudinaryImage("doctor", { cloudName: "cloudinary-training" });
+        const cldImage = new CloudinaryImage("doctor", { cloudName: "cloudinary-training" });
         // if no modeType is specified "blur" is the default
         const modeType = "blur" 
         return (
             <div>
             <h3>Render a Placeholder Image</h3>
             <h4>Image with {modeType} Placeholder </h4>
-            <AdvancedImage width="100%" cldImg={doctor} plugins={[placeholder({mode: modeType})]}/>
+            <AdvancedImage width="100%" cldImg={cldImage} plugins={[placeholder({mode: modeType})]}/>
         </div>
         )
     }`;

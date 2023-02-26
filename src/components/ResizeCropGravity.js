@@ -1,7 +1,6 @@
 import "../App.css";
-import { Sandpack } from "@codesandbox/sandpack-react";
-import { INDEX } from "./Index.js";
 import Experiment from "./experiments";
+import SandpackWrapper from "./SandpackWrapper";
 
 const cloudinaryAdvancedVideo = `import {AdvancedVideo} from '@cloudinary/react';
 import {CloudinaryVideo} from "@cloudinary/url-gen";
@@ -51,36 +50,11 @@ export default function ResizeCropGravity() {
         }
         instructions={[
           `Remove gravity from the image tranformation`,
-          "View the image with and without gravity and note the differences"
+          "View the image with and without gravity and note the differences",
         ]}
       />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryAdvancedImage} />
 
-      <Sandpack
-        theme="dark"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryAdvancedImage,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.9.0",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 300, // default - 300
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
       <h3
         className={
           "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
@@ -95,35 +69,10 @@ export default function ResizeCropGravity() {
         }
         instructions={[
           `Remove gravity from the video tranformation`,
-          "View the video with and without gravity and note the differences"
+          "View the video with and without gravity and note the differences",
         ]}
       />
-      <Sandpack
-        theme="dark"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryAdvancedVideo,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.9.0",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 300, // default - 300
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryAdvancedVideo} />
     </div>
   );
 }

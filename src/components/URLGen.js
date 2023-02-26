@@ -1,5 +1,5 @@
 import "../App.css";
-import { Sandpack } from "@codesandbox/sandpack-react";
+import SandpackWrapper from "./SandpackWrapper";
 import Experiment from "./experiments";
 
 const cloudinaryImageURLs = `import {Cloudinary,CloudinaryImage} from "@cloudinary/url-gen";
@@ -93,37 +93,7 @@ const cloudinaryVideo = new CloudinaryVideo("<my public id>", { cloudName: "<my 
           `Try some of these other public ids from the "cloudinary-training" cloud: cld-sample-3, cld-sample-5`
         ]}
       />
-
-      <Sandpack
-        // You can change these examples!
-        // Try uncommenting any of these lines
-        theme="dark"
-        // theme="light"
-        // theme="auto"
-        template="react"
-        files={{
-          "/App.js": cloudinaryImageURLs,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 350, // default - 300
-          // editorWidthPercentage: 60, // default - 50
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryImageURLs} />
       <h3
         className={
           "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
@@ -131,36 +101,7 @@ const cloudinaryVideo = new CloudinaryVideo("<my public id>", { cloudName: "<my 
       >
         Video URL Generator
       </h3>
-      <Sandpack
-        // You can change these examples!
-        // Try uncommenting any of these lines
-        theme="dark"
-        // theme="light"
-        // theme="auto"
-        template="react"
-        files={{
-          "/App.js": cloudinaryVideoURLs,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 300, // default - 300
-          // editorWidthPercentage: 60, // default - 50
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 300,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryVideoURLs} />
     </div>
   );
 }

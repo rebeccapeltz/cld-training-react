@@ -8,13 +8,13 @@ import { AdvancedImage,lazyload} from "@cloudinary/react";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 export default function App() {
     const brownSheep = new CloudinaryImage("brown_sheep", { cloudName: "demo" });
-    brownSheep.resize(fill().width(400).height(400))
+    brownSheep.resize(fill().width(400).height(400).gravity("auto"))
     const woman = new CloudinaryImage("woman", { cloudName: "demo" });
-    woman.resize(fill().width(400).height(400))
+    woman.resize(fill().width(400).height(400).gravity("auto"))
     const cat = new CloudinaryImage("fat_cat", { cloudName: "demo" });
-    cat.resize(fill().width(400).height(400))
+    cat.resize(fill().width(400).height(400).gravity("auto"))
     const bear = new CloudinaryImage("bear", { cloudName: "demo" });
-    bear.resize(fill().width(400).height(400).gravity("gravity"));
+    bear.resize(fill().width(400).height(400).gravity("auto"));
     return (
         <div>
         <h3>Scroll down to see images lazyload</h3>

@@ -1,7 +1,6 @@
 import "../App.css";
-import { Sandpack } from "@codesandbox/sandpack-react";
-import { INDEX } from "./Index.js";
 import Experiment from "./experiments";
+import SandpackWrapper from "./SandpackWrapper";
 
 const image = `import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
@@ -76,9 +75,9 @@ export default function OverlayText() {
   return (
     <div className="code-container">
       <h2
-       className={
-        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
-      }
+        className={
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
+        }
       >
         Text Overlaid on Image
       </h2>{" "}
@@ -86,7 +85,7 @@ export default function OverlayText() {
         Look for the message in the central, lower area the image.
       </p>
       <Experiment
-        codeString={ ` .overlay(
+        codeString={` .overlay(
           source(
             text("Sprinkles and Spots", new TextStyle("Arial", 20))
             .textColor("#eeeef1")
@@ -103,44 +102,14 @@ export default function OverlayText() {
           `Many Google fonts are supported for use as the font family for text overlays, so try one of those`,
           `Modify the compass locations: north, north_east, east, south_east, south, south_west, west, and northwest`,
           `Modify the X,Y offsets? You can use positive and negative values for the x and y offset`,
-          `What happens if you remove the Position transformation? What is the default?`
+          `What happens if you remove the Position transformation? What is the default?`,
         ]}
       />
-      <Sandpack
-        // You can change these examples!
-        // Try uncommenting any of these lines
-        theme="dark"
-        // theme="light"
-        // theme="auto"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": image,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 300, // default - 300
-          // editorWidthPercentage: 60, // default - 50
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={image} />
       <h2
-      className={
-        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
-      }
+        className={
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
+        }
       >
         Text Overlaid on Video
       </h2>{" "}
@@ -148,7 +117,7 @@ export default function OverlayText() {
         Look for the message in the central, upper area of the video.
       </p>
       <Experiment
-        codeString={ ` .overlay(
+        codeString={` .overlay(
           source(
             text("Sprinkles and Spots", new TextStyle("Arial", 20))
             .textColor("#eeeef1")
@@ -165,40 +134,10 @@ export default function OverlayText() {
           `Many Google fonts are supported for use as the font family for text overlays, so try one of those`,
           `Modify the compass locations: north, north_east, east, south_east, south, south_west, west, and northwest`,
           `Modify the X,Y offsets? You can use positive and negative values for the x and y offset`,
-          `What happens if you remove the Position transformation? What is the default?`
+          `What happens if you remove the Position transformation? What is the default?`,
         ]}
       />
-      <Sandpack
-        // You can change these examples!
-        // Try uncommenting any of these lines
-        theme="dark"
-        // theme="light"
-        // theme="auto"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": video,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 300, // default - 300
-          // editorWidthPercentage: 60, // default - 50
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={video} />
     </div>
   );
 }

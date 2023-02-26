@@ -1,7 +1,6 @@
 import "../App.css";
-import { Sandpack } from "@codesandbox/sandpack-react";
-import { INDEX } from "./Index.js";
 import Experiment from "./experiments";
+import SandpackWrapper from "./SandpackWrapper";
 
 const cloudinaryImages = `import {Cloudinary} from "@cloudinary/url-gen";
 import { AdvancedImage} from "@cloudinary/react";
@@ -62,40 +61,10 @@ cldImageQ.quality("80");`}
           "Open Chrome inspector Network tab and refresh",
           "Locate size column for image an note the size of the image file with and with out quality",
           "Try different quality options like q_auto:good, q_auto:eco and q_auto:best",
-          "Try using numeric quality values like q_80"
+          "Try using numeric quality values like q_80",
         ]}
       />
-      <Sandpack
-        // You can change these examples!
-        // Try uncommenting any of these lines
-        theme="dark"
-        // theme="light"
-        // theme="auto"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryImages,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: true, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 350, // default - 300
-          // editorWidthPercentage: 60, // default - 50
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryImages} />
       <h3
         className={
           "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
@@ -110,44 +79,14 @@ cldVideoQ.quality("auto:good");`}
         instructions={[
           "Right click video and open in new tab",
           "Open Chrome inspector",
-          "Click on vertical ellipses and Add more tools", 
+          "Click on vertical ellipses and Add more tools",
           "Add Media and this should create a media tab",
           "Open Chrome inspector Network tab and refresh",
           "Click on the video file and you'll find the file size there",
           "Try different quality options like q_auto:good, q_auto:eco and q_auto:best",
         ]}
       />
-      <Sandpack
-        // You can change these examples!
-        // Try uncommenting any of these lines
-        theme="dark"
-        // theme="light"
-        // theme="auto"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryVideoURLs,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 350, // default - 300
-          // editorWidthPercentage: 60, // default - 50
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 300,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryVideoURLs} />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import "../App.css";
-import { Sandpack } from "@codesandbox/sandpack-react";
-import { INDEX } from "./Index.js";
 import Experiment from "./experiments";
+import SandpackWrapper from "./SandpackWrapper";
 
 const cloudinaryImages = `import {Cloudinary} from "@cloudinary/url-gen";
 import { AdvancedImage} from "@cloudinary/react";
@@ -90,40 +89,10 @@ cldImage.format("png");`}
           `Note the differences between the image with f_auto applied to it`,
           `If you don't see a difference, try changing the format of the original file to "png"`,
           "Add CSS to the AdvancedImage component to see the actual size of the image rendered",
-          "Add colors as demonstrated with the AdvancedVideo component to the background"
+          "Add colors as demonstrated with the AdvancedVideo component to the background",
         ]}
       />
-      <Sandpack
-        // You can change these examples!
-        // Try uncommenting any of these lines
-        theme="dark"
-        // theme="light"
-        // theme="auto"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryImages,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: true, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 500, // default - 300
-          // editorWidthPercentage: 60, // default - 50
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryImages} />
       <h3
         className={
           "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
@@ -140,44 +109,15 @@ cldImage.format("png");`}
         experimentTitle={
           "Experiment with converting GIFs to videos and the interchange between image and video formats"
         }
-        instructions={[`GIFs can be very large so converting a GIF to a video can help with asset size and performance on a web page`,
+        instructions={[
+          `GIFs can be very large so converting a GIF to a video can help with asset size and performance on a web page`,
           "Use the format transformation to convert the GIF to a video ",
           "Log the URL and open it in the browser",
           "Render the video you created from a GIF with Advanced Video",
-          "Note size differences between the original GIF and the video created from it"
+          "Note size differences between the original GIF and the video created from it",
         ]}
       />
-      <Sandpack
-        // You can change these examples!
-        // Try uncommenting any of these lines
-        theme="dark"
-        // theme="light"
-        // theme="auto"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": cloudinaryVideoURLs,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 500, // default - 300
-          // editorWidthPercentage: 60, // default - 50
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 300,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryVideoURLs} />
     </div>
   );
 }
