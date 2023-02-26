@@ -166,7 +166,7 @@ export default function Layout() {
           <nav>
             <ul>
               {testMenuItems.map(({ href, title, divider }) => (
-                <li className="m-1" key={title}>
+                <li className="m-.8" key={title}>
                   <NavLink
                     to={href}
                     className={({ isActive, href, divider }) =>
@@ -186,8 +186,6 @@ export default function Layout() {
       </div>
       <footer className="footer bg-cldgray items-center p-4 bg-neutral text-neutral-content">
         <div className="items-center grid-flow-col ">
-         
-
           <p>Copyright © 2023 </p>
         </div>
         <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
@@ -200,7 +198,6 @@ export default function Layout() {
           <a href="https://community.cloudinary.com">
            <img title="Cloudinary Community Forum" target="_blank"  height="30px" width="30px" src="/images/cloudinary_cloud_glyph_white_png.png" alt="Cloudinary Community"/>
           </a>
-         
         </div>
       </footer>
     </div>
