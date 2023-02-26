@@ -186,7 +186,7 @@ export default function Layout() {
       </div>
       <footer className="footer bg-cldgray items-center p-4 bg-neutral text-neutral-content">
         <div className="items-center grid-flow-col ">
-          <p>Copyright © 2023 </p>
+          <p>© 2023  Cloudinary Customer Education</p>
         </div>
         <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
         <a href="https://github.com/rebeccapeltz/cld-training-react">
