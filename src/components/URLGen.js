@@ -55,7 +55,7 @@ export default function URLGenComponent() {
     <div className="code-container">
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Image URL Generator
@@ -126,7 +126,7 @@ const cloudinaryVideo = new CloudinaryVideo("<my public id>", { cloudName: "<my 
       />
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Video URL Generator

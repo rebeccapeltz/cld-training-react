@@ -73,7 +73,7 @@ export default function Format() {
     <div className="code-container">
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Using Format with Images
@@ -126,7 +126,7 @@ cldImage.format("png");`}
       />
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Using Format with Video

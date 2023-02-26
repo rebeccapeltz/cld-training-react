@@ -1,5 +1,7 @@
 import { INDEX } from "./Index.js";
 import { Sandpack } from "@codesandbox/sandpack-react";
+import { nightOwl } from "@codesandbox/sandpack-themes";
+
 
 export default function SandpackWrapper(props) {
   const editorHeight = (numberOnPage) => {
@@ -11,8 +13,9 @@ export default function SandpackWrapper(props) {
   const height = editorHeight(props.numberOnPage);
   return (
     <div>
-      <Sandpack
-        theme="dark"
+      <Sandpack 
+        theme={nightOwl}
+        // theme="dark"
         template="react"
         files={{
           "/index.js": INDEX,
@@ -29,7 +32,7 @@ export default function SandpackWrapper(props) {
           showTabs: true,
           showLineNumbers: true,
           showInlineErrors: true,
-          wrapContent: false,
+          wrapContent: true,
           editorHeight: height,
           autorun: false,
           recompileMode: "delayed",

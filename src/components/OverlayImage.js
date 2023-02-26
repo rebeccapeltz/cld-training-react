@@ -83,7 +83,7 @@ export default function OverlayImage() {
     <div className="code-container">
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Image Overlaid on Image
@@ -147,7 +147,7 @@ export default function OverlayImage() {
       />
       <h2
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Text Overlaid on Video

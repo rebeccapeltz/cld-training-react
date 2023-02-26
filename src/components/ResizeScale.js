@@ -39,7 +39,7 @@ export default function CldBuildVideo() {
     <div className="code-container">
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Scale Image
@@ -81,7 +81,7 @@ export default function CldBuildVideo() {
       />
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Scale Video

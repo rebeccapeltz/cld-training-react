@@ -39,7 +39,7 @@ export default function PadWithBackground() {
     <div className="code-container">
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Pad Images with Background Auto
@@ -92,7 +92,7 @@ return (
       />
       <h3
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Pad Video with Background Color

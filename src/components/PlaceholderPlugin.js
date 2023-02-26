@@ -1,12 +1,9 @@
 import React from "react";
 import "../App.css";
-import { INDEX } from "./Index.js";
+import SandpackWrapper from "./SandpackWrapper";
 import Experiment from "./experiments";
 
-import { Sandpack } from "@codesandbox/sandpack-react";
-
-const placeholder = `
-    import {CloudinaryImage} from "@cloudinary/url-gen";
+const placeholder = `import {CloudinaryImage} from "@cloudinary/url-gen";
     import { AdvancedImage, placeholder} from "@cloudinary/react";
     export default function App() {
         const doctor = new CloudinaryImage("doctor", { cloudName: "cloudinary-training" });
@@ -26,7 +23,7 @@ function PlaceholderPlugin() {
     <div className="code-container">
       <h2
         className={
-          "font-sans font-medium leading-tight text-3xl mt-0 mb-2 text-clddarkblue"
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
         }
       >
         Placeholder Plugin
@@ -42,32 +39,7 @@ codeString={`const modeType = "pixelate";
           `Note the types you would prefer as a user`,
         ]}
       />
-      <Sandpack
-        theme="dark"
-        template="react"
-        files={{
-          "/index.js": INDEX,
-          "/App.js": placeholder,
-        }}
-        customSetup={{
-          dependencies: {
-            "@cloudinary/react": "^1.9.0",
-            "@cloudinary/url-gen": "^1.8.7",
-          },
-        }}
-        options={{
-          showNavigator: true,
-          showTabs: true,
-          showLineNumbers: false, // default - true
-          showInlineErrors: true, // default - false
-          wrapContent: true, // default - false
-          editorHeight: 600, // default - 300
-          autorun: false,
-          recompileMode: "delayed", //default is immediate
-          recompileDelay: 400,
-          resizablePanels: true, //default
-        }}
-      />
+      <SandpackWrapper numberOnPage="1" scriptName={placeholder} />
     </div>
   );
 }
