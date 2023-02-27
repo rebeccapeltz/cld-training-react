@@ -113,7 +113,7 @@ export default function Layout() {
     },
     {
       href: "/image-only",
-      title: "Asset Specific",
+      title: "Resource Type Specific",
       divider: true,
     },
     {
