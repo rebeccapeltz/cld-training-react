@@ -18,7 +18,7 @@ export default function App() {
     return (
         <div>
         <h3>Scroll down to see images lazyload</h3>
-        <p style={{ height: "700px" }}>
+        <p>
           You can open your network tab to see the images loading    
         </p>
         <div style={{ height: "600px" }} />

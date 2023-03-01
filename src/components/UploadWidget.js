@@ -1,5 +1,5 @@
 import "../App.css";
-import React, { useEffect, useState } from "react";
+  import React, { useEffect, useState } from "react";
 import UploadWidgetSyntax from "./UploadWidgetSyntax";
 
 export default function UploadWidget() {
@@ -29,12 +29,10 @@ export default function UploadWidget() {
       console.log(result);
       console.log("success", result.info.secure_url);
       setUploadedImage(result.info.secure_url);
-      debugger
     }
   };
   const uploadWidget = () => {
     console.log(cloudName, unsignedPreset);
-    // debugger;
     window.cloudinary.openUploadWidget(
       {
         cloudName: cloudName,
@@ -107,7 +105,7 @@ export default function UploadWidget() {
             >
               Upload File
             </button>
-            <img src={uploadedImage} onLoad={(event) => event.target.style.display = 'inline-block'} onError={(event) => event.target.style.display = 'none'} alt="uploaded using the upload widget" />
+            <img style={{marginTop: "1rem"}} src={uploadedImage} onLoad={(event) => event.target.style.display = 'inline-block'} onError={(event) => event.target.style.display = 'none'} alt="uploaded using the upload widget" />
           </div>
         </div>
       </form>

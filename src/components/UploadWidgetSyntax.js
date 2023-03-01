@@ -34,12 +34,10 @@ export default function UploadWidgetSyntax() {
         console.log(result);
         console.log("success", result.info.secure_url);
         setUploadedImage(result.info.secure_url);
-        debugger
       }
     };
     const uploadWidget = () => {
       console.log(cloudName, unsignedPreset);
-      // debugger;
       window.cloudinary.openUploadWidget(
         {
           cloudName: cloudName,
