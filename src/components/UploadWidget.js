@@ -4,8 +4,10 @@ import UploadWidgetSyntax from "./UploadWidgetSyntax";
 
 export default function UploadWidget() {
   const [loaded, setLoaded] = useState(false);
-  const [cloudName, setCloudName] = useState("cloudinary-training");
-  const [unsignedPreset, setUnsignedPreset] = useState("vpy7udvq");
+  const [cloudName, setCloudName] = useState("");
+  const [unsignedPreset, setUnsignedPreset] = useState("");
+  // const [cloudName, setCloudName] = useState("cloudinary-training");
+  // const [unsignedPreset, setUnsignedPreset] = useState("vpy7udvq");
   const [uploadedImage, setUploadedImage] = useState("");
 
   useEffect(() => {
@@ -67,8 +69,9 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldgray leading-tight focus:outline-none focus:bg-white focus:border-cldblue"
+              className="bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldgray leading-tight focus:outline-none focus:bg-cldblue focus:border-cldblue"
               id="inline-cloud-name"
+              placeholder="Cloudinary Cloud Name"
               type="text"
               value={cloudName}
               onChange={(e) => setCloudName(e.target.value)}
@@ -86,8 +89,9 @@ export default function UploadWidget() {
           </div>
           <div className="md:w-2/3">
             <input
-              className="font-sans bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldgray leading-tight focus:outline-none focus:bg-white focus:border-cldlightblue"
+              className="font-sans bg-cldblue appearance-none border-2 border-cldlightblue rounded w-full py-2 px-4 text-cldgray leading-tight focus:outline-none focus:bg-cldblue focus:border-cldlightblue"
               id="inline-unsigned-preset"
+              placeholder="Unsigned Preset Name"
               type="text"
               value={unsignedPreset}
               onChange={(e) => setUnsignedPreset(e.target.value)}
