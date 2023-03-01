@@ -3,17 +3,22 @@ import "../App.css";
 import Experiment from "./experiments";
 import SandpackWrapper from "./SandpackWrapper";
 
-const lazyload = `import {CloudinaryImage} from "@cloudinary/url-gen";
+const lazyload = `import {Cloudinary} from "@cloudinary/url-gen";
 import { AdvancedImage,lazyload} from "@cloudinary/react";
 import {fill} from "@cloudinary/url-gen/actions/resize";
 export default function App() {
-    const brownSheep = new CloudinaryImage("brown_sheep", { cloudName: "demo" });
+    const cld = new Cloudinary({
+      cloud: {
+        cloudName: 'cloudinary-training'
+      }
+    });
+    const brownSheep = cld.image("lazyload/brown_sheep");
     brownSheep.resize(fill().width(400).height(400).gravity("auto"))
-    const woman = new CloudinaryImage("woman", { cloudName: "demo" });
+    const woman = cld.image("lazyload/woman", { cloudName: "demo" });
     woman.resize(fill().width(400).height(400).gravity("auto"))
-    const cat = new CloudinaryImage("fat_cat", { cloudName: "demo" });
+    const cat = cld.image("lazyload/fat_cat", { cloudName: "demo" });
     cat.resize(fill().width(400).height(400).gravity("auto"))
-    const bear = new CloudinaryImage("bear", { cloudName: "demo" });
+    const bear = cld.image("lazyload/bear", { cloudName: "demo" });
     bear.resize(fill().width(400).height(400).gravity("auto"));
     return (
         <div>
@@ -21,11 +26,11 @@ export default function App() {
         <p>
           You can open your network tab to see the images loading    
         </p>
-        <div style={{ height: "600px" }} />
-            <AdvancedImage  style={{display: "block", marginTop: "600px", width: "400px", height: "400px"}}  cldImg={brownSheep} plugins={[lazyload({rootMargin: '5px 5px 5px 5px', threshold: 0.1})]} />
-            <AdvancedImage  style={{display: "block", marginTop: "600px", width: "400px", height: "400px"}}  cldImg={cat} plugins={[lazyload({rootMargin: '5px 5px 5px 5px', threshold: 0.15})]} />
-            <AdvancedImage  style={{display: "block", marginTop: "600px", width: "400px", height: "400px"}}  cldImg={woman} plugins={[lazyload({rootMargin: '5px 5px 5px 5px', threshold: 0.2})]} />
-            <AdvancedImage  style={{display: "block", marginTop: "600px", width: "400px", height: "400px"}}  cldImg={bear} plugins={[lazyload({rootMargin: '5px 5px 5px 5px', threshold: 0.25})]} />
+        <div style={{ height: "300px" }} />
+            <AdvancedImage  style={{display: "block", marginTop: "300px", width: "300px", height: "300px"}}  cldImg={brownSheep} plugins={[lazyload({rootMargin: '5px 5px 5px 5px', threshold: 0.1})]} />
+            <AdvancedImage  style={{display: "block", marginTop: "300px", width: "300px", height: "300px"}}  cldImg={cat} plugins={[lazyload({rootMargin: '5px 5px 5px 5px', threshold: 0.15})]} />
+            <AdvancedImage  style={{display: "block", marginTop: "300px", width: "300px", height: "300px"}}  cldImg={woman} plugins={[lazyload({rootMargin: '5px 5px 5px 5px', threshold: 0.2})]} />
+            <AdvancedImage  style={{display: "block", marginTop: "300px", width: "300px", height: "300px"}}  cldImg={bear} plugins={[lazyload({rootMargin: '5px 5px 5px 5px', threshold: 0.25})]} />
 
         </div>
     )
