@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function Layout() {
   let activeClassName = "text-cldcoral";
   let dividerStyle = "font-sans font-bold bg-clddarkblue text-white pl-1";
-  let titleStyle = "font-sans text-sm font-semibold bg-cldgray text-black pl-4";
+  let titleStyle = "font-sans text-sm lg:text-lg font-semibold bg-cldgray text-black pl-4";
   const [hideAside, setHidAside] = useState(false);
 
   const handleChange = () => {

@@ -6,6 +6,7 @@ import SandpackWrapper from "./SandpackWrapper";
 const lazyload = `import {Cloudinary} from "@cloudinary/url-gen";
 import { AdvancedImage,lazyload} from "@cloudinary/react";
 import {fill} from "@cloudinary/url-gen/actions/resize";
+
 export default function App() {
     const cld = new Cloudinary({
       cloud: {
@@ -14,12 +15,13 @@ export default function App() {
     });
     const brownSheep = cld.image("lazyload/brown_sheep");
     brownSheep.resize(fill().width(400).height(400).gravity("auto"))
-    const woman = cld.image("lazyload/woman", { cloudName: "demo" });
+    const woman = cld.image("lazyload/woman");
     woman.resize(fill().width(400).height(400).gravity("auto"))
-    const cat = cld.image("lazyload/fat_cat", { cloudName: "demo" });
+    const cat = cld.image("lazyload/fat_cat");
     cat.resize(fill().width(400).height(400).gravity("auto"))
-    const bear = cld.image("lazyload/bear", { cloudName: "demo" });
+    const bear = cld.image("lazyload/bear");
     bear.resize(fill().width(400).height(400).gravity("auto"));
+    
     return (
         <div>
         <h3>Scroll down to see images lazyload</h3>
@@ -40,19 +42,19 @@ function LazyloadPlugin() {
   return (
     <div className="code-container">
       <h2
-      className={
-        "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
-      }
+        className={
+          "font-sans font-medium leading-tight text-2xl mt-0 mb-2 text-clddarkblue"
+        }
       >
         Lazyload Plugin
       </h2>
       <h3
-       className={
-        "font-sans font-medium leading-tight text-l mt-0 mb-2 text-clddarkblue"
-      }
+        className={
+          "font-sans font-medium leading-tight text-l mt-0 mb-2 text-clddarkblue"
+        }
       >
         Scroll down to see images lazyload
-      </h3>   
+      </h3>
       <Experiment
         codeString={`plugins={[lazyload({rootMargin: 'TOPpx RGHTpx BOTTOMpx LEFTpx', threshold: 0.0-100.0})]}`}
         experimentTitle={`Discover and Experiment with Lazyload Bounding Box and Threshold`}

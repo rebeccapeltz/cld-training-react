@@ -6,7 +6,7 @@ import { nightOwl } from "@codesandbox/sandpack-themes";
 export default function SandpackWrapper(props) {
   const editorHeight = (numberOnPage) => {
     let n = parseInt(numberOnPage);
-    if (n === 1) return 600;
+    if (n === 1) return 700;
     else return 300;
   };
 
