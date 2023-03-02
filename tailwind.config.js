@@ -17,13 +17,15 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      cldblue: "#3448c5",
-      cldlightblue: "#b6d2ff",
       cldgray: "#eeeef1",
       white: "#ffffff",
       clddarkblue: "#0c163b",
+      cldblue: "#3448c5",
+      cldlightblue: "#b6d2ff",
       cldyellow: "#f7bc00",
-      cldcoral: "#ff5050"
+      cldcoral: "#ff5050",
+      cldpeach: "#ffd4c4",
+      cldturquois: "#48c4d8"
     },
   },
   plugins: [require("daisyui")],
