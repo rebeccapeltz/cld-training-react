@@ -125,12 +125,12 @@ export default function Layout() {
     },
     {
       href: "image-only",
-      title: "Image Only Transformations",
+      title: "Image Only",
       divider: false,
     },
     {
       href: "/video-only",
-      title: "Video Only Transformations",
+      title: "Video Only",
       divider: false,
     },
     {

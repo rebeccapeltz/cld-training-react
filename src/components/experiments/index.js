@@ -7,6 +7,7 @@ SyntaxHighlighter.registerLanguage("javascript", js);
 SyntaxHighlighter.registerLanguage("html", xml);
 
 export default function Experiment(props) {
+  // console.log(JSON.stringify(props,null,2))
   return (
     <div>
       <div className="collapse">
@@ -16,9 +17,13 @@ export default function Experiment(props) {
         </div>
         <div className="collapse-content">
           <div>
-            <p className="font-sans text-clddarkblue experiment-intro">
+            <p className="font-sans font-bold text-clddarkblue experiment-intro">
               {props.experimentTitle}
             </p>
+            <p className="font-sans text-clddarkblue experiment-intro">
+              {props.notes}
+            </p>
+            <br/>
             <div className="ml-4">
               <ul className="font-sans text-clddarkblue list-decimal">
                 {props.instructions.map((inst, n) => (

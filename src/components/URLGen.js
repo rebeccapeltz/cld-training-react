@@ -60,27 +60,14 @@ export default function URLGenComponent() {
       >
         Image URL Generator
       </h3>
-      <p className={"font-sans mt-1 mb-1 text-clddarblue"}>
-        The URL Generator is available as an npm package. It provides three
-        classes that can be used to configure and generate image and video URLs
-        and elements:{" "}
-        <span className={"font-bold text-clddarkblue"}>
-          {" "}
-          Cloudinary, CloudinaryImage, and CloudinaryVideo.
-        </span>
-        As you see how to create Cloudinary transformations for image and video URLs, 
-        you will learn learn how to generate URLs for images and video. 
-      </p>
-      <p className={"font-sans mt-1 mb-1 text-clddarkblue"}>
-        You need to supply your Cloudinary{" "}
-        <span className={"font-bold"}>cloud name</span> and an asset{" "}
-        <span className={"font-bold"}> public id</span> to instantiate an asset.
-        Once you have an asset object, you can use url-gen to apply
-        transformation functions to build image and video elements. If you only
-        need the URL, you can call the toURL() function to generate just the
-        URL.
-      </p>
-      <Experiment
+     
+      <Experiment notes={`The URL Generator is available as an npm package. It provides three classes that 
+      can be used to configure and generate image and video URLs and elements: 
+      Cloudinary, CloudinaryImage, and CloudinaryVideo.As you see how to create Cloudinary 
+      transformations for image and video URLs, you will learn learn how to generate URLs for images and video. 
+      You need to supply your Cloudinary cloud name and an asset public id to instantiate an asset. 
+      Once you have an asset object, you can use url-gen to apply transformation functions to build image and video elements. 
+      If you only need the URL, you can call the toURL() function to generate just the URL.`}  
         codeString={`const cld = new Cloudinary({cloud: {cloudName: '<my cloud name>'}}); 
 const cldImage = cld.image('<my public id>');
 const cldVideo = cld.video('<my public id>');

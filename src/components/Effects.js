@@ -2,6 +2,9 @@ import "../App.css";
 import Experiment from "./experiments";
 import SandpackWrapper from "./SandpackWrapper";
 
+const notes = `There are many effects! In a URL they begin with "e_". Some effects can be are exclusive
+to either images for video, while many can be used on both image and video.`;
+
 const multipleImageandVideo = `import {AdvancedImage,AdvancedVideo} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {thumbnail, fill} from "@cloudinary/url-gen/actions/resize";
@@ -114,27 +117,13 @@ export default function Effects() {
         Apply Effects to both Image and Video: blur and contrast
       </h3>
       <p className="font-sans text-clddarkblue">
-        There are many effects! In a URL they begin with{" "}
-        <span className="font-bold">e_</span>. Some effects can be are exclusive
-        to either images for video, while many can be used on both image and
-        video. Find the{" "}
-        <a
-          className={"underline"}
-          href="https://cloudinary.com/documentation/transformation_reference"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Transformation URL API Reference
-        </a>{" "}
-        in the documentation.
-      </p>
-      <p className="font-sans text-clddarkblue">
         Notice that we are using{" "}
         <span className="font-bold">gravity("face")</span>. It produces the
         <span className="font-bold"> g_face</span> transformation, and looks for
         an interesting face in the image to focus on.
       </p>
       <Experiment
+        notes={notes}
         codeString={`import { Effect, vignette, sepia, accelerate, advancedRedEye, artisticFilter, assistColorBlind, blackwhite, blur, boomerang, cartoonify, colorize, deshake, dither, EffectActions, fadeIn, fadeOut, gradientFade, grayscale, loop, makeTransparent, negate, noise, oilPaint, outline, pixelate, redEye, removeBackground, reverse, shadow, simulateColorBlind, styleTransfer, theme, transition, vectorize} from "@cloudinary/url-gen/actions/effect";`}
         experimentTitle={
           "Find the Transformation URL API Reference in the Documenation"

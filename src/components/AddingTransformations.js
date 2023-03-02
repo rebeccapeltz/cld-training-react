@@ -42,6 +42,12 @@ export default function AddingTransformations() {
     `;
   const experimentTitle1 =
     "Experiment by creating a second AdvancedImage that uses the same Image variable.";
+    const notes = `Both new Cloudinary.image() and new CloudinaryImage() instantiate objects 
+    that are mutable. While there is no way to remove a transformation from an image instance, 
+    if you modify the instance by adding a url-gen action, you will see all renderings of your 
+    instance updated with the new transformation added on to it. If you want to create a new 
+    transformation without affecting or adding to an existing transformation, create a new instance of 
+    Cloudinary.image or CloudinaryImage.`;
   const instructions1 = [
     "Start by running the code.",
     "Then make a copy of the AdvancedImage component directive. In the second AdvancedImage Element use the outline effect.",
@@ -58,22 +64,11 @@ export default function AddingTransformations() {
       >
         Adding a Transformation to an Image Instance
       </h3>
-      <p className="font-sans mt-1 mb-1 text-clddarkblue">
-        Both new <span className={"font-bold"}>Cloudinary.image()</span> and{" "}
-        <span className={"font-bold"}>new CloudinaryImage()</span> instantiate
-        objects that are mutable. While there is no way to remove a
-        transformation from an image instance, if you modify the instance by
-        adding a url-gen action, you will see all renderings of your instance
-        updated with the new transformation added on to it. If you want to
-        create a new transformation without affecting or adding to an existing
-        transformation, create a new instance of{" "}
-        <span className={"font-bold"}>Cloudinary.image</span> or
-        <span className={"font-bold"}> CloudinaryImage</span>.
-      </p>
       <Experiment
         codeString={experimentString1}
         experimentTitle={experimentTitle1}
-        instructions={instructions1}
+        instructions={instructions1} 
+        notes={notes}
       />
       <SandpackWrapper numberOnPage="1" scriptName={cloudinaryAdvancedImage} />
     </div>
