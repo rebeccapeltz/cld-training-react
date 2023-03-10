@@ -5,6 +5,7 @@ import SandpackWrapper from "./SandpackWrapper";
 const cloudinaryAdvancedVideo = `import {AdvancedVideo,AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {scale, fill} from "@cloudinary/url-gen/actions/resize";
+import {audioCodec,bitRate} from "@cloudinary/url-gen/actions/transcode";
 import { VideoEdit, trim} from "@cloudinary/url-gen/actions/videoEdit";
 
 const cld = new Cloudinary({
@@ -12,6 +13,12 @@ cloud: {
     cloudName: 'cloudinary-training'
 }
 });
+
+// working with audio
+const music = cld.video("barouqe")
+  .transcode(audioCodec("mp3"))
+  .transcode(bitRate("44k"));
+const musicURL = music.toURL();
 
 // show the first 20 seconds by ending at 20 seconds
 const first20Seconds = cld.video('video-trn/barneys-first-car');
@@ -42,9 +49,18 @@ const imageFromFrame = cld.video('video-trn/barneys-first-car')
 export default function App() {
   return (
     <div className="App">
+      <p>Deliver audio as a video resource_type</p>
+      <audio controls>
+         <source src={musicURL} type="audio/mpeg"></source>
+        Your browser does not support the audio tag.
+      </audio>
+      <p>Deliver just the first 20 seconds</p>
       <AdvancedVideo cldVid={first20Seconds} controls />
+      <p>Deliver just the last 20 seconds</p>
       <AdvancedVideo cldVid={last20Seconds} controls />
+      <p>Deliver just 17 seconds in the middle of the video</p>
       <AdvancedVideo cldVid={cldVideoInTheMiddle} controls />
+      <p>Create an image out of the frame at 10 seconds</p>
       <AdvancedImage cldImg={imageFromFrame} />
     </div>
   );
@@ -60,35 +76,7 @@ export default function VideoOnly() {
       >
         Video Only Transformations
       </h2>{" "}
-      <p className="font-sans text-clddarkblue">
-        Find the{" "}
-        <a
-          className={"underline"}
-          href="https://cloudinary.com/documentation/transformation_reference"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Transformation URL API Reference
-        </a>{" "}
-        in the documentation. If you need help figuring out which functions to
-        import to get the transformation working, consult this{" "}
-        <a
-          className={"underline"}
-          href="https://codesandbox.io/s/github/cloudinary-devs/cld-react-sdk-docs-examples/tree/main/?from-embed&initialpath=%2Fimages"
-        >
-          codesandbox
-        </a>{" "}
-        and the{" "}
-        <a
-          className={"underline"}
-          href="https://github.com/cloudinary/js-url-gen/blob/master/__TESTS__/compilationsOutput.test.ts"
-          target="_blank"
-          rel="noreferrer"
-        >
-          compilation test
-        </a>{" "}
-        in the open source url-gen code.
-      </p>
+  
       <Experiment
         codeString={``}
         experimentTitle={`Discover and Experiment with Transformations that can only be applied to Video`}
