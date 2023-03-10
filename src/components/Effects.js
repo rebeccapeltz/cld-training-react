@@ -28,6 +28,7 @@ export default function App() {
 
   return (
     <div>
+      Blur and contrast effects can be applied to image or video.
       <div>
         <AdvancedImage  alt="Sample" cldImg={cldImage} />
         <AdvancedImage  alt="Sample" cldImg={cldBlur} />
@@ -58,9 +59,16 @@ export default function App() {
 
   return (
     <div>
-      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldGrayScale} />
-      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldSepia} />
-      <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldBlackclddarkblue} />
+      <p>
+      These images use image only effects and image only cropping like cropping with gravity on the face 
+      which is useful for creating profile images. Gravity("face") produces the g_face transformation, and looks for an interesting
+       face in the image to focus on.
+      </p>
+      <div>
+        <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldGrayScale} />
+        <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldSepia} />
+        <AdvancedImage height="300px" width="auto" alt="Sample" cldImg={cldBlackclddarkblue} />
+      </div>
     </div>
   )
 }`;
@@ -116,12 +124,6 @@ export default function Effects() {
       >
         Apply Effects to both Image and Video: blur and contrast
       </h3>
-      <p className="font-sans text-clddarkblue">
-        Notice that we are using{" "}
-        <span className="font-bold">gravity("face")</span>. It produces the
-        <span className="font-bold"> g_face</span> transformation, and looks for
-        an interesting face in the image to focus on.
-      </p>
       <Experiment
         notes={notes}
         codeString={`import { Effect, vignette, sepia, accelerate, advancedRedEye, artisticFilter, assistColorBlind, blackwhite, blur, boomerang, cartoonify, colorize, deshake, dither, EffectActions, fadeIn, fadeOut, gradientFade, grayscale, loop, makeTransparent, negate, noise, oilPaint, outline, pixelate, redEye, removeBackground, reverse, shadow, simulateColorBlind, styleTransfer, theme, transition, vectorize} from "@cloudinary/url-gen/actions/effect";`}
@@ -145,7 +147,7 @@ export default function Effects() {
         Image Only Effects: Grayscale, Sepia, Black and White
       </h3>
       <Experiment
-        codeString={`import {grayscale, sepia, blackwhite} from "@cloudinary/url-gen/actions/effect";`}
+        codeString={`import {colorize, simulateColorBlind, vectorize, pixelate} from "@cloudinary/url-gen/actions/effect";`}
         experimentTitle={"Experiment with other image effects"}
         instructions={[
           `Try these effects: colorize, simulateColorBlind, vectorize, pixelate`,

@@ -22,7 +22,7 @@ export default function App() {
     }
   }); 
   const cldVideo1 = cld.video('climbing');
-  const cldVideo2 = cld.video('climbing');
+  const cldVideo2 = cld.video('hike-up');
   return (
     <div>
     <AdvancedVideo height="300px" width="auto" cldVid={cldVideo1} />

@@ -81,7 +81,7 @@ export default function VideoOnly() {
         codeString={``}
         experimentTitle={`Discover and Experiment with Transformations that can only be applied to Video`}
         instructions={[
-          `Find "video only" transformation in the documention`,
+          `Find "video only" transformations in the documention`,
           `Write code to render them`,
           `Remember to import the functions the image transformations require`,
         ]}

@@ -21,7 +21,7 @@ export default function App() {
     }
   }); 
   const cldImage1 = cld.image('cld-sample');
-  const cldImage2 = cld.image('cld-sample');
+  const cldImage2 = cld.image('cld-sample-2');
   return (
     <div>
     <AdvancedImage height="300px" width="auto" alt="Sample Image 1" cldImg={cldImage1} />
