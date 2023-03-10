@@ -11,7 +11,7 @@ video.resize(fill().width(244).height(400).gravity("auto"));
 export default function App() {
   return (
     <div className="App">
-      <AdvancedVideo cldVid={video} height="250px" width="auto" controls cldPoster="auto" />
+      <AdvancedVideo cldVid={video} controls cldPoster="auto" />
     </div>
   );
 }
@@ -27,7 +27,7 @@ export default function App() {
   image.resize(crop().width(400).height(400).gravity("auto"));
   return (
     <div>
-      <AdvancedImage  height="250px" width="auto"  cldImg={image} />
+      <AdvancedImage cldImg={image} />
     </div>
   )
 }

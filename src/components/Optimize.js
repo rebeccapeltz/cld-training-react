@@ -2,7 +2,7 @@ import "../App.css";
 import Experiment from "./experiments";
 import SandpackWrapper from "./SandpackWrapper";
 
-const cloudinaryImages = `import {Cloudinary} from "@cloudinary/url-gen";
+const cloudinaryImage = `import {Cloudinary} from "@cloudinary/url-gen";
 import { AdvancedImage} from "@cloudinary/react";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 
@@ -15,7 +15,8 @@ export default function App() {
 
   return (
     <div>
-    <p> <a target="_blank" href={cldImage.toURL()}>{cldImage.toURL()}</a></p>
+    <p> Original Dimension: 1870 x 1250</p>
+    <p> Original Size: 465.67 KB</p>
     <AdvancedImage height="300px" width="auto" cldImg={cldImage} />
     <p> <a target="_blank" href={cldImageOptimize.toURL()}>{cldImageOptimize.toURL()}</a></p>
     <AdvancedImage height="300px" width="auto" cldImg={cldImageOptimize} />
@@ -23,7 +24,7 @@ export default function App() {
   )
 }`;
 
-const cloudinaryVideoURLs = `import {Cloudinary} from "@cloudinary/url-gen";
+const cloudinaryVideo = `import {Cloudinary} from "@cloudinary/url-gen";
 import { AdvancedVideo} from "@cloudinary/react";
 import { fill } from "@cloudinary/url-gen/actions/resize";
 
@@ -36,7 +37,9 @@ export default function App() {
 
   return (
     <div>
-    <p> <a target="_blank" href={cldVideo.toURL()}>{cldVideo.toURL()}</a></p>
+    <p> Original Dimension: 1920 x 1280</p>
+    <p> Original Size: 3.67 MB</p>
+
     <AdvancedVideo controls height="300px" width="auto" cldVid={cldVideo} />
     <p> <a target="_blank" href={cldVideoOptimize.toURL()}>{cldVideoOptimize.toURL()}</a></p>
     <AdvancedVideo controls height="300px" width="auto" cldVid={cldVideoOptimize} />
@@ -76,6 +79,7 @@ export default function Format() {
         experimentTitle={`Explore the Outcomes of Removing the "auto" Parameter`}
         instructions={[
           `You will need to use Chrome inspector to see details regarding size, format and content type`,
+          `Inspect and note the size of the image after applying cropping, compression and formatting`,
           `Remove "g_auto"`,
           `What happens to the cropped image and "g_auto" is not applied?`,
           `Modify "q_auto" to "q_80" or use any number to see the difference`,
@@ -85,7 +89,7 @@ export default function Format() {
           `What happens to the cropped image and "g_auto" is not applied?`,
         ]}
       />
-      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryImages} />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryImage} />
 
       <h3
         className={
@@ -99,6 +103,7 @@ export default function Format() {
         experimentTitle={`Explore the Outcomes of Removing the "auto" Parameter`}
         instructions={[
           `You will need to use Chrome inspector to see details regarding size, format and content type`,
+          `Inspect and note the size of the video after applying cropping, compression and formatting`,
           `Remove "g_auto"`,
           `What happens to the cropped video and "g_auto" is not applied?`,
           `Modify "q_auto" to "q_80" or use any number to see the difference`,
@@ -108,7 +113,7 @@ export default function Format() {
           `What happens to the cropped image and "g_auto" is not applied?`,
         ]}
       />
-      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryVideoURLs} />
+      <SandpackWrapper numberOnPage="2" scriptName={cloudinaryVideo} />
     </div>
   );
 }

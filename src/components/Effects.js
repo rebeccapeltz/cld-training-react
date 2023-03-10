@@ -171,6 +171,16 @@ export default function Effects() {
         ]}
       />
       <SandpackWrapper numberOnPage="3" scriptName={multipleVideos} />
+      <p className={"font-sans text-xs italic text-clddarkblue underline"}>
+        Credit:{" "}
+        <a
+          href="https://archive.org/details/Andy_Griffith_Barneys_First_Car"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Barney's First Car{" "}
+        </a>
+      </p>
     </div>
   );
 }
