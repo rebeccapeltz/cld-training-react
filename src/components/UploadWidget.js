@@ -17,8 +17,7 @@ export default function UploadWidget() {
       const script = document.createElement("script");
       script.setAttribute("async", "");
       script.setAttribute("id", "cloudinaryUploadWidgetScript");
-      script.src = "https://widget.cloudinary.com/v2.0/global/all.js";
-      //   script.src = "https://upload-widget.cloudinary.com/global/all.js";
+      script.src = "https://upload-widget.cloudinary.com/global/all.js";
       script.addEventListener("load", () => setLoaded(true));
       document.body.appendChild(script);
     }
